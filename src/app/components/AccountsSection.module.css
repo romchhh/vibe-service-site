@@ -36,7 +36,8 @@
 
 .header {
   max-width: 760px;
-  margin-bottom: 48px;
+  margin: 0 auto 48px;
+  text-align: center;
 }
 
 .heading {
