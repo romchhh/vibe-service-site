@@ -1,0 +1,49 @@
+# CardProc
+
+> International Stripe payment processing from 1.5%
+
+CardProc helps businesses accept payments worldwide via Stripe.
+
+## Summary
+
+- Service: Stripe payment processing, warmed accounts, company + bank + Stripe setup
+- Commission: from 1.5%
+- Uptime: 99.9% with Payment routing failover
+- Experience: 7 years with Stripe, 1100+ accounts, $53M+ client volume
+- Withdrawals: EUR, USD, PLN, USDT and more
+- Languages: Russian (default), English
+- Contact: hello@cardproc.com, Telegram @cardproc
+
+## Key pages
+
+- Home: /
+- Blog: /blog
+- Privacy policy: /privacy
+- Contact form: /#kontakt
+
+## Services
+
+1. Turnkey infrastructure: foreign entity, bank account, Stripe account
+2. Payment processing for any niche from 1.5%
+3. Warmed Stripe accounts with turnover
+4. Free expert consultation and 24/7 Telegram support
+
+## Sections on homepage
+
+- /#services — Services
+- /#advantages — Advantages (uptime, accounts, tax, CRM, niches, withdrawals)
+- /#how-we-work — How we work
+- /#accounts — Accounts in operation
+- /#specialists — CardProc specialists
+- /#clients — Client niches
+- /#kontakt — Contact form
+
+## Crawling
+
+- Sitemap: /sitemap.xml
+- Robots: /robots.txt
+- AI info: /ai.txt
+
+## Attribution
+
+Developed by TeleBots: https://telebots.site/en

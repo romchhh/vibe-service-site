@@ -1,46 +1,104 @@
+'use client'
+
+import { useTranslation } from 'react-i18next'
+import { siteConfig } from '@/lib/site'
+import { TelegramIcon, SupportIcon } from './icons/SocialIcons'
+import { useContactModal } from './ContactModalProvider'
 import styles from './Footer.module.css'
 
+const NAV_LINKS = [
+  { key: 'about', href: '/#specialists' },
+  { key: 'services', href: '/#services' },
+  { key: 'clients', href: '/#clients' },
+  { key: 'blog', href: '/blog' },
+] as const
+
 export default function Footer() {
+  const { t } = useTranslation()
+  const { open: openContactModal } = useContactModal()
+  const year = new Date().getFullYear()
+
+  const contactItems = [
+    {
+      key: 'telegramChannel' as const,
+      href: siteConfig.telegramChannelUrl,
+      icon: <TelegramIcon size={20} />,
+      iconClass: styles.contactIconTelegram,
+    },
+    {
+      key: 'telegramOperator' as const,
+      href: siteConfig.telegramOperatorUrl,
+      icon: <TelegramIcon size={20} />,
+      iconClass: styles.contactIconTelegram,
+    },
+    {
+      key: 'support247' as const,
+      icon: <SupportIcon size={20} />,
+      iconClass: styles.contactIconSupport,
+      onClick: openContactModal,
+    },
+  ]
+
   return (
     <footer className={styles.footer}>
-      <div className={styles.top}>
-        <nav className={styles.links} aria-label="Stopka nawigacja">
-          <a href="#">O klinice</a>
-          <a href="#">Usługi</a>
-          <a href="#">Lekarze</a>
-          <a href="#">Historie pacjentów</a>
-          <a href="#">Opinie</a>
-        </nav>
+      <div className={styles.grid}>
+        <div className={styles.col}>
+          <a href="/" className={styles.brand}>
+            <span className={styles.brandBold}>{t('footer.brandBold')}</span>
+            <span className={styles.brandRegular}>{t('footer.brandRegular')}</span>
+          </a>
+          <p className={styles.copyright}>{t('footer.copyright', { year })}</p>
+          <p className={styles.legal}>{t('footer.legal')}</p>
+        </div>
 
-        <div className={styles.cols}>
-          <div className={styles.col}>
-            <h3>Godziny pracy</h3>
-            <p>Pn–Sb: 10:00 – 20:00</p>
-            <p>Niedziela – dzień wolny</p>
-          </div>
+        <div className={styles.col}>
+          <h3 className={styles.heading}>{t('footer.infoHeading')}</h3>
+          <nav className={styles.nav} aria-label={t('footer.navLabel')}>
+            {NAV_LINKS.map(({ key, href }) => (
+              <a key={key} href={href}>{t(`footer.${key}`)}</a>
+            ))}
+          </nav>
+        </div>
 
-          <div className={styles.col}>
-            <h3>Kontakt</h3>
-            <p>ul. Marszałkowska 12<br />00-590 Warszawa</p>
-            <p>+48 123 456 789</p>
-            <a href="mailto:kontakt@dente.pl">kontakt@dente.pl</a>
-          </div>
+        <div className={styles.col}>
+          <h3 className={styles.heading}>{t('footer.contactHeading')}</h3>
+          <ul className={styles.contacts}>
+            {contactItems.map(({ key, icon, iconClass, ...item }) => (
+              <li key={key}>
+                <span className={`${styles.contactIcon} ${iconClass}`}>{icon}</span>
+                {'onClick' in item && item.onClick ? (
+                  <button type="button" className={styles.contactLink} onClick={item.onClick}>
+                    {t(`footer.${key}`)}
+                  </button>
+                ) : (
+                  <a
+                    href={'href' in item ? item.href : '#'}
+                    className={styles.contactLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t(`footer.${key}`)}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-          <div className={styles.col}>
-            <h3>Social media</h3>
-            <a href="#">INSTAGRAM</a>
-            <a href="#">FACEBOOK</a>
-            <a href="#">TIKTOK</a>
-          </div>
+        <div className={`${styles.col} ${styles.colAbout}`}>
+          <h3 className={styles.heading}>{t('footer.aboutHeading')}</h3>
+          <p className={styles.aboutText}>{t('footer.aboutText')}</p>
         </div>
       </div>
 
-      <div className={styles.wordmark} aria-hidden="true">DENTÉ</div>
-
       <div className={styles.bottom}>
-        <span>© {new Date().getFullYear()} Denté. Wszelkie prawa zastrzeżone.</span>
-        <a href="#">Polityka prywatności</a>
-        <a href="#" className={styles.dev}>PROJEKT STRONY: DENTÉ STUDIO</a>
+        <a href="/privacy">{t('footer.privacy')}</a>
+        <span className={styles.credit}>
+          {t('footer.developedBy')}{' '}
+          <a href="https://telebots.site/en" target="_blank" rel="noopener noreferrer">
+            TeleBots
+          </a>
+        </span>
       </div>
     </footer>
   )

@@ -1,0 +1,220 @@
+.section {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    var(--gray-100) 0%,
+    #f7f9ff 32%,
+    #fafcff 68%,
+    var(--white) 100%
+  );
+  padding: var(--section-padding-y) var(--page-padding-x);
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 45% at 15% 60%, rgba(99, 91, 255, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 160px;
+  background: linear-gradient(180deg, transparent 0%, rgba(99, 91, 255, 0.04) 100%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+
+.heading {
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  font-size: var(--section-heading);
+  line-height: var(--leading-tight);
+  color: var(--gray-900);
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: 20px;
+}
+
+.lead {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+  color: var(--gray-900);
+  margin-bottom: 14px;
+}
+
+.desc {
+  font-size: var(--text-lg);
+  line-height: var(--leading-body);
+  color: var(--gray-500);
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 20px 16px;
+  align-items: center;
+}
+
+.viewport {
+  grid-column: 2;
+  grid-row: 1;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.track {
+  display: flex;
+  transition: transform 0.55s var(--ease-out);
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  object-fit: contain;
+  filter: drop-shadow(0 12px 32px rgba(10, 37, 64, 0.14));
+}
+
+.navBtn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid rgba(99, 91, 255, 0.25);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  color: var(--stripe-blue);
+  cursor: pointer;
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s, border-color 0.25s;
+  box-shadow: var(--shadow-sm);
+}
+
+.navBtn:hover {
+  transform: scale(1.06);
+  border-color: var(--stripe-blue);
+  box-shadow: var(--shadow-glow);
+}
+
+.navPrev {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.navNext {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.dots {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: var(--stripe-blue-light);
+  cursor: pointer;
+  transition: transform 0.25s var(--ease-out), background 0.25s;
+}
+
+.dotActive {
+  background: var(--stripe-blue);
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--section-padding-y-md) var(--page-padding-x-md);
+  }
+
+  .header {
+    margin-bottom: 28px;
+  }
+
+  .slider {
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 20px 12px;
+  }
+
+  .viewport {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin: 0 -8px;
+  }
+
+  .image {
+    max-width: none;
+    width: 100%;
+    border-radius: var(--radius-md);
+    filter: drop-shadow(0 8px 24px rgba(10, 37, 64, 0.12));
+  }
+
+  .navPrev {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+  }
+
+  .dots {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+  }
+
+  .navNext {
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: end;
+  }
+
+  .navBtn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 390px) {
+  .section {
+    padding-left: var(--page-padding-x-sm);
+    padding-right: var(--page-padding-x-sm);
+  }
+
+  .viewport {
+    margin: 0 -4px;
+  }
+}
