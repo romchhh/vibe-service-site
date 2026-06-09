@@ -21,9 +21,26 @@ export default function ContactForm({ modal = false, onSuccess }: { modal?: bool
     e.preventDefault()
     if (!form.consent) return
     setStatus('loading')
-    await new Promise(r => setTimeout(r, 1400))
-    setStatus('success')
-    onSuccess?.()
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          comment: form.comment,
+          source: modal ? 'modal' : 'section',
+        }),
+      })
+
+      if (!res.ok) throw new Error('submit failed')
+
+      setStatus('success')
+      onSuccess?.()
+    } catch {
+      setStatus('error')
+    }
   }
 
   if (status === 'success') {
@@ -67,6 +84,9 @@ export default function ContactForm({ modal = false, onSuccess }: { modal?: bool
         <input type="checkbox" checked={form.consent} onChange={set('consent')} required />
         <span>{t('contact.consent')}</span>
       </label>
+      {status === 'error' && (
+        <p className={styles.error} role="alert">{t('contact.error')}</p>
+      )}
       <button type="submit" className={styles.submit} disabled={!form.consent || status === 'loading'}>
         {status === 'loading' ? t('contact.submitting') : t('contact.submit')}
         {status !== 'loading' && (

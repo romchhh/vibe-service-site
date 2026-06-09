@@ -251,6 +251,7 @@
     "submitting": "Sending…",
     "successTitle": "Thank you!",
     "successText": "We will contact you shortly.",
+    "error": "Could not send your request. Please try again or contact us on Telegram.",
     "modalTitle": "Contact WayOfProcessing",
     "close": "Close",
     "imageAlt": "Stripe payment card",

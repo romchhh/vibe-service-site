@@ -149,6 +149,13 @@
   cursor: not-allowed;
 }
 
+.error {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: #dc2626;
+  text-align: center;
+}
+
 .success {
   display: flex;
   flex-direction: column;

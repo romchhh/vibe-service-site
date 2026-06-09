@@ -251,6 +251,7 @@
     "submitting": "Отправка…",
     "successTitle": "Спасибо!",
     "successText": "Мы свяжемся с вами в ближайшее время.",
+    "error": "Не удалось отправить заявку. Попробуйте ещё раз или напишите нам в Telegram.",
     "modalTitle": "Связаться с WayOfProcessing",
     "close": "Закрыть",
     "imageAlt": "Stripe payment card",
