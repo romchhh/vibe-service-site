@@ -6,7 +6,7 @@ export const siteConfig = {
   titleEn:
     'Buy Verified Stripe Account | Stripe Account for Sale — WayOfProcessing',
   description:
-    'Stripe payment processing for any niche from 1.5%. Warmed-up accounts, 99.9% uptime, CRM access and unlimited withdrawals in EUR, USD, PLN and USDT.',
+    'Stripe payment processing for any niche from 1.5%. Warmed-up accounts, 99.9% uptime, CRM access and unlimited withdrawals in EUR, USD and USDT.',
   descriptionRu:
     'Купить Stripe аккаунт или арендовать готовый верифицированный аккаунт с оборотом. Продажа Stripe аккаунтов для бизнеса. Процессинг от 1.5%, вывод EUR/USD/USDT.',
   descriptionEn:

@@ -38,6 +38,8 @@ export default function AccountsSection() {
           <p className={styles.desc}>{t('accounts.desc')}</p>
         </div>
 
+        <h3 className={styles.galleryHeading}>{t('accounts.galleryHeading')}</h3>
+
         <div className={styles.slider}>
           <button
             type="button"

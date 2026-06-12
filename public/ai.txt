@@ -4,7 +4,7 @@
 
 ## About
 
-WayOfProcessing provides Stripe payment processing services worldwide. We offer warmed-up Stripe accounts, payment routing with 99.9% uptime, CRM access, tax-optimized jurisdictions, and unlimited withdrawals in EUR, USD, PLN, USDT and more.
+WayOfProcessing provides Stripe payment processing services worldwide. We offer warmed-up Stripe accounts, payment routing with 99.9% uptime, CRM access, tax-optimized jurisdictions, and unlimited withdrawals in EUR, USD, USDT and more.
 
 WayOfProcessing is an independent service and is not affiliated with, endorsed by, or a subsidiary of Stripe, Inc.
 

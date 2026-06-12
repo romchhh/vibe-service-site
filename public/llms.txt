@@ -10,7 +10,7 @@ WayOfProcessing helps businesses accept payments worldwide via Stripe.
 - Commission: from 1.5%
 - Uptime: 99.9% with Payment routing failover
 - Experience: 7 years with Stripe, 1100+ accounts, $53M+ client volume
-- Withdrawals: EUR, USD, PLN, USDT and more
+- Withdrawals: EUR, USD, USDT and more
 - Languages: Russian (/ru, default), English (/en)
 - Contact: hello@wayofprocessing.com, Telegram @wayofprocessing
 - Disclaimer: WayOfProcessing is independent and not affiliated with Stripe, Inc.

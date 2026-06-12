@@ -2,7 +2,7 @@
   "seo": {
     "heroImageAlt": "WayOfProcessing — international Stripe payment processing with warmed accounts",
     "bottomTitle": "Buy Verified Stripe Account — Stripe Account for Sale | WayOfProcessing",
-    "bottomText": "WayOfProcessing is where you can buy a verified Stripe account or rent a ready warmed account with transaction history. Stripe account for sale with up to $500,000/month volume — buy Stripe account with instant delivery or choose a rental plan for your niche.\n\nWe sell and rent Stripe merchant accounts for e-commerce, SaaS, subscriptions, forex and high-risk. Processing from 1.5%, payouts in EUR, USD, PLN and USDT. Submit a request for a free quote and instant account matching.",
+    "bottomText": "WayOfProcessing is where you can buy a verified Stripe account or rent a ready warmed account with transaction history. Stripe account for sale with up to $500,000/month volume — buy Stripe account with instant delivery or choose a rental plan for your niche.\n\nWe sell and rent Stripe merchant accounts for e-commerce, SaaS, subscriptions, forex and high-risk. Processing from 1.5%, payouts in EUR, USD and USDT. Submit a request for a free quote and instant account matching.",
     "faqHeading": "Frequently asked questions about Stripe processing",
     "faq": [
       {
@@ -89,11 +89,11 @@
     "cta": "Learn more about WayOfProcessing"
   },
   "services": {
-    "heading": "Our services",
+    "heading": "What we do for your business",
     "more": "Learn more",
     "complex": {
-      "title": "Company registration + bank account + Stripe",
-      "desc": "Full turnkey business registration package in various jurisdictions.",
+      "title": "Legal entity, bank and Stripe — as one package",
+      "desc": "We register a company in the right jurisdiction, connect a bank account and Stripe. You get a working setup without hunting for separate vendors.",
       "jurisdictionsLabel": "Available jurisdictions",
       "flags": {
         "gb": "🇬🇧",
@@ -105,30 +105,31 @@
       }
     },
     "processing": {
-      "title": "Payment processing",
-      "intro": "Turnkey Stripe account setup: API, Payment Link, payment routing and international payment acceptance for any niche.",
+      "title": "Accepting payments via Stripe",
+      "intro": "We set up checkout for your project — from site API to pay-by-link with no development. Fees from 1.5%, no hidden charges or setup fees.",
       "rate": "1.5%",
       "rateSuffix": " of turnover",
       "items": {
-        "api": "API integration with the client's website.",
-        "cloaking": "«Payment cloaking» technology to hide the source of transactions.",
-        "invoice": "Invoice/Payment Link without technical integration."
+        "api": "Integration into your site, app or CRM through the official Stripe API.",
+        "cloaking": "Routing between accounts — payments keep flowing if one goes under review.",
+        "invoice": "Payment Link and Invoice: customers pay via a link, no developer required on your side."
       }
     },
     "fintech": {
-      "title": "Ready-made fintech platform accounts",
-      "desc": "Verified European neobank and fintech accounts for business and Stripe withdrawals."
+      "title": "Neobanks and fintech for withdrawals",
+      "desc": "We match and hand over ready Revolut, Wise, Airwallex and other accounts — so you can move money off Stripe quickly and without extra hoops."
     },
     "support": {
-      "title": "Support & consultation",
-      "desc": "We provide a free expert consultation to every client. Contact us via Telegram chat.",
+      "title": "An expert with you before and after launch",
+      "desc": "We review your niche, run the numbers and stay involved after go-live. Telegram chat with a real specialist, not an auto-reply bot.",
       "cta": "Get a free consultation"
     }
   },
   "accounts": {
-    "heading": "Stripe account for sale — buy or rent",
-    "lead": "Buy verified Stripe account with instant delivery — up to $500,000/month volume",
-    "desc": "If one account fails, payments are automatically routed to another warmed Stripe account via our «Payment routing» solution.",
+    "heading": "Stripe for your project — without doing it alone",
+    "lead": "Take an account under management or get one registered for yourself. We match the setup to your niche, volume and country.",
+    "desc": "Every case is handled by a specialist: we assess risk, prepare infrastructure and connect in days, not months.",
+    "galleryHeading": "Accounts in operation",
     "imageAlt": "Stripe account screenshot {{number}}",
     "prev": "Previous slide",
     "next": "Next slide",
@@ -155,30 +156,30 @@
     }
   },
   "advantages": {
-    "heading": "Our advantages",
+    "heading": "Benefits of working with WayOfProcessing",
     "uptime": {
-      "title": "Uninterrupted operation with 99.9% uptime",
-      "desc": "In case of failure, payments are automatically redirected to another warmed-up Stripe account via our «Payment routing» solution"
+      "title": "Payments don't stop when something breaks",
+      "desc": "If one Stripe account goes under review, transactions switch to a backup. 99.9% acceptance uptime — revenue doesn't depend on a single point of failure."
     },
     "accounts": {
-      "title": "Fully configured Stripe accounts",
-      "desc": "Our accounts have passed all required verifications (director identity, business, activity type) and can handle volumes up to $500,000 / month."
+      "title": "Accounts with history, not blank slates",
+      "desc": "We hand over verified accounts with real turnover — they handle limits more smoothly than freshly registered ones. Up to $500,000 per month."
     },
     "tax": {
-      "title": "Tax burden optimization",
-      "desc": "Our Stripe accounts are registered in tax-free jurisdictions, which helps reduce tax costs."
+      "title": "Jurisdictions without extra tax drag",
+      "desc": "We pick a registration country for your model — so you don't overpay tax or drown in compliance paperwork."
     },
     "crm": {
-      "title": "CRM access for transaction control",
-      "desc": "Every client gets access to a CRM system to track payments, their status and export reports to Excel/CSV."
+      "title": "See every payment in real time",
+      "desc": "Personal CRM dashboard: transaction statuses, filters, Excel and CSV export — no need to ask a manager for reports."
     },
     "niches": {
-      "title": "Flexibility with any niches",
-      "desc": "We work with any allowed and restricted niches, provided there is an ultra-low Chargeback Rate."
+      "title": "We work where others say no",
+      "desc": "E-commerce, SaaS, subscriptions, forex, gaming — with a controlled chargeback rate we'll find a setup for your niche."
     },
     "withdrawals": {
-      "title": "Unlimited withdrawals",
-      "desc": "Withdrawals in EUR, USD, PLN and other currencies to any IBAN, as well as USDT (with additional conversion fee). Payout on day 3 with no limits."
+      "title": "Withdraw in fiat or USDT",
+      "desc": "EUR, USD to IBAN or conversion to USDT. Standard payout cycle — 3 days, no cap on amount."
     }
   },
   "clients": {

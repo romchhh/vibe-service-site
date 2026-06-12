@@ -41,16 +41,22 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
   return (
     <>
       <nav className={`${styles.nav} ${isDark ? styles.solid : styles.transparent} ${isDark ? styles.navDark : styles.navLight}`}>
+        <div className={styles.navStart}>
+          <button className={styles.hamburger} onClick={() => setMenuOpen(true)} aria-label={t('nav.openMenu')}>
+            <span/><span/><span/>
+          </button>
+
+          <div className={styles.center}>
+            <a href={hash('specialists')}>{t('nav.about')}</a>
+            <a href={hash('services')}>{t('nav.services')}</a>
+            <a href={hash('clients')}>{t('nav.clients')}</a>
+            <a href={blogPath} className={isBlogActive ? styles.activeLink : ''}>{t('nav.blog')}</a>
+          </div>
+        </div>
+
         <a href={lp('/')} className={styles.brand}>
           {t('footer.brandBold')}<span>{t('footer.brandRegular')}</span>
         </a>
-
-        <div className={styles.center}>
-          <a href={hash('specialists')}>{t('nav.about')}</a>
-          <a href={hash('services')}>{t('nav.services')}</a>
-          <a href={hash('clients')}>{t('nav.clients')}</a>
-          <a href={blogPath} className={isBlogActive ? styles.activeLink : ''}>{t('nav.blog')}</a>
-        </div>
 
         <div className={styles.actions}>
           <a
@@ -87,10 +93,6 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
               </span>
             </button>
           </div>
-
-          <button className={styles.hamburger} onClick={() => setMenuOpen(true)} aria-label={t('nav.openMenu')}>
-            <span/><span/><span/>
-          </button>
         </div>
       </nav>
 
