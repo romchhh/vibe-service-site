@@ -17,9 +17,9 @@
   flex-direction: column;
   width: 100%;
   max-width: 520px;
-  height: 90vh;
-  max-height: 90dvh;
-  overflow: hidden;
+  max-height: min(90dvh, 860px);
+  overflow-x: hidden;
+  overflow-y: auto;
   background: var(--white);
   border-radius: var(--radius-xl);
   padding: 28px 28px 24px;
@@ -74,8 +74,7 @@
 }
 
 .body {
-  flex: 1;
-  min-height: 0;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   margin-top: 20px;

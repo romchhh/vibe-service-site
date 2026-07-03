@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import PreferredTimePicker from './PreferredTimePicker'
 import styles from './ContactForm.module.css'
 
 type FormState = { name: string; phone: string; preferredTime: string; comment: string; consent: boolean }
@@ -79,16 +80,15 @@ export default function ContactForm({ modal = false, onSuccess }: { modal?: bool
       </div>
       <div className={styles.field}>
         <label htmlFor="contact-time">{t('contact.preferredTime')}</label>
-        <input
+        <PreferredTimePicker
           id="contact-time"
-          type="text"
-          placeholder={t('contact.preferredTimePlaceholder')}
           value={form.preferredTime}
-          onChange={set('preferredTime')}
+          onChange={(preferredTime) => setForm((f) => ({ ...f, preferredTime }))}
           required
+          compact={modal}
         />
       </div>
-      <div className={`${styles.field} ${modal ? styles.fieldGrow : ''}`}>
+      <div className={styles.field}>
         <label htmlFor="contact-comment">{t('contact.comment')}</label>
         <textarea
           id="contact-comment"

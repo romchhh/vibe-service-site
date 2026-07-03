@@ -10,6 +10,11 @@
   gap: 8px;
 }
 
+.field:has([data-schedule-open="true"]) {
+  position: relative;
+  z-index: 50;
+}
+
 .field label {
   font-size: var(--text-sm);
   font-weight: 600;
@@ -44,8 +49,6 @@
 }
 
 .formModal {
-  flex: 1;
-  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -56,20 +59,7 @@
   padding: 14px 16px;
 }
 
-.fieldGrow {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.formModal .fieldGrow textarea {
-  flex: 1;
-  min-height: 72px;
-}
-
 .formModal .submit {
-  margin-top: auto;
   align-self: stretch;
   justify-content: center;
   padding: 16px 32px;
