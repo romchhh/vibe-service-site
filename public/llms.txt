@@ -6,16 +6,37 @@ UK consulting firm for international businesses entering the British market.
 
 Vibe Services provides turnkey UK business setup: substance, company registration (LTD/LLP), accounting and sales. From idea to first sale in ~3 months.
 
+## Languages
+
+The site is available in English, German, Russian, Ukrainian and French. Each locale has its own SEO metadata, hreflang alternates and localized content.
+
 ## Key URLs
 
 - https://vibe-service.co.uk/en/ — English home
-- https://vibe-service.co.uk/ru/ — Russian home
+- https://vibe-service.co.uk/de/ — German home (Deutsch)
+- https://vibe-service.co.uk/ru/ — Russian home (Русский)
+- https://vibe-service.co.uk/ua/ — Ukrainian home (Українська)
+- https://vibe-service.co.uk/fr/ — French home (Français)
+
+## Services (English)
+
 - https://vibe-service.co.uk/en/services/substance-in-uk
 - https://vibe-service.co.uk/en/services/company-registration
 - https://vibe-service.co.uk/en/services/accounting
 - https://vibe-service.co.uk/en/services/sales-organisation
+
+## Blog
+
 - https://vibe-service.co.uk/en/blog
+- RSS feeds: /en/blog/feed.xml, /de/blog/feed.xml, /ru/blog/feed.xml, /ua/blog/feed.xml, /fr/blog/feed.xml
 
 ## Contact
 
-info@vibe-service.co.uk
+- Email: info@vibe-service.co.uk
+- Phone: +44 7771 656297
+- WhatsApp: https://wa.me/447771656297
+
+## Technical SEO
+
+- Sitemap: https://vibe-service.co.uk/sitemap.xml (includes hreflang alternates for all locales)
+- Robots: https://vibe-service.co.uk/robots.txt

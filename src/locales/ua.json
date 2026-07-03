@@ -1,33 +1,33 @@
 {
   "seo": {
-    "heroImageAlt": "Vibe Services — UK business consulting and London office",
-    "bottomTitle": "UK Business Setup & Substance — Vibe Services",
-    "bottomText": "Vibe Services helps international businesses establish real substance in the United Kingdom. We provide turnkey UK market entry: company registration (LTD/LLP), registered office, local director, accounting, VAT, payroll and sales organisation.\n\nDon't spend 12 months — we do it in 3. Our team has supported Alteg, Alpengold, Green Up, Beehave, Mirax and Braz. Book a free 15-minute consultation.",
-    "faqHeading": "Frequently asked questions about UK business setup",
+    "heroImageAlt": "Vibe Services — консалтинг з бізнесу у Великобританії",
+    "bottomTitle": "Відкриття бізнесу у UK під ключ — Vibe Services",
+    "bottomText": "Vibe Services — британська консалтингова компанія, яка допомагає міжнародному бізнесу вийти на ринок Великобританії. Реєстрація LTD/LLP, substance (реальний офіс, представник), бухгалтерія, VAT, payroll та організація продажів.\n\nНе витрачайте 12 місяців — ми зробимо це за 3. Серед наших клієнтів: Alteg, Alpengold, Green Up, Beehave, Mirax, Braz. Запишіться на безкоштовну 15-хвилинну консультацію.",
+    "faqHeading": "Поширені питання про відкриття бізнесу у UK",
     "faq": [
       {
-        "question": "What is substance in the UK and why does it matter?",
-        "answer": "Substance means a real operational presence: office, staff or management, and genuine business activity in the UK. Without it, HMRC and banks may block accounts or raise tax challenges. Vibe Services builds compliant substance from day one."
+        "question": "Що таке substance у UK і навіщо він потрібен?",
+        "answer": "Substance — це реальна операційна присутність: офіс, персонал або управління у Великобританії. Без нього HMRC і банки можуть заблокувати рахунки або висунути податкові претензії. Vibe Services створює compliant substance з першого дня."
       },
       {
-        "question": "How fast can you set up a UK business?",
-        "answer": "Our turnkey process takes around 3 months — from company registration to operational presence and first sales. This is significantly faster than the typical 12-month DIY approach."
+        "question": "Як швидко можна відкрити бізнес у Великобританії?",
+        "answer": "Наш процес «під ключ» займає близько 3 місяців — від реєстрації компанії до операційної присутності та перших продажів. Це значно швидше типового 12-місячного шляху."
       },
       {
-        "question": "What services does Vibe Services provide?",
-        "answer": "Substance in UK (registered office, real office, local representative), company registration (LTD/LLP), accounting (VAT, payroll, annual accounts), and UK sales organisation (market analysis, marketing, team hiring)."
+        "question": "Які послуги надає Vibe Services?",
+        "answer": "Substance in UK (юрадреса, реальний офіс, представник), реєстрація компанії (LTD/LLP), бухгалтерія (VAT, payroll, річна звітність) та організація продажів у UK."
       },
       {
-        "question": "Can non-residents open a UK company and bank account?",
-        "answer": "Yes, with the right structure and substance. We guide international owners through registration, compliance and banking — reducing rejection risk from UK banks."
+        "question": "Чи може нерезидент відкрити компанію та рахунок у UK?",
+        "answer": "Так, за правильної структури та substance. Ми супроводжуємо міжнародних власників через реєстрацію, комплаєнс і банкінг — знижуючи ризик відмови з боку британських банків."
       },
       {
-        "question": "Which company structure should I choose — LTD or LLP?",
-        "answer": "It depends on your ownership, tax position and business model. Our legal director Dmitry Lakshin advises on the optimal structure during a free consultation."
+        "question": "Яку структуру обрати — LTD чи LLP?",
+        "answer": "Залежить від структури власності, податкової позиції та моделі бізнесу. Юридичний директор Дмитро Лакшин підбере оптимальну структуру на безкоштовній консультації."
       },
       {
-        "question": "How do I contact Vibe Services?",
-        "answer": "Book a consultation via the form on this site, email info@vibe-service.co.uk, or message us on Telegram or WhatsApp."
+        "question": "Як зв'язатися з Vibe Services?",
+        "answer": "Запишіться через форму на сайті, напишіть на info@vibe-service.co.uk або в Telegram / WhatsApp."
       }
     ]
   },

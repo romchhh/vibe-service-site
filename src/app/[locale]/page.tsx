@@ -15,43 +15,15 @@ import Footer from '../components/Footer'
 import ScrollReveal from '../components/ScrollReveal'
 import JsonLd from '../components/JsonLd'
 import { isValidLocale, type Locale } from '@/lib/i18n/config'
+import { getHomeSeo } from '@/lib/page-seo'
 import { buildPageMetadata } from '@/lib/seo'
-import { siteConfig } from '@/lib/site'
 
 type Props = { params: Promise<{ locale: string }> }
-
-const META_BY_LOCALE: Record<Locale, { title: string; description: string; keywords: string[] }> = {
-  en: {
-    title: siteConfig.titleEn,
-    description: siteConfig.descriptionEn,
-    keywords: siteConfig.keywordsEn,
-  },
-  de: {
-    title: 'UK-Geschäftsaufbau schlüsselfertig — Vibe Services',
-    description: siteConfig.descriptionEn,
-    keywords: siteConfig.keywordsEn,
-  },
-  ru: {
-    title: siteConfig.titleRu,
-    description: siteConfig.descriptionRu,
-    keywords: siteConfig.keywordsRu,
-  },
-  ua: {
-    title: 'Відкриття бізнесу у UK під ключ — Vibe Services',
-    description: siteConfig.descriptionRu,
-    keywords: siteConfig.keywordsRu,
-  },
-  fr: {
-    title: 'Création d\'entreprise au Royaume-Uni — Vibe Services',
-    description: siteConfig.descriptionEn,
-    keywords: siteConfig.keywordsEn,
-  },
-}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale } = await params
   const locale = isValidLocale(rawLocale) ? rawLocale : 'en'
-  const meta = META_BY_LOCALE[locale]
+  const meta = getHomeSeo(locale)
 
   return buildPageMetadata({
     title: meta.title,
@@ -60,6 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale,
     ogTitle: meta.title,
     keywords: meta.keywords,
+    ogImageAlt: meta.ogImageAlt,
   })
 }
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { localeOgLocale, localePath, type Locale } from './i18n/config'
+import { localeOgLocale, localePath, localeSchemaLanguage, locales, type Locale } from './i18n/config'
 import { siteConfig } from './site'
 
 type PageMetaInput = {
@@ -40,17 +40,20 @@ export function absoluteUrl(path: string) {
   return `${siteConfig.url}${path.startsWith('/') ? path : `/${path}`}`
 }
 
+export function buildHreflangLanguages(path: string): Record<string, string> {
+  const languages = Object.fromEntries(
+    locales.map((loc) => [localeOgLocale(loc).replace('_', '-'), localePath(path, loc)]),
+  ) as Record<string, string>
+
+  languages['x-default'] = localePath(path, 'en')
+
+  return languages
+}
+
 function buildHreflang(path: string, locale: Locale) {
   return {
     canonical: localePath(path, locale),
-    languages: {
-      'en-GB': localePath(path, 'en'),
-      'de-DE': localePath(path, 'de'),
-      'ru-RU': localePath(path, 'ru'),
-      'uk-UA': localePath(path, 'ua'),
-      'fr-FR': localePath(path, 'fr'),
-      'x-default': localePath(path, 'en'),
-    },
+    languages: buildHreflangLanguages(path),
   }
 }
 
@@ -78,7 +81,9 @@ function buildSharedMeta({
   const localizedPath = localePath(path, locale)
   const url = absoluteUrl(localizedPath)
   const ogLocale = localeOgLocale(locale)
-  const alternateOgLocale = localeOgLocale(locale === 'ru' ? 'en' : 'ru')
+  const alternateOgLocales = locales
+    .filter((loc) => loc !== locale)
+    .map((loc) => localeOgLocale(loc))
   const imagePath = ogImage ?? siteConfig.ogImage
   const imageUrl = imagePath.startsWith('http') ? imagePath : absoluteUrl(imagePath)
 
@@ -95,7 +100,7 @@ function buildSharedMeta({
     },
     openGraph: {
       locale: ogLocale,
-      alternateLocale: [alternateOgLocale],
+      alternateLocale: alternateOgLocales,
       url,
       siteName: siteConfig.name,
       title: ogTitle ?? title,
@@ -256,7 +261,7 @@ export function buildWebPageJsonLd({
     description,
     isPartOf: { '@id': `${siteConfig.url}/#website` },
     ...(aboutId ? { about: { '@id': aboutId } } : {}),
-    inLanguage: locale,
+    inLanguage: localeSchemaLanguage(locale),
     ...(dateModified ? { dateModified } : {}),
   }
 }

@@ -37,6 +37,11 @@ export default function BlogPreviewSection() {
         <div className={styles.actions}>
           <Link href={lp('/blog')} className={styles.viewAll}>
             {t('homeBlog.viewAll')}
+            <span className={styles.viewAllArrow} aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M2 12 L12 2 M5 2 H12 V9" />
+              </svg>
+            </span>
           </Link>
         </div>
       </div>

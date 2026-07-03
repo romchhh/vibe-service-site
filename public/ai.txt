@@ -27,7 +27,19 @@ Vibe Services helps international businesses establish real operational presence
 
 ## Languages
 
-/en/, /de/, /ru/, /ua/, /fr/
+English: /en/
+German: /de/
+Russian: /ru/
+Ukrainian: /ua/
+French: /fr/
+
+## Localized home pages
+
+- https://vibe-service.co.uk/en/
+- https://vibe-service.co.uk/de/
+- https://vibe-service.co.uk/ru/
+- https://vibe-service.co.uk/ua/
+- https://vibe-service.co.uk/fr/
 
 ## Blog articles
 
@@ -40,10 +52,15 @@ Vibe Services helps international businesses establish real operational presence
 ## Contact
 
 - Email: info@vibe-service.co.uk
+- Phone: +44 7771 656297
 - Website: https://vibe-service.co.uk
 
 ## Technical
 
 - Sitemap: https://vibe-service.co.uk/sitemap.xml
 - Robots: https://vibe-service.co.uk/robots.txt
-- RSS: https://vibe-service.co.uk/en/blog/feed.xml
+- RSS (EN): https://vibe-service.co.uk/en/blog/feed.xml
+- RSS (DE): https://vibe-service.co.uk/de/blog/feed.xml
+- RSS (RU): https://vibe-service.co.uk/ru/blog/feed.xml
+- RSS (UA): https://vibe-service.co.uk/ua/blog/feed.xml
+- RSS (FR): https://vibe-service.co.uk/fr/blog/feed.xml

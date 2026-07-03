@@ -5,6 +5,7 @@ import Footer from '../../components/Footer'
 import Breadcrumbs from '../../components/seo/Breadcrumbs'
 import JsonLdScript from '../../components/seo/JsonLdScript'
 import { isValidLocale, localePath, type Locale } from '@/lib/i18n/config'
+import { BREADCRUMB_LABELS, getPrivacySeo } from '@/lib/page-seo'
 import { buildBreadcrumbJsonLd, buildGraphJsonLd, buildPageMetadata, buildWebPageJsonLd } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
@@ -13,35 +14,35 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale } = await params
   const locale = (isValidLocale(rawLocale) ? rawLocale : 'en') as Locale
-  const isEn = locale === 'en'
+  const meta = getPrivacySeo(locale)
 
   return buildPageMetadata({
-    title: isEn ? siteConfig.pages.privacy.titleEn : siteConfig.pages.privacy.title,
-    description: isEn ? siteConfig.pages.privacy.descriptionEn : siteConfig.pages.privacy.description,
+    title: meta.title,
+    description: meta.description,
     path: '/privacy',
     locale,
-    keywords: isEn
-      ? [`${siteConfig.name} privacy policy`, 'personal data', 'GDPR', 'UK business']
-      : [`политика конфиденциальности ${siteConfig.name}`, 'обработка персональных данных', 'GDPR'],
+    keywords: meta.keywords,
+    ogImageAlt: meta.ogImageAlt,
   })
 }
 
 export default async function Privacy({ params }: Props) {
   const { locale: rawLocale } = await params
   const locale = (isValidLocale(rawLocale) ? rawLocale : 'en') as Locale
-  const isEn = locale === 'en'
+  const meta = getPrivacySeo(locale)
+  const privacyLabel = BREADCRUMB_LABELS.privacy[locale]
 
   const breadcrumb = buildBreadcrumbJsonLd(
     [
       { name: siteConfig.name, path: '/' },
-      { name: isEn ? 'Privacy Policy' : 'Политика конфиденциальности', path: '/privacy' },
+      { name: privacyLabel, path: '/privacy' },
     ],
     locale,
   )
 
   const webPage = buildWebPageJsonLd({
-    title: isEn ? siteConfig.pages.privacy.titleEn : siteConfig.pages.privacy.title,
-    description: isEn ? siteConfig.pages.privacy.descriptionEn : siteConfig.pages.privacy.description,
+    title: meta.title,
+    description: meta.description,
     path: '/privacy',
     locale,
     pageType: 'PrivacyPolicy',
@@ -54,7 +55,7 @@ export default async function Privacy({ params }: Props) {
       <Breadcrumbs
         items={[
           { name: siteConfig.name, path: localePath('/', locale) },
-          { name: isEn ? 'Privacy Policy' : 'Политика конфиденциальности', path: localePath('/privacy', locale) },
+          { name: privacyLabel, path: localePath('/privacy', locale) },
         ]}
       />
       <main>

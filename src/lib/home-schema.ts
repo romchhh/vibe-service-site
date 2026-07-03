@@ -5,20 +5,46 @@ import de from '@/locales/de.json'
 import fr from '@/locales/fr.json'
 import { buildFaqPageJsonLd } from './service-seo'
 import { SERVICE_SLUGS, getServiceBySlug, getServiceView } from './services'
-import { contentLocale, localePath, type Locale } from './i18n/config'
+import { localePath, localeSchemaLanguage, type Locale } from './i18n/config'
 import { absoluteUrl } from './seo'
+import { getHomeSeo } from './page-seo'
 import { siteConfig } from './site'
 
 const COPY_BY_LOCALE: Record<Locale, typeof en> = { en, ru, ua, de, fr }
 const HOW_WE_WORK_STEPS = ['step1', 'step2', 'step3', 'step4'] as const
 
+const CONSULTATION_CTA: Record<Locale, string> = {
+  en: 'Book a consultation',
+  de: 'Beratung vereinbaren',
+  ru: 'Записаться на консультацию',
+  ua: 'Записатися на консультацію',
+  fr: 'Réserver une consultation',
+}
+
+const BLOG_READ_CTA: Record<Locale, string> = {
+  en: `Read ${siteConfig.name} blog`,
+  de: `${siteConfig.name} Blog lesen`,
+  ru: `Читать блог ${siteConfig.name}`,
+  ua: `Читати блог ${siteConfig.name}`,
+  fr: `Lire le blog ${siteConfig.name}`,
+}
+
+const SERVICE_HEADING: Record<Locale, string> = {
+  en: `${siteConfig.name} — UK business consulting`,
+  de: `${siteConfig.name} — UK-Geschäftsberatung`,
+  ru: `${siteConfig.name} — консалтинг по бизнесу в UK`,
+  ua: `${siteConfig.name} — консалтинг з бізнесу у UK`,
+  fr: `${siteConfig.name} — conseil en affaires au Royaume-Uni`,
+}
+
 export function buildHomeJsonLd(locale: Locale) {
   const copy = COPY_BY_LOCALE[locale] ?? en
   const faqItems = copy.seo.faq
   const homePath = localePath('/', locale)
-  const isRu = contentLocale(locale) === 'ru'
-  const title = isRu ? siteConfig.titleRu : siteConfig.titleEn
-  const description = isRu ? siteConfig.descriptionRu : siteConfig.descriptionEn
+  const seo = getHomeSeo(locale)
+  const title = seo.title
+  const description = seo.description
+  const lang = localeSchemaLanguage(locale)
 
   return {
     '@context': 'https://schema.org',
@@ -65,19 +91,19 @@ export function buildHomeJsonLd(locale: Locale) {
           {
             '@type': 'CommunicateAction',
             target: absoluteUrl(`${homePath}#kontakt`),
-            name: isRu ? 'Записаться на консультацию' : 'Book a consultation',
+            name: CONSULTATION_CTA[locale],
           },
           {
             '@type': 'ReadAction',
             target: absoluteUrl(localePath('/blog', locale)),
-            name: `Read ${siteConfig.name} blog`,
+            name: BLOG_READ_CTA[locale],
           },
         ],
       },
       {
         '@type': 'ProfessionalService',
         '@id': `${siteConfig.url}/#service`,
-        name: `${siteConfig.name} — UK business consulting`,
+        name: SERVICE_HEADING[locale],
         description,
         url: absoluteUrl(homePath),
         provider: { '@id': `${siteConfig.url}/#organization` },
@@ -100,7 +126,7 @@ export function buildHomeJsonLd(locale: Locale) {
           '@type': 'ImageObject',
           url: absoluteUrl(siteConfig.ogImage),
         },
-        inLanguage: locale === 'ua' ? 'uk' : locale,
+        inLanguage: lang,
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['h1', '#faq-heading'],

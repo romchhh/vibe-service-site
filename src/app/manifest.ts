@@ -3,14 +3,14 @@ import { siteConfig } from '@/lib/site'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: siteConfig.titleRu,
+    name: siteConfig.titleEn,
     short_name: siteConfig.name,
-    description: siteConfig.descriptionRu,
-    start_url: '/ru',
+    description: siteConfig.descriptionEn,
+    start_url: '/en',
     display: 'standalone',
     background_color: '#0A2540',
     theme_color: siteConfig.themeColor,
-    lang: 'ru',
+    lang: 'en',
     categories: ['finance', 'business'],
     icons: [
       {

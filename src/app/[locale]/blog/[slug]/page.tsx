@@ -8,7 +8,8 @@ import Breadcrumbs from '../../../components/seo/Breadcrumbs'
 import JsonLdScript from '../../../components/seo/JsonLdScript'
 import { buildBlogPostingJsonLd, getPostKeywords } from '@/lib/blog-seo'
 import { getAllSlugs, getPostBySlug, getRelatedPosts, localizePost } from '@/lib/blog'
-import { isValidLocale, contentLocale, localePath, locales, type Locale } from '@/lib/i18n/config'
+import { isValidLocale, localePath, locales, type Locale } from '@/lib/i18n/config'
+import { BREADCRUMB_LABELS } from '@/lib/page-seo'
 import { absoluteUrl, buildArticleMetadata, buildBreadcrumbJsonLd, buildGraphJsonLd, buildWebPageJsonLd } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
@@ -51,12 +52,12 @@ export default async function BlogPost({ params }: Props) {
   const view = localizePost(post, locale)
   const related = getRelatedPosts(slug)
   const postPath = localePath(`/blog/${post.slug}`, locale)
-  const isEn = locale === 'en'
+  const blogLabel = BREADCRUMB_LABELS.blog[locale]
 
   const breadcrumb = buildBreadcrumbJsonLd(
     [
       { name: siteConfig.name, path: '/' },
-      { name: isEn ? 'Blog' : 'Блог', path: '/blog' },
+      { name: blogLabel, path: '/blog' },
       { name: view.title, path: `/blog/${post.slug}` },
     ],
     locale,
@@ -74,7 +75,7 @@ export default async function BlogPost({ params }: Props) {
   const relatedList = related.length > 0
     ? {
         '@type': 'ItemList',
-        name: isEn ? 'Read also' : 'Читайте также',
+        name: BREADCRUMB_LABELS.readAlso[locale],
         itemListElement: related.map((item, index) => ({
           '@type': 'ListItem',
           position: index + 1,
@@ -95,7 +96,7 @@ export default async function BlogPost({ params }: Props) {
       <Breadcrumbs
         items={[
           { name: siteConfig.name, path: localePath('/', locale) },
-          { name: isEn ? 'Blog' : 'Блог', path: localePath('/blog', locale) },
+          { name: blogLabel, path: localePath('/blog', locale) },
           { name: view.title, path: postPath },
         ]}
       />

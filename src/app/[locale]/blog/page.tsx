@@ -6,7 +6,8 @@ import Breadcrumbs from '../../components/seo/Breadcrumbs'
 import JsonLdScript from '../../components/seo/JsonLdScript'
 import { buildBlogItemListJsonLd } from '@/lib/blog-seo'
 import { getAllPosts, localizePost } from '@/lib/blog'
-import { contentLocale, isValidLocale, localePath, type Locale } from '@/lib/i18n/config'
+import { isValidLocale, localePath, localeSchemaLanguage, locales, type Locale } from '@/lib/i18n/config'
+import { BREADCRUMB_LABELS, getBlogSeo } from '@/lib/page-seo'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildGraphJsonLd, buildPageMetadata, buildWebPageJsonLd } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
@@ -15,31 +16,25 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale } = await params
   const locale = (isValidLocale(rawLocale) ? rawLocale : 'en') as Locale
-  const lang = contentLocale(locale)
-  const isEn = lang === 'en'
+  const meta = getBlogSeo(locale)
+  const pageMeta = buildPageMetadata({
+    title: meta.title,
+    description: meta.description,
+    path: '/blog',
+    locale,
+    keywords: meta.keywords,
+    ogImageAlt: meta.ogImageAlt,
+  })
 
   return {
-    ...buildPageMetadata({
-      title: isEn ? siteConfig.pages.blog.titleEn : siteConfig.pages.blog.title,
-      description: isEn ? siteConfig.pages.blog.descriptionEn : siteConfig.pages.blog.description,
-      path: '/blog',
-      locale,
-      keywords: isEn
-        ? [`${siteConfig.name} blog`, 'UK substance', 'UK company registration', 'UK banking', 'Patent Box']
-        : [`блог ${siteConfig.name}`, 'substance UK', 'регистрация компании UK', 'банковский счёт UK', 'Patent Box'],
-    }),
+    ...pageMeta,
     alternates: {
-      canonical: localePath('/blog', locale),
-      languages: {
-        'ru-RU': localePath('/blog', 'ru'),
-        'en-US': localePath('/blog', 'en'),
-        'x-default': localePath('/blog', 'ru'),
-      },
+      ...pageMeta.alternates,
       types: {
-        'application/rss+xml': [
-          { url: localePath('/blog/feed.xml', 'ru'), title: `${siteConfig.name} Blog RSS (RU)` },
-          { url: localePath('/blog/feed.xml', 'en'), title: `${siteConfig.name} Blog RSS (EN)` },
-        ],
+        'application/rss+xml': locales.map((loc) => ({
+          url: localePath('/blog/feed.xml', loc),
+          title: `${siteConfig.name} Blog RSS (${loc.toUpperCase()})`,
+        })),
       },
     },
   }
@@ -48,22 +43,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Blog({ params }: Props) {
   const { locale: rawLocale } = await params
   const locale = (isValidLocale(rawLocale) ? rawLocale : 'en') as Locale
-  const lang = contentLocale(locale)
-  const isEn = lang === 'en'
+  const meta = getBlogSeo(locale)
   const posts = getAllPosts()
   const blogPath = localePath('/blog', locale)
 
   const breadcrumb = buildBreadcrumbJsonLd(
     [
       { name: siteConfig.name, path: '/' },
-      { name: isEn ? 'Blog' : 'Блог', path: '/blog' },
+      { name: BREADCRUMB_LABELS.blog[locale], path: '/blog' },
     ],
     locale,
   )
 
   const webPage = buildWebPageJsonLd({
-    title: isEn ? siteConfig.pages.blog.titleEn : siteConfig.pages.blog.title,
-    description: isEn ? siteConfig.pages.blog.descriptionEn : siteConfig.pages.blog.description,
+    title: meta.title,
+    description: meta.description,
     path: '/blog',
     locale,
   })
@@ -72,8 +66,8 @@ export default async function Blog({ params }: Props) {
     '@type': 'Blog',
     '@id': `${absoluteUrl(blogPath)}#blog`,
     url: absoluteUrl(blogPath),
-    name: isEn ? siteConfig.pages.blog.titleEn : siteConfig.pages.blog.title,
-    description: isEn ? siteConfig.pages.blog.descriptionEn : siteConfig.pages.blog.description,
+    name: meta.title,
+    description: meta.description,
     publisher: { '@id': `${siteConfig.url}/#organization` },
     blogPost: posts.map((post) => ({
       '@type': 'BlogPosting',
@@ -83,7 +77,7 @@ export default async function Blog({ params }: Props) {
       datePublished: post.date,
       url: absoluteUrl(localePath(`/blog/${post.slug}`, locale)),
     })),
-    inLanguage: locale,
+    inLanguage: localeSchemaLanguage(locale),
   }
 
   const itemList = buildBlogItemListJsonLd(posts, locale)
@@ -95,7 +89,7 @@ export default async function Blog({ params }: Props) {
       <Breadcrumbs
         items={[
           { name: siteConfig.name, path: localePath('/', locale) },
-          { name: isEn ? 'Blog' : 'Блог', path: blogPath },
+          { name: BREADCRUMB_LABELS.blog[locale], path: blogPath },
         ]}
       />
       <main>

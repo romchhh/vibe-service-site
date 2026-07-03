@@ -14,6 +14,7 @@ import {
 } from '@/lib/services'
 import { buildServiceJsonLd } from '@/lib/service-seo'
 import { isValidLocale, localeHashPath, localePath, locales, type Locale } from '@/lib/i18n/config'
+import { BREADCRUMB_LABELS, getServiceSeoMeta } from '@/lib/page-seo'
 import { buildPageMetadata } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
@@ -32,16 +33,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {}
 
   const view = getServiceView(service, locale)
-
-  return buildPageMetadata({
+  const meta = getServiceSeoMeta(service.slug as ServiceSlug, locale, {
     title: view.meta.title,
     description: view.meta.description,
+    keywords: view.meta.keywords,
+    ogImageAlt: view.h1,
+  })
+
+  return buildPageMetadata({
+    title: meta.title,
+    description: meta.description,
     path: `/services/${service.slug}`,
     locale,
-    keywords: view.meta.keywords,
+    keywords: meta.keywords,
     ogTitle: view.h1,
     ogImage: SERVICE_IMAGES[service.slug as ServiceSlug],
-    ogImageAlt: view.h1,
+    ogImageAlt: meta.ogImageAlt,
   })
 }
 
@@ -54,9 +61,8 @@ export default async function ServiceRoute({ params }: Props) {
   if (!service) notFound()
 
   const view = getServiceView(service, locale)
-  const isEn = locale === 'en'
   const servicePath = localePath(`/services/${slug}`, locale)
-  const servicesLabel = isEn ? 'Services' : 'Услуги'
+  const servicesLabel = BREADCRUMB_LABELS.services[locale]
 
   return (
     <>

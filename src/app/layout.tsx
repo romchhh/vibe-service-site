@@ -4,7 +4,7 @@ import { Montserrat } from 'next/font/google'
 import './globals.css'
 import Providers from './components/Providers'
 import { siteConfig } from '@/lib/site'
-import { defaultLocale, isValidLocale } from '@/lib/i18n/config'
+import { defaultLocale, isValidLocale, localeHtmlLang, type Locale } from '@/lib/i18n/config'
 
 const montserrat = Montserrat({
   subsets: ['latin', 'cyrillic'],
@@ -64,7 +64,8 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const headerList = await headers()
   const localeHeader = headerList.get('x-locale')
-  const htmlLang = localeHeader && isValidLocale(localeHeader) ? localeHeader : defaultLocale
+  const locale = (localeHeader && isValidLocale(localeHeader) ? localeHeader : defaultLocale) as Locale
+  const htmlLang = localeHtmlLang(locale)
 
   return (
     <html lang={htmlLang} className={montserrat.variable} suppressHydrationWarning>

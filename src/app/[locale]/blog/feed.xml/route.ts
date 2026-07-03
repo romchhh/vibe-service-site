@@ -1,5 +1,6 @@
 import { getAllPosts, localizePost } from '@/lib/blog'
-import { contentLocale, isValidLocale, localePath, locales } from '@/lib/i18n/config'
+import { isValidLocale, localeHtmlLang, localePath, locales } from '@/lib/i18n/config'
+import { getBlogSeo } from '@/lib/page-seo'
 import { absoluteUrl, escapeXml } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
@@ -12,13 +13,10 @@ export function generateStaticParams() {
 export async function GET(_request: Request, { params }: RouteContext) {
   const { locale: rawLocale } = await params
   const locale = isValidLocale(rawLocale) ? rawLocale : 'en'
-  const lang = contentLocale(locale)
-  const isEn = lang === 'en'
+  const meta = getBlogSeo(locale)
   const posts = getAllPosts()
-  const channelTitle = escapeXml(isEn ? siteConfig.pages.blog.titleEn : siteConfig.pages.blog.title)
-  const channelDescription = escapeXml(
-    isEn ? siteConfig.pages.blog.descriptionEn : siteConfig.pages.blog.description,
-  )
+  const channelTitle = escapeXml(meta.title)
+  const channelDescription = escapeXml(meta.description)
   const blogPath = localePath('/blog', locale)
   const feedPath = localePath('/blog/feed.xml', locale)
   const feedUrl = absoluteUrl(feedPath)
@@ -51,7 +49,7 @@ export async function GET(_request: Request, { params }: RouteContext) {
     <title>${channelTitle}</title>
     <link>${blogUrl}</link>
     <description>${channelDescription}</description>
-    <language>${locale}</language>
+    <language>${localeHtmlLang(locale)}</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${feedUrl}" rel="self" type="application/rss+xml" />
     ${items}

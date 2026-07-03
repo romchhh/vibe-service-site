@@ -50,6 +50,22 @@ export function localeOgLocale(locale: Locale): string {
   return OG_LOCALE_MAP[locale]
 }
 
+const HTML_LANG_MAP: Record<Locale, string> = {
+  en: 'en',
+  de: 'de',
+  ru: 'ru',
+  ua: 'uk',
+  fr: 'fr',
+}
+
+export function localeHtmlLang(locale: Locale): string {
+  return HTML_LANG_MAP[locale]
+}
+
+export function localeSchemaLanguage(locale: Locale): string {
+  return HTML_LANG_MAP[locale]
+}
+
 /** Content locale for JSON data that only has en/ru variants */
 export function contentLocale(locale: Locale): 'en' | 'ru' {
   return locale === 'ru' || locale === 'ua' ? 'ru' : 'en'
