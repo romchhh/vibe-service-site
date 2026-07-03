@@ -2,7 +2,7 @@ import { optimizeRemoteImageUrl } from '@/lib/image-url'
 
 export const REVIEW_PHOTOS = {
   testimonial1: optimizeRemoteImageUrl(
-    'https://images.unsplash.com/photo-1573496359142-b8d87734a21a',
+    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d',
     120,
     78,
   ),
