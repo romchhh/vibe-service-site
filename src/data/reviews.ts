@@ -7,12 +7,12 @@ export const REVIEW_PHOTOS = {
     78,
   ),
   testimonial2: optimizeRemoteImageUrl(
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e',
+    'https://images.unsplash.com/photo-1580489944761-15a19d654956',
     120,
     78,
   ),
   testimonial3: optimizeRemoteImageUrl(
-    'https://images.unsplash.com/photo-1580489944761-15a19d654956',
+    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e',
     120,
     78,
   ),
