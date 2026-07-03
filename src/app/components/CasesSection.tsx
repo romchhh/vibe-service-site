@@ -17,13 +17,15 @@ export default function CasesSection() {
         <div className={styles.grid}>
           {PARTNERS.map((partner) => {
             const logo = (
-              <Image
-                src={partner.logo}
-                alt={partner.name}
-                fill
-                sizes="(max-width: 900px) 11vw, 64px"
-                className={styles.logoImage}
-              />
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  fill
+                  sizes="(max-width: 900px) 11vw, 64px"
+                  quality={80}
+                  loading="lazy"
+                  className={styles.logoImage}
+                />
             )
 
             return (

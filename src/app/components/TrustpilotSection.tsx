@@ -119,6 +119,8 @@ export default function TrustpilotSection() {
                     alt={author}
                     fill
                     sizes="(max-width: 768px) 44px, 52px"
+                    quality={78}
+                    loading="lazy"
                     className={styles.avatarImage}
                   />
                 </div>

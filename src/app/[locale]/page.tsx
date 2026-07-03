@@ -14,6 +14,7 @@ import SeoTextSection from '../components/SeoTextSection'
 import Footer from '../components/Footer'
 import ScrollReveal from '../components/ScrollReveal'
 import JsonLd from '../components/JsonLd'
+import { getBlogPreviewPosts } from '@/lib/blog'
 import { isValidLocale, type Locale } from '@/lib/i18n/config'
 import { getHomeSeo } from '@/lib/page-seo'
 import { buildPageMetadata } from '@/lib/seo'
@@ -39,6 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Home({ params }: Props) {
   const { locale: rawLocale } = await params
   const locale = (isValidLocale(rawLocale) ? rawLocale : 'en') as Locale
+  const blogPreviewPosts = getBlogPreviewPosts(locale, 3)
 
   return (
     <>
@@ -51,7 +53,9 @@ export default async function Home({ params }: Props) {
         <HowWeWorkSection />
         <ScrollReveal><TeamSection /></ScrollReveal>
         <ScrollReveal delay={40}><CasesSection /></ScrollReveal>
-        <ScrollReveal delay={40}><BlogPreviewSection /></ScrollReveal>
+        <ScrollReveal delay={40}>
+          <BlogPreviewSection posts={blogPreviewPosts} />
+        </ScrollReveal>
         <ScrollReveal delay={40}><TrustpilotSection /></ScrollReveal>
         <ScrollReveal delay={40}><FaqSection /></ScrollReveal>
         <ScrollReveal delay={40}><ContactSection /></ScrollReveal>

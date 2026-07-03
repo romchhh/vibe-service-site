@@ -107,7 +107,7 @@
         "bio": "Specialises in UK corporate law, company structures and regulatory compliance. Dmitry ensures every setup is legally sound and tax-efficient."
       },
       "geoff": {
-        "name": "Geoff Mads",
+        "name": "Geoff Madd",
         "role": "Partner, UK Operations Director",
         "bio": "Manages day-to-day operations in the UK: office, staff, banking relationships and local representation for international clients."
       }
@@ -187,23 +187,25 @@
     "ctaButton": "Book a consultation"
   },
   "contact": {
-    "heading": "Book your free consultation",
-    "subheading": "15-minute call with our UK experts — no obligation, fully confidential",
-    "name": "Name",
-    "namePlaceholder": "Your name",
-    "phone": "Phone or email",
-    "phonePlaceholder": "Your contact",
-    "comment": "Comment",
-    "commentPlaceholder": "Tell us about your business and goals in the UK...",
-    "consent": "By submitting, you agree to the processing of personal data",
-    "submit": "Book a consultation",
-    "submitting": "Sending…",
-    "successTitle": "Thank you!",
-    "successText": "We'll contact you shortly to confirm your consultation time.",
-    "error": "Failed to send. Please try again or email info@vibe-service.co.uk.",
-    "modalTitle": "Contact Vibe Services",
-    "close": "Close",
-    "imageAlt": "UK business consulting"
+    "heading": "Запишіться на безкоштовну консультацію",
+    "subheading": "15-хвилинний дзвінок з експертами з UK — без зобов'язань, конфіденційно",
+    "name": "Ім'я",
+    "namePlaceholder": "Ваше ім'я",
+    "phone": "Телефон або email",
+    "phonePlaceholder": "Ваш контакт",
+    "preferredTime": "Зручний час для дзвінка",
+    "preferredTimePlaceholder": "Наприклад: пн–пт, 10:00–14:00 (GMT)",
+    "comment": "Коментар (необов'язково)",
+    "commentPlaceholder": "Розкажіть про бізнес і цілі в UK...",
+    "consent": "Надсилаючи форму, ви погоджуєтесь на обробку персональних даних",
+    "submit": "Записатися на консультацію",
+    "submitting": "Надсилання…",
+    "successTitle": "Дякуємо!",
+    "successText": "Ми зв'яжемося з вами для підтвердження часу консультації.",
+    "error": "Не вдалося надіслати. Спробуйте ще раз або напишіть на info@vibe-service.co.uk.",
+    "modalTitle": "Записатися на консультацію",
+    "close": "Закрити",
+    "imageAlt": "Консалтинг з бізнесу в UK"
   },
   "privacy": {
     "title": "Privacy Policy",

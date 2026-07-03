@@ -26,6 +26,8 @@ export default function ServiceCard({ slug, title, description, href, titleAs: T
             alt={title}
             fill
             sizes="(max-width: 900px) 100vw, 50vw"
+            quality={72}
+            loading="lazy"
             className={styles.cardImage}
           />
           <div className={styles.cardOverlay} aria-hidden="true" />

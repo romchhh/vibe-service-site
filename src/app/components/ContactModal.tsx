@@ -53,7 +53,7 @@ export default function ContactModal() {
           <p className={styles.subtitle}>{t('contact.subheading')}</p>
         </div>
         <div className={styles.body}>
-          <ContactForm modal />
+          <ContactForm modal onSuccess={close} />
         </div>
       </div>
     </div>

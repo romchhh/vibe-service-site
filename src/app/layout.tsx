@@ -8,9 +8,11 @@ import { defaultLocale, isValidLocale, localeHtmlLang, type Locale } from '@/lib
 
 const montserrat = Montserrat({
   subsets: ['latin', 'cyrillic'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '600', '700', '800'],
   display: 'swap',
   variable: '--font-montserrat',
+  preload: true,
+  adjustFontFallback: true,
 })
 
 const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
@@ -70,12 +72,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang={htmlLang} className={montserrat.variable} suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="alternate" type="text/plain" href="/ai.txt" title="AI information" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM information" />
       </head>
       <body className={montserrat.className}>
-        <Providers>{children}</Providers>
+        <Providers initialLocale={locale}>{children}</Providers>
       </body>
     </html>
   )

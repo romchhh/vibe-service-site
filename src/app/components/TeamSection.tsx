@@ -24,7 +24,9 @@ export default function TeamSection() {
                   src={TEAM_PHOTOS[key]}
                   alt={t(`team.members.${key}.name`)}
                   fill
-                  sizes="140px"
+                  sizes="(max-width: 900px) 120px, 140px"
+                  quality={78}
+                  loading="lazy"
                   className={styles.avatarImage}
                 />
               </div>

@@ -107,7 +107,7 @@
         "bio": "Specialises in UK corporate law, company structures and regulatory compliance. Dmitry ensures every setup is legally sound and tax-efficient."
       },
       "geoff": {
-        "name": "Geoff Mads",
+        "name": "Geoff Madd",
         "role": "Partner, UK Operations Director",
         "bio": "Manages day-to-day operations in the UK: office, staff, banking relationships and local representation for international clients."
       }
@@ -187,23 +187,25 @@
     "ctaButton": "Book a consultation"
   },
   "contact": {
-    "heading": "Book your free consultation",
-    "subheading": "15-minute call with our UK experts — no obligation, fully confidential",
-    "name": "Name",
-    "namePlaceholder": "Your name",
-    "phone": "Phone or email",
-    "phonePlaceholder": "Your contact",
-    "comment": "Comment",
-    "commentPlaceholder": "Tell us about your business and goals in the UK...",
-    "consent": "By submitting, you agree to the processing of personal data",
-    "submit": "Book a consultation",
-    "submitting": "Sending…",
-    "successTitle": "Thank you!",
-    "successText": "We'll contact you shortly to confirm your consultation time.",
-    "error": "Failed to send. Please try again or email info@vibe-service.co.uk.",
-    "modalTitle": "Contact Vibe Services",
-    "close": "Close",
-    "imageAlt": "UK business consulting"
+    "heading": "Réservez votre consultation gratuite",
+    "subheading": "Appel de 15 minutes avec nos experts UK — sans engagement, confidentiel",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom",
+    "phone": "Téléphone ou e-mail",
+    "phonePlaceholder": "Votre contact",
+    "preferredTime": "Créneau préféré pour l'appel",
+    "preferredTimePlaceholder": "ex. lun–ven, 10h00–14h00 (GMT)",
+    "comment": "Commentaire (facultatif)",
+    "commentPlaceholder": "Parlez-nous de votre activité et de vos objectifs au UK...",
+    "consent": "En envoyant, vous acceptez le traitement des données personnelles",
+    "submit": "Réserver une consultation",
+    "submitting": "Envoi…",
+    "successTitle": "Merci !",
+    "successText": "Nous vous contacterons pour confirmer l'horaire de la consultation.",
+    "error": "Échec de l'envoi. Réessayez ou écrivez à info@vibe-service.co.uk.",
+    "modalTitle": "Réserver une consultation",
+    "close": "Fermer",
+    "imageAlt": "Conseil en affaires au Royaume-Uni"
   },
   "privacy": {
     "title": "Privacy Policy",

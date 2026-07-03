@@ -5,6 +5,7 @@ const TELEGRAM_API = 'https://api.telegram.org'
 type LeadPayload = {
   name: string
   phone: string
+  preferredTime: string
   comment?: string
   source?: 'section' | 'modal'
 }
@@ -20,7 +21,7 @@ function getTelegramConfig() {
   return { token, chatId }
 }
 
-function formatLeadMessage({ name, phone, comment, source }: LeadPayload): string {
+function formatLeadMessage({ name, phone, preferredTime, comment, source }: LeadPayload): string {
   const sourceLabel =
     source === 'modal' ? 'Модальное окно' : 'Форма на странице'
 
@@ -29,6 +30,7 @@ function formatLeadMessage({ name, phone, comment, source }: LeadPayload): strin
     '',
     `👤 Имя: ${name}`,
     `📞 Контакт: ${phone}`,
+    `🕐 Удобное время: ${preferredTime}`,
   ]
 
   if (comment?.trim()) {

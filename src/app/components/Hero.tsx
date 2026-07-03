@@ -3,11 +3,15 @@
 import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
 import { PARTNERS } from '@/data/partners'
+import { IMAGE_QUALITY, optimizeRemoteImageUrl } from '@/lib/image-url'
 import { useContactModal } from './ContactModalProvider'
 import styles from './Hero.module.css'
 
-const HERO_IMAGE =
-  'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1920&q=80'
+const HERO_IMAGE = optimizeRemoteImageUrl(
+  'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad',
+  1600,
+  IMAGE_QUALITY.hero,
+)
 
 export default function Hero() {
   const { t } = useTranslation()
@@ -21,6 +25,8 @@ export default function Hero() {
           alt={t('seo.heroImageAlt')}
           fill
           priority
+          fetchPriority="high"
+          quality={IMAGE_QUALITY.hero}
           sizes="100vw"
           className={styles.bgImage}
         />
@@ -52,6 +58,8 @@ export default function Hero() {
                       alt={partner.name}
                       width={44}
                       height={44}
+                      quality={80}
+                      loading="lazy"
                       className={styles.logoImage}
                     />
                   )

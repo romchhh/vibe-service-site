@@ -10,7 +10,7 @@ export default function LangSync() {
 
   useEffect(() => {
     const locale = getLocaleFromPathname(pathname) ?? defaultLocale
-    setI18nLocale(locale)
+    void setI18nLocale(locale)
   }, [pathname])
 
   return null

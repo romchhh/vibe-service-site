@@ -1,8 +1,10 @@
 'use client'
 
 import { createContext, useCallback, useContext, useState } from 'react'
+import dynamic from 'next/dynamic'
 import { useBodyScrollLock } from '@/lib/body-scroll-lock'
-import ContactModal from './ContactModal'
+
+const ContactModal = dynamic(() => import('./ContactModal'), { ssr: false })
 
 type ContactModalContextValue = {
   isOpen: boolean
@@ -23,7 +25,7 @@ export function ContactModalProvider({ children }: { children: React.ReactNode }
   return (
     <ContactModalContext.Provider value={{ isOpen, open, close }}>
       {children}
-      <ContactModal />
+      {isOpen ? <ContactModal /> : null}
     </ContactModalContext.Provider>
   )
 }

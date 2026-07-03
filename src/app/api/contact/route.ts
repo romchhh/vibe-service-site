@@ -3,11 +3,13 @@ import { isTelegramConfigured, sendLeadToTelegram } from '@/lib/telegram'
 
 const MAX_NAME = 120
 const MAX_PHONE = 80
+const MAX_PREFERRED_TIME = 120
 const MAX_COMMENT = 2000
 
 type ContactBody = {
   name?: string
   phone?: string
+  preferredTime?: string
   comment?: string
   source?: 'section' | 'modal'
 }
@@ -32,14 +34,15 @@ export async function POST(request: Request) {
 
   const name = trimField(body.name, MAX_NAME)
   const phone = trimField(body.phone, MAX_PHONE)
+  const preferredTime = trimField(body.preferredTime, MAX_PREFERRED_TIME)
   const comment = trimField(body.comment, MAX_COMMENT)
   const source = body.source === 'modal' ? 'modal' : 'section'
 
-  if (!name || !phone) {
-    return NextResponse.json({ error: 'Name and phone are required' }, { status: 400 })
+  if (!name || !phone || !preferredTime) {
+    return NextResponse.json({ error: 'Name, contact and preferred time are required' }, { status: 400 })
   }
 
-  const sent = await sendLeadToTelegram({ name, phone, comment, source })
+  const sent = await sendLeadToTelegram({ name, phone, preferredTime, comment, source })
 
   if (!sent) {
     return NextResponse.json({ error: 'Failed to send' }, { status: 502 })

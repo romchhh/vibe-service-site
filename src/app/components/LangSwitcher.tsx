@@ -5,6 +5,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { setI18nLocale } from '@/lib/i18n/client'
 import { switchLocalePath, type Locale } from '@/lib/i18n/config'
+import { setLocaleCookie } from '@/lib/i18n/locale-preference'
 import { useLocale } from '@/lib/i18n/use-locale'
 import styles from './LangSwitcher.module.css'
 
@@ -44,7 +45,8 @@ export default function LangSwitcher({ variant = 'header', light = false }: Lang
       setOpen(false)
       return
     }
-    setI18nLocale(lang)
+    setLocaleCookie(lang)
+    void setI18nLocale(lang)
     router.push(switchLocalePath(pathname, lang))
     setOpen(false)
   }

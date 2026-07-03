@@ -1,14 +1,17 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import type { BlogPost } from '@/lib/blog'
 import { formatBlogDate, localizePost } from '@/lib/blog'
+import { optimizeRemoteImageUrl } from '@/lib/image-url'
 import { useLocale, useLocalizedPath } from '@/lib/i18n/use-locale'
 import { useContactModal } from './ContactModalProvider'
-import BlogPostContent from './BlogPostContent'
 import styles from './BlogPostPage.module.css'
+
+const BlogPostContent = dynamic(() => import('./BlogPostContent'))
 
 export default function BlogPostPage({
   post,
@@ -35,12 +38,13 @@ export default function BlogPostPage({
 
         <div className={styles.cover}>
           <Image
-            src={view.image}
+            src={optimizeRemoteImageUrl(post.image, 1000, 78)}
             alt={view.imageAlt}
             fill
             sizes="(max-width: 900px) 100vw, 760px"
-            className={styles.coverImg}
+            quality={78}
             priority
+            className={styles.coverImg}
           />
         </div>
 

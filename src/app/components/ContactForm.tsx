@@ -4,12 +4,18 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from './ContactForm.module.css'
 
-type FormState = { name: string; phone: string; comment: string; consent: boolean }
+type FormState = { name: string; phone: string; preferredTime: string; comment: string; consent: boolean }
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
 export default function ContactForm({ modal = false, onSuccess }: { modal?: boolean; onSuccess?: () => void }) {
   const { t } = useTranslation()
-  const [form, setForm] = useState<FormState>({ name: '', phone: '', comment: '', consent: false })
+  const [form, setForm] = useState<FormState>({
+    name: '',
+    phone: '',
+    preferredTime: '',
+    comment: '',
+    consent: false,
+  })
   const [status, setStatus] = useState<Status>('idle')
 
   const set = (k: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -29,6 +35,7 @@ export default function ContactForm({ modal = false, onSuccess }: { modal?: bool
         body: JSON.stringify({
           name: form.name,
           phone: form.phone,
+          preferredTime: form.preferredTime,
           comment: form.comment,
           source: modal ? 'modal' : 'section',
         }),
@@ -68,7 +75,18 @@ export default function ContactForm({ modal = false, onSuccess }: { modal?: bool
       </div>
       <div className={styles.field}>
         <label htmlFor="contact-phone">{t('contact.phone')}</label>
-        <input id="contact-phone" type="text" placeholder={t('contact.phonePlaceholder')} value={form.phone} onChange={set('phone')} required />
+        <input id="contact-phone" type="text" placeholder={t('contact.phonePlaceholder')} value={form.phone} onChange={set('phone')} required autoComplete="tel email" />
+      </div>
+      <div className={styles.field}>
+        <label htmlFor="contact-time">{t('contact.preferredTime')}</label>
+        <input
+          id="contact-time"
+          type="text"
+          placeholder={t('contact.preferredTimePlaceholder')}
+          value={form.preferredTime}
+          onChange={set('preferredTime')}
+          required
+        />
       </div>
       <div className={`${styles.field} ${modal ? styles.fieldGrow : ''}`}>
         <label htmlFor="contact-comment">{t('contact.comment')}</label>

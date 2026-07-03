@@ -8,11 +8,29 @@ export const SERVICE_SLUGS = [
   'sales-organisation',
 ] as const
 
+import { optimizeRemoteImageUrl } from './image-url'
+
 export const SERVICE_IMAGES: Record<ServiceSlug, string> = {
-  'substance-in-uk': 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
-  'company-registration': 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
-  'accounting': 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
-  'sales-organisation': 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
+  'substance-in-uk': optimizeRemoteImageUrl(
+    'https://images.unsplash.com/photo-1497366216548-37526070297c',
+    640,
+    75,
+  ),
+  'company-registration': optimizeRemoteImageUrl(
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+    640,
+    75,
+  ),
+  accounting: optimizeRemoteImageUrl(
+    'https://images.unsplash.com/photo-1554224155-6726b3ff858f',
+    640,
+    75,
+  ),
+  'sales-organisation': optimizeRemoteImageUrl(
+    'https://images.unsplash.com/photo-1552664730-d307ca884978',
+    640,
+    75,
+  ),
 }
 
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number]

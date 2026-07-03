@@ -1,5 +1,6 @@
 import blogData from '@/data/blog.json'
 import { contentLocale, type Locale } from './i18n/config'
+import { optimizeRemoteImageUrl } from './image-url'
 
 export type BlogLocalePost = {
   title: string
@@ -24,6 +25,8 @@ export type BlogPostView = BlogLocalePost & {
   image: string
 }
 
+export type BlogPostPreview = Omit<BlogPostView, 'body'>
+
 export type BlogContentLocale = 'ru' | 'en'
 
 const posts = blogData.posts as BlogPost[]
@@ -37,7 +40,7 @@ export function localizePost(post: BlogPost, locale: Locale | BlogContentLocale)
   return {
     slug: post.slug,
     date: post.date,
-    image: post.image,
+    image: optimizeRemoteImageUrl(post.image, 800, 75),
     ...post[lang],
   }
 }
@@ -57,6 +60,13 @@ export function getAllPostViews(locale: Locale): BlogPostView[] {
 export function getPostView(slug: string, locale: Locale): BlogPostView | undefined {
   const post = getPostBySlug(slug)
   return post ? localizePost(post, locale) : undefined
+}
+
+export function getBlogPreviewPosts(locale: Locale, limit = 3): BlogPostPreview[] {
+  return getAllPosts().slice(0, limit).map((post) => {
+    const { body: _body, ...preview } = localizePost(post, locale)
+    return preview
+  })
 }
 
 export function getRelatedPosts(slug: string, limit = 3): BlogPost[] {

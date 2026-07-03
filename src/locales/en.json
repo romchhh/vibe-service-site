@@ -107,7 +107,7 @@
         "bio": "Specialises in UK corporate law, company structures and regulatory compliance. Dmitry ensures every setup is legally sound and tax-efficient."
       },
       "geoff": {
-        "name": "Geoff Mads",
+        "name": "Geoff Madd",
         "role": "Partner, UK Operations Director",
         "bio": "Manages day-to-day operations in the UK: office, staff, banking relationships and local representation for international clients."
       }
@@ -198,7 +198,9 @@
     "namePlaceholder": "Your name",
     "phone": "Phone or email",
     "phonePlaceholder": "Your contact",
-    "comment": "Comment",
+    "preferredTime": "Preferred call time",
+    "preferredTimePlaceholder": "e.g. Mon–Fri, 10:00–14:00 (GMT)",
+    "comment": "Comment (optional)",
     "commentPlaceholder": "Tell us about your business and goals in the UK...",
     "consent": "By submitting, you agree to the processing of personal data",
     "submit": "Book a consultation",
@@ -206,7 +208,7 @@
     "successTitle": "Thank you!",
     "successText": "We'll contact you shortly to confirm your consultation time.",
     "error": "Failed to send. Please try again or email info@vibe-service.co.uk.",
-    "modalTitle": "Contact Vibe Services",
+    "modalTitle": "Book a consultation",
     "close": "Close",
     "imageAlt": "UK business consulting"
   },

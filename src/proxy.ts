@@ -1,24 +1,7 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-import { defaultLocale, isValidLocale, type Locale } from '@/lib/i18n/config'
-
-function detectLocale(request: NextRequest): Locale {
-  const accept = request.headers.get('accept-language') ?? ''
-  const preferred = accept
-    .split(',')
-    .map((part) => part.split(';')[0].trim().toLowerCase())
-    .filter(Boolean)
-
-  for (const lang of preferred) {
-    if (lang.startsWith('uk') || lang === 'ua') return 'ua'
-    if (lang.startsWith('ru')) return 'ru'
-    if (lang.startsWith('de')) return 'de'
-    if (lang.startsWith('fr')) return 'fr'
-    if (lang.startsWith('en')) return 'en'
-  }
-
-  return defaultLocale
-}
+import { LOCALE_COOKIE_NAME, resolveLocale } from '@/lib/i18n/locale-preference'
+import { isValidLocale } from '@/lib/i18n/config'
 
 /** Paths that must live at site root, not under /{locale}/ */
 function stripLocalePrefix(pathname: string): string | null {
@@ -62,7 +45,11 @@ export function proxy(request: NextRequest) {
     return response
   }
 
-  const locale = detectLocale(request)
+  const locale = resolveLocale({
+    cookieValue: request.cookies.get(LOCALE_COOKIE_NAME)?.value,
+    acceptLanguage: request.headers.get('accept-language') ?? undefined,
+  })
+
   const url = request.nextUrl.clone()
   url.pathname = pathname === '/' ? `/${locale}` : `/${locale}${pathname}`
   const response = NextResponse.redirect(url)

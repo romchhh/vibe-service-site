@@ -1,3 +1,5 @@
+import { optimizeRemoteImageUrl } from '@/lib/image-url'
+
 export const siteConfig = {
   name: 'Vibe Services',
   title: 'Vibe Services — UK Business Setup & Substance',
@@ -23,7 +25,11 @@ export const siteConfig = {
   trustpilotUrl: 'https://www.trustpilot.com/review/vibe-service.co.uk',
   locale: 'en_GB',
   alternateLocale: 'ru_RU',
-  ogImage: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&q=80',
+  ogImage: optimizeRemoteImageUrl(
+    'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad',
+    1200,
+    75,
+  ),
   ogImageAlt: 'Vibe Services — UK business consulting and substance services',
   themeColor: '#0A2540',
   keywordsRu: [

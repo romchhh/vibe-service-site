@@ -58,6 +58,10 @@ const HTML_LANG_MAP: Record<Locale, string> = {
   fr: 'fr',
 }
 
+export function localeHreflang(locale: Locale): string {
+  return localeOgLocale(locale).replace('_', '-')
+}
+
 export function localeHtmlLang(locale: Locale): string {
   return HTML_LANG_MAP[locale]
 }

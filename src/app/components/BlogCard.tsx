@@ -3,12 +3,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
-import { formatBlogDate, type BlogPostView } from '@/lib/blog'
+import { formatBlogDate, type BlogPostPreview } from '@/lib/blog'
 import { useLocale } from '@/lib/i18n/use-locale'
 import styles from './BlogCard.module.css'
 
 type Props = {
-  post: BlogPostView
+  post: BlogPostPreview
   href: string
   titleAs?: 'h2' | 'h3'
 }
@@ -24,7 +24,9 @@ export default function BlogCard({ post, href, titleAs: TitleTag = 'h2' }: Props
           src={post.image}
           alt={post.imageAlt}
           fill
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 33vw"
+          quality={72}
+          loading="lazy"
           className={styles.cardImg}
         />
       </div>

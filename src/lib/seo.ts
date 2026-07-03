@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { localeOgLocale, localePath, localeSchemaLanguage, locales, type Locale } from './i18n/config'
+import { localeHreflang, localeOgLocale, localePath, localeSchemaLanguage, locales, type Locale } from './i18n/config'
 import { siteConfig } from './site'
 
 type PageMetaInput = {
@@ -40,19 +40,22 @@ export function absoluteUrl(path: string) {
   return `${siteConfig.url}${path.startsWith('/') ? path : `/${path}`}`
 }
 
+/** Absolute URLs for `<link rel="alternate" hreflang="…">` and sitemap xhtml:link entries. */
 export function buildHreflangLanguages(path: string): Record<string, string> {
   const languages = Object.fromEntries(
-    locales.map((loc) => [localeOgLocale(loc).replace('_', '-'), localePath(path, loc)]),
+    locales.map((loc) => [localeHreflang(loc), absoluteUrl(localePath(path, loc))]),
   ) as Record<string, string>
 
-  languages['x-default'] = localePath(path, 'en')
+  languages['x-default'] = absoluteUrl(localePath(path, 'en'))
 
   return languages
 }
 
 function buildHreflang(path: string, locale: Locale) {
+  const localizedPath = localePath(path, locale)
+
   return {
-    canonical: localePath(path, locale),
+    canonical: absoluteUrl(localizedPath),
     languages: buildHreflangLanguages(path),
   }
 }
@@ -96,7 +99,7 @@ function buildSharedMeta({
       ? { index: false, follow: false }
       : { index: true, follow: true, googleBot },
     other: {
-      'content-language': localeOgLocale(locale).replace('_', '-'),
+      'content-language': localeHreflang(locale),
     },
     openGraph: {
       locale: ogLocale,

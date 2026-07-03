@@ -2,18 +2,18 @@
 
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
-import { getAllPostViews } from '@/lib/blog'
-import { useLocale, useLocalizedPath } from '@/lib/i18n/use-locale'
+import type { BlogPostPreview } from '@/lib/blog'
+import { useLocalizedPath } from '@/lib/i18n/use-locale'
 import BlogCard from './BlogCard'
 import styles from './BlogPreviewSection.module.css'
 
-const PREVIEW_COUNT = 3
+type Props = {
+  posts: BlogPostPreview[]
+}
 
-export default function BlogPreviewSection() {
+export default function BlogPreviewSection({ posts }: Props) {
   const { t } = useTranslation()
-  const locale = useLocale()
   const lp = useLocalizedPath()
-  const posts = getAllPostViews(locale).slice(0, PREVIEW_COUNT)
 
   if (posts.length === 0) return null
 
