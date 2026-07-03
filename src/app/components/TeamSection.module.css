@@ -84,6 +84,11 @@
   line-height: var(--leading-body);
 }
 
+.ctaWrap {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .cta {
   display: inline-flex;
   align-items: center;
@@ -123,5 +128,9 @@
   .grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .ctaWrap {
+    justify-content: center;
   }
 }

@@ -35,14 +35,16 @@ export default function TeamSection() {
           ))}
         </div>
 
-        <button type="button" className={styles.cta} onClick={openContactModal}>
-          {t('team.cta')}
-          <span className={styles.ctaArrow} aria-hidden="true">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M2 12 L12 2 M5 2 H12 V9" />
-            </svg>
-          </span>
-        </button>
+        <div className={styles.ctaWrap}>
+          <button type="button" className={styles.cta} onClick={openContactModal}>
+            {t('team.cta')}
+            <span className={styles.ctaArrow} aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M2 12 L12 2 M5 2 H12 V9" />
+              </svg>
+            </span>
+          </button>
+        </div>
       </div>
     </section>
   )

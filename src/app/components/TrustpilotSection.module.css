@@ -126,17 +126,18 @@
 }
 
 .avatar {
+  position: relative;
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: #d9dde3;
-  color: var(--gray-900);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 700;
+  overflow: hidden;
   flex-shrink: 0;
+  background: var(--gray-200);
+}
+
+.avatarImage {
+  object-fit: cover;
+  object-position: center;
 }
 
 .reviewContent {
@@ -294,8 +295,8 @@
   }
 
   .avatar {
-    width: 48px;
-    height: 48px;
+    width: clamp(44px, 12vw, 48px);
+    height: clamp(44px, 12vw, 48px);
   }
 
   .btnPrimary,

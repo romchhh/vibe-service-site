@@ -3,13 +3,14 @@
 import { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
+import { REVIEW_PHOTOS } from '@/data/reviews'
 import { siteConfig } from '@/lib/site'
 import { useContactModal } from './ContactModalProvider'
 import SectionLink from './SectionLink'
 import styles from './TrustpilotSection.module.css'
+const AUTO_PLAY_MS = 6000
 
 const REVIEWS = ['testimonial1', 'testimonial2', 'testimonial3'] as const
-const AUTO_PLAY_MS = 6000
 
 function ReviewStars() {
   return (
@@ -21,14 +22,6 @@ function ReviewStars() {
       ))}
     </div>
   )
-}
-
-function getInitials(author: string): string {
-  const parts = author.split(/[,\s]+/).filter(Boolean)
-  return parts
-    .slice(0, 2)
-    .map((part) => part[0]?.toUpperCase() ?? '')
-    .join('')
 }
 
 function ArrowIcon({ direction }: { direction: 'prev' | 'next' }) {
@@ -120,8 +113,14 @@ export default function TrustpilotSection() {
                 className={`${styles.reviewBody} ${isAnimating ? styles.reviewBodyFade : ''}`}
                 aria-live="polite"
               >
-                <div className={styles.avatar} aria-hidden="true">
-                  {getInitials(author)}
+                <div className={styles.avatar}>
+                  <Image
+                    src={REVIEW_PHOTOS[reviewKey]}
+                    alt={author}
+                    fill
+                    sizes="(max-width: 768px) 44px, 52px"
+                    className={styles.avatarImage}
+                  />
                 </div>
                 <div className={styles.reviewContent}>
                   <div className={styles.reviewMeta}>

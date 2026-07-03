@@ -26,11 +26,16 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  height: 100%;
   background: var(--gray-100);
   border-radius: var(--radius-lg);
   padding: 28px 24px;
@@ -87,12 +92,44 @@ a.logo:hover {
     padding: var(--section-padding-y-md) var(--page-padding-x-md);
   }
 
+  .subheading {
+    margin-bottom: clamp(28px, 7vw, 40px);
+    font-size: clamp(15px, 3.8vw, var(--text-lg));
+  }
+
   .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(10px, 2.8vw, 16px);
   }
 
   .card {
-    padding: 22px 16px;
+    padding: clamp(14px, 3.6vw, 22px) clamp(10px, 2.8vw, 16px);
+    border-radius: clamp(14px, 3.5vw, var(--radius-lg));
+  }
+
+  .logo {
+    width: clamp(40px, 11vw, 56px);
+    height: clamp(40px, 11vw, 56px);
+    margin-bottom: clamp(10px, 2.5vw, 14px);
+  }
+
+  .title {
+    font-size: clamp(14px, 3.6vw, 17px);
+    margin-bottom: clamp(4px, 1vw, 8px);
+  }
+
+  .desc {
+    font-size: clamp(11px, 2.9vw, 13px);
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 360px) {
+  .grid {
+    gap: 10px;
+  }
+
+  .card {
+    padding: 12px 8px;
   }
 }

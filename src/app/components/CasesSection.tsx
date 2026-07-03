@@ -21,7 +21,7 @@ export default function CasesSection() {
                 src={partner.logo}
                 alt={partner.name}
                 fill
-                sizes="64px"
+                sizes="(max-width: 900px) 11vw, 64px"
                 className={styles.logoImage}
               />
             )
