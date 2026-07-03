@@ -1,18 +1,19 @@
-import { getAllPosts } from '@/lib/blog'
-import { isValidLocale, localePath } from '@/lib/i18n/config'
+import { getAllPosts, localizePost } from '@/lib/blog'
+import { contentLocale, isValidLocale, localePath, locales } from '@/lib/i18n/config'
 import { absoluteUrl, escapeXml } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
 type RouteContext = { params: Promise<{ locale: string }> }
 
 export function generateStaticParams() {
-  return [{ locale: 'ru' }, { locale: 'en' }]
+  return locales.map((locale) => ({ locale }))
 }
 
 export async function GET(_request: Request, { params }: RouteContext) {
   const { locale: rawLocale } = await params
-  const locale = isValidLocale(rawLocale) ? rawLocale : 'ru'
-  const isEn = locale === 'en'
+  const locale = isValidLocale(rawLocale) ? rawLocale : 'en'
+  const lang = contentLocale(locale)
+  const isEn = lang === 'en'
   const posts = getAllPosts()
   const channelTitle = escapeXml(isEn ? siteConfig.pages.blog.titleEn : siteConfig.pages.blog.title)
   const channelDescription = escapeXml(
@@ -25,7 +26,7 @@ export async function GET(_request: Request, { params }: RouteContext) {
 
   const items = posts
     .map((post) => {
-      const view = post[locale]
+      const view = localizePost(post, locale)
       const url = absoluteUrl(localePath(`/blog/${post.slug}`, locale))
       const title = escapeXml(view.title)
       const description = escapeXml(view.excerpt)

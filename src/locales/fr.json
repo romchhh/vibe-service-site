@@ -33,27 +33,27 @@
   },
   "nav": {
     "services": "Services",
-    "clients": "Case studies",
-    "about": "Team",
+    "clients": "Études de cas",
+    "about": "Équipe",
     "blog": "Blog",
-    "reviews": "Reviews",
-    "cta": "Book a call",
+    "reviews": "Avis",
+    "cta": "Réserver un appel",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "language": "Language",
-    "openContact": "Get a consultation"
+    "openContact": "Book a consultation"
   },
   "hero": {
-    "headline": "Business setup and support in Great Britain",
-    "accent": "turnkey",
-    "badge": "Substance in UK, sales organisation, accounting — from idea to first sale in 3 months",
-    "cta": "Get a consultation",
+    "headline": "Création et accompagnement d'entreprise au Royaume-Uni",
+    "accent": "clé en main",
+    "badge": "Substance in UK, organisation des ventes, comptabilité — de l'idée à la première vente en 3 mois",
+    "cta": "Obtenir une consultation",
     "trustedBy": "Trusted by",
     "trustpilotRating": "4.9",
-    "trustpilotReviews": "47 reviews"
+    "trustpilotReviews": "47 avis"
   },
   "stats": {
-    "heading": "Why international businesses choose us",
+    "heading": "Pourquoi nous choisir",
     "stat1": {
       "value": "3 mo",
       "desc": "from idea to operational UK presence — not 12 months"
@@ -92,7 +92,7 @@
     }
   },
   "team": {
-    "heading": "Meet the team",
+    "heading": "Notre équipe",
     "description": "Three specialists with deep expertise in international structuring, UK law and on-the-ground operations.",
     "cta": "Book a consultation",
     "members": {
@@ -114,7 +114,7 @@
     }
   },
   "cases": {
-    "heading": "Case studies",
+    "heading": "Études de cas",
     "subheading": "International brands we've helped enter the UK market",
     "alteg": {
       "title": "Alteg",
@@ -173,11 +173,6 @@
       "text": "Clear process from start to finish. They handled registration, accounting and our first UK sales hire.",
       "author": "James, Braz"
     }
-  },
-  "float": {
-    "label": "Quick contact",
-    "whatsapp": "Message on WhatsApp",
-    "telegram": "Message on Telegram"
   },
   "blog": {
     "title": "Vibe Services Blog",
@@ -354,5 +349,10 @@
     "aboutText": "We help international businesses establish real substance and operations in the UK — from company registration to first sale in 3 months.",
     "privacy": "Privacy Policy",
     "developedBy": "Developed by"
+  },
+  "float": {
+    "label": "Contact rapide",
+    "whatsapp": "Message WhatsApp",
+    "telegram": "Message Telegram"
   }
 }

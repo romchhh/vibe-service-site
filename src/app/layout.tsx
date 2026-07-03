@@ -25,10 +25,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.titleRu,
+    default: siteConfig.titleEn,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.descriptionRu,
+  description: siteConfig.descriptionEn,
   keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
-  category: 'finance',
+  category: 'business',
   icons: {
     icon: siteConfig.ogImage,
     apple: siteConfig.ogImage,

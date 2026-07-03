@@ -9,8 +9,11 @@ import { useLocale } from '@/lib/i18n/use-locale'
 import styles from './LangSwitcher.module.css'
 
 const LANGUAGES = [
-  { code: 'ru' as const, label: 'Русский' },
   { code: 'en' as const, label: 'English' },
+  { code: 'de' as const, label: 'Deutsch' },
+  { code: 'ru' as const, label: 'Русский' },
+  { code: 'ua' as const, label: 'Українська' },
+  { code: 'fr' as const, label: 'Français' },
 ]
 
 function GlobeIcon() {

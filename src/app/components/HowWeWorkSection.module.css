@@ -1,23 +1,7 @@
 .section {
   position: relative;
-  background: linear-gradient(
-    180deg,
-    var(--white) 0%,
-    #fafbff 28%,
-    #f5f7fc 62%,
-    var(--gray-100) 100%
-  );
+  background: var(--white);
   padding: var(--section-padding-y) var(--page-padding-x);
-}
-
-.section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 55% at 50% 20%, rgba(99, 91, 255, 0.06) 0%, transparent 70%),
-    radial-gradient(ellipse 60% 40% at 80% 85%, rgba(99, 91, 255, 0.04) 0%, transparent 65%);
-  pointer-events: none;
 }
 
 .inner {

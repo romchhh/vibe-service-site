@@ -1,9 +1,59 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-import { defaultLocale, isValidLocale } from '@/lib/i18n/config'
+import { defaultLocale, isValidLocale, type Locale } from '@/lib/i18n/config'
+
+function detectLocale(request: NextRequest): Locale {
+  const accept = request.headers.get('accept-language') ?? ''
+  const preferred = accept
+    .split(',')
+    .map((part) => part.split(';')[0].trim().toLowerCase())
+    .filter(Boolean)
+
+  for (const lang of preferred) {
+    if (lang.startsWith('uk') || lang === 'ua') return 'ua'
+    if (lang.startsWith('ru')) return 'ru'
+    if (lang.startsWith('de')) return 'de'
+    if (lang.startsWith('fr')) return 'fr'
+    if (lang.startsWith('en')) return 'en'
+  }
+
+  return defaultLocale
+}
+
+/** Paths that must live at site root, not under /{locale}/ */
+function stripLocalePrefix(pathname: string): string | null {
+  const segments = pathname.split('/').filter(Boolean)
+  const [first, second, ...rest] = segments
+
+  if (!first || !isValidLocale(first) || !second) return null
+
+  if (second === '_next' || second === 'api' || second === 'images') {
+    return `/${[second, ...rest].join('/')}`
+  }
+
+  // Root public files: manifest.webmanifest, robots.txt, sitemap.xml, *.txt
+  if (segments.length === 2 && second.includes('.')) {
+    return `/${second}`
+  }
+
+  return null
+}
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
+
+  // Public assets must stay at root — Next.js Image optimizer fetches these directly.
+  if (pathname.startsWith('/images/')) {
+    return NextResponse.next()
+  }
+
+  const stripped = stripLocalePrefix(pathname)
+  if (stripped) {
+    const url = request.nextUrl.clone()
+    url.pathname = stripped
+    return NextResponse.rewrite(url)
+  }
+
   const segment = pathname.split('/').filter(Boolean)[0]
 
   if (segment && isValidLocale(segment)) {
@@ -12,13 +62,20 @@ export function proxy(request: NextRequest) {
     return response
   }
 
+  const locale = detectLocale(request)
   const url = request.nextUrl.clone()
-  url.pathname = pathname === '/' ? `/${defaultLocale}` : `/${defaultLocale}${pathname}`
+  url.pathname = pathname === '/' ? `/${locale}` : `/${locale}${pathname}`
   const response = NextResponse.redirect(url)
-  response.headers.set('x-locale', defaultLocale)
+  response.headers.set('x-locale', locale)
   return response
 }
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
+  matcher: [
+    /*
+     * Match all paths except static files at root (_next, images, etc.)
+     * Locale-prefixed static paths are handled via rewrite in proxy().
+     */
+    '/((?!_next|api|images|favicon.ico|.*\\..*).*)',
+  ],
 }

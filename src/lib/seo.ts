@@ -44,9 +44,12 @@ function buildHreflang(path: string, locale: Locale) {
   return {
     canonical: localePath(path, locale),
     languages: {
+      'en-GB': localePath(path, 'en'),
+      'de-DE': localePath(path, 'de'),
       'ru-RU': localePath(path, 'ru'),
-      'en-US': localePath(path, 'en'),
-      'x-default': localePath(path, 'ru'),
+      'uk-UA': localePath(path, 'ua'),
+      'fr-FR': localePath(path, 'fr'),
+      'x-default': localePath(path, 'en'),
     },
   }
 }

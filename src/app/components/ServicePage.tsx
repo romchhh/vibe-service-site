@@ -10,7 +10,7 @@ import {
   SERVICE_IMAGES,
   type ServiceSlug,
 } from '@/lib/services'
-import { useLocalizedPath } from '@/lib/i18n/use-locale'
+import { useLocale, useLocalizedPath } from '@/lib/i18n/use-locale'
 import { useContactModal } from './ContactModalProvider'
 import Breadcrumbs from './seo/Breadcrumbs'
 import BlogCard from './BlogCard'
@@ -28,10 +28,10 @@ type Props = {
 }
 
 export default function ServicePage({ slug, breadcrumbs }: Props) {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const lp = useLocalizedPath()
   const { open: openContactModal } = useContactModal()
-  const locale = i18n.language === 'en' ? 'en' : 'ru'
+  const locale = useLocale()
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
   const service = getServiceBySlug(slug)
 

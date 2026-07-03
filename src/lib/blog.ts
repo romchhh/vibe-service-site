@@ -1,4 +1,5 @@
 import blogData from '@/data/blog.json'
+import { contentLocale, type Locale } from './i18n/config'
 
 export type BlogLocalePost = {
   title: string
@@ -23,16 +24,21 @@ export type BlogPostView = BlogLocalePost & {
   image: string
 }
 
-export type BlogLocale = 'ru' | 'en'
+export type BlogContentLocale = 'ru' | 'en'
 
 const posts = blogData.posts as BlogPost[]
 
-export function localizePost(post: BlogPost, locale: BlogLocale): BlogPostView {
+function toBlogLocale(locale: Locale): BlogContentLocale {
+  return contentLocale(locale)
+}
+
+export function localizePost(post: BlogPost, locale: Locale | BlogContentLocale): BlogPostView {
+  const lang = locale === 'en' || locale === 'ru' ? locale : toBlogLocale(locale)
   return {
     slug: post.slug,
     date: post.date,
     image: post.image,
-    ...post[locale],
+    ...post[lang],
   }
 }
 
@@ -44,11 +50,11 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
   return posts.find((post) => post.slug === slug)
 }
 
-export function getAllPostViews(locale: BlogLocale): BlogPostView[] {
+export function getAllPostViews(locale: Locale): BlogPostView[] {
   return getAllPosts().map((post) => localizePost(post, locale))
 }
 
-export function getPostView(slug: string, locale: BlogLocale): BlogPostView | undefined {
+export function getPostView(slug: string, locale: Locale): BlogPostView | undefined {
   const post = getPostBySlug(slug)
   return post ? localizePost(post, locale) : undefined
 }

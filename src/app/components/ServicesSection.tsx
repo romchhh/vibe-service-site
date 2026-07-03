@@ -2,14 +2,14 @@
 
 import { useTranslation } from 'react-i18next'
 import { SERVICE_SLUGS, getServiceBySlug, getServiceView } from '@/lib/services'
-import { useLocalizedPath } from '@/lib/i18n/use-locale'
+import { useLocale, useLocalizedPath } from '@/lib/i18n/use-locale'
 import ServiceCard from './ServiceCard'
 import styles from './ServicesSection.module.css'
 
 export default function ServicesSection() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const lp = useLocalizedPath()
-  const locale = i18n.language === 'en' ? 'en' : 'ru'
+  const locale = useLocale()
 
   return (
     <section id="services" className={styles.section}>

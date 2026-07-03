@@ -1,88 +1,21 @@
-# WayOfProcessing
+# Vibe Services
 
-> International Stripe payment processing from 1.5%
-
-WayOfProcessing helps businesses accept payments worldwide via Stripe.
+UK consulting firm for international businesses entering the British market.
 
 ## Summary
 
-- Service: Stripe payment processing, warmed accounts, company + bank + Stripe setup
-- Commission: from 1.5%
-- Uptime: 99.9% with Payment routing failover
-- Experience: 7 years with Stripe, 1100+ accounts, $53M+ client volume
-- Withdrawals: EUR, USD, USDT and more
-- Languages: Russian (/ru, default), English (/en)
-- Contact: hello@wayofprocessing.com, Telegram @wayofprocessing
-- Disclaimer: WayOfProcessing is independent and not affiliated with Stripe, Inc.
+Vibe Services provides turnkey UK business setup: substance, company registration (LTD/LLP), accounting and sales. From idea to first sale in ~3 months.
 
-## Key pages
+## Key URLs
 
-- Home (RU): /ru
-- Home (EN): /en
-- Blog (RU): /ru/blog
-- Blog (EN): /en/blog
-- Privacy (RU): /ru/privacy
-- Privacy (EN): /en/privacy
-- Contact form: /ru/#kontakt or /en/#kontakt
-- Blog RSS: /ru/blog/feed.xml, /en/blog/feed.xml
+- https://vibe-service.co.uk/en/ — English home
+- https://vibe-service.co.uk/ru/ — Russian home
+- https://vibe-service.co.uk/en/services/substance-in-uk
+- https://vibe-service.co.uk/en/services/company-registration
+- https://vibe-service.co.uk/en/services/accounting
+- https://vibe-service.co.uk/en/services/sales-organisation
+- https://vibe-service.co.uk/en/blog
 
-## Service pages
+## Contact
 
-- /ru/services/stripe-account-rent — Аренда Stripe аккаунта (RU)
-- /en/services/stripe-account-rent — Stripe Account Rental (EN)
-- /ru/services/stripe-account-buy — Покупка Stripe аккаунта (RU)
-- /en/services/stripe-account-buy — Buy a Stripe Account (EN)
-- /ru/services/processing-turnkey — Процессинг Stripe под ключ (RU)
-- /en/services/processing-turnkey — Turnkey Stripe Processing (EN)
-- /ru/services/legal-entity-bank — Юрлицо, банк и Stripe (RU)
-- /en/services/legal-entity-bank — Legal Entity, Bank and Stripe (EN)
-
-## Blog articles
-
-- /ru/blog/stripe-for-your-business — Stripe для вашего бизнеса (RU)
-- /en/blog/stripe-for-your-business — Stripe for Your Business (EN)
-- /ru/blog/stripe-via-php-api — Подключение Stripe через PHP с помощью API
-- /ru/blog/fast-payment-system — Система быстрых оплат для интернет-магазина
-- /ru/blog/business-categories-stripe — Какие тематики не подходят для Stripe
-- /ru/blog/stripe-webhooks-guide — Stripe Webhooks: полное руководство по настройке и безопасности
-- /ru/blog/stripe-subscriptions-saas — Stripe Subscriptions для SaaS: рекуррентные платежи
-- /ru/blog/stripe-chargeback-prevention — Чарджбеки в Stripe: предотвращение и споры
-- /ru/blog/fast-payment-system-ecommerce — Быстрая система оплат для интернет-магазина
-- /ru/blog/stripe-restricted-business-categories — Какие тематики Stripe не подключает
-- /ru/blog/stripe-platform-rules — Правила платёжной системы Stripe
-- /ru/blog/how-to-choose-payment-system — Как выбрать платёжную систему в 2026 году
-- /ru/blog/stripe-wordpress-integration — Интеграция Stripe для WordPress: плагин и API
-- /ru/blog/what-is-stripe-scaling-business — Что такое Stripe и масштабирование онлайн-бизнеса
-- /ru/blog/stripe-international-payments-integration — Интеграция Stripe для международных платежей
-- /ru/blog/international-payments-for-business — Приём международных платежей для бизнеса
-- /ru/blog/stripe-payment-routing-uptime — Payment routing в Stripe: аптайм 99.9%
-
-## Services
-
-1. Turnkey infrastructure: foreign entity, bank account, Stripe account
-2. Payment processing for any niche from 1.5%
-3. Warmed Stripe accounts with turnover
-4. Payment routing with automatic failover
-5. Free expert consultation and 24/7 Telegram support
-
-## Homepage sections
-
-- /#services — Services
-- /#advantages — Advantages (uptime, accounts, tax, CRM, niches, withdrawals)
-- /#how-we-work — How we work
-- /#accounts — Accounts in operation
-- /#specialists — WayOfProcessing specialists
-- /#clients — Client niches
-- /#faq — FAQ
-- /#kontakt — Contact form
-
-## Structured data
-
-- Organization, WebSite, FinancialService, FAQPage, HowTo, BlogPosting
-- Sitemap: /sitemap.xml
-- Robots: /robots.txt
-- AI info: /ai.txt
-
-## Attribution
-
-Developed by TeleBots: https://telebots.site/en
+info@vibe-service.co.uk

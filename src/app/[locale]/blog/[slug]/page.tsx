@@ -7,8 +7,8 @@ import ScrollReveal from '../../../components/ScrollReveal'
 import Breadcrumbs from '../../../components/seo/Breadcrumbs'
 import JsonLdScript from '../../../components/seo/JsonLdScript'
 import { buildBlogPostingJsonLd, getPostKeywords } from '@/lib/blog-seo'
-import { getAllSlugs, getPostBySlug, getRelatedPosts } from '@/lib/blog'
-import { isValidLocale, localePath, locales, type Locale } from '@/lib/i18n/config'
+import { getAllSlugs, getPostBySlug, getRelatedPosts, localizePost } from '@/lib/blog'
+import { isValidLocale, contentLocale, localePath, locales, type Locale } from '@/lib/i18n/config'
 import { absoluteUrl, buildArticleMetadata, buildBreadcrumbJsonLd, buildGraphJsonLd, buildWebPageJsonLd } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(slug)
   if (!post) return {}
 
-  const locale = (isValidLocale(rawLocale) ? rawLocale : 'ru') as Locale
-  const view = post[locale]
+  const locale = (isValidLocale(rawLocale) ? rawLocale : 'en') as Locale
+  const view = localizePost(post, locale)
 
   return buildArticleMetadata({
     title: view.title,
@@ -47,8 +47,8 @@ export default async function BlogPost({ params }: Props) {
   const post = getPostBySlug(slug)
   if (!post) notFound()
 
-  const locale = (isValidLocale(rawLocale) ? rawLocale : 'ru') as Locale
-  const view = post[locale]
+  const locale = (isValidLocale(rawLocale) ? rawLocale : 'en') as Locale
+  const view = localizePost(post, locale)
   const related = getRelatedPosts(slug)
   const postPath = localePath(`/blog/${post.slug}`, locale)
   const isEn = locale === 'en'
@@ -78,7 +78,7 @@ export default async function BlogPost({ params }: Props) {
         itemListElement: related.map((item, index) => ({
           '@type': 'ListItem',
           position: index + 1,
-          name: item[locale].title,
+          name: localizePost(item, locale).title,
           url: absoluteUrl(localePath(`/blog/${item.slug}`, locale)),
         })),
       }

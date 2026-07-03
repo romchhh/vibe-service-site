@@ -1,19 +1,24 @@
 import en from '@/locales/en.json'
 import ru from '@/locales/ru.json'
+import ua from '@/locales/ua.json'
+import de from '@/locales/de.json'
+import fr from '@/locales/fr.json'
 import { buildFaqPageJsonLd } from './service-seo'
 import { SERVICE_SLUGS, getServiceBySlug, getServiceView } from './services'
-import { localePath, type Locale } from './i18n/config'
+import { contentLocale, localePath, type Locale } from './i18n/config'
 import { absoluteUrl } from './seo'
 import { siteConfig } from './site'
 
+const COPY_BY_LOCALE: Record<Locale, typeof en> = { en, ru, ua, de, fr }
 const HOW_WE_WORK_STEPS = ['step1', 'step2', 'step3', 'step4'] as const
 
 export function buildHomeJsonLd(locale: Locale) {
-  const copy = locale === 'en' ? en : ru
+  const copy = COPY_BY_LOCALE[locale] ?? en
   const faqItems = copy.seo.faq
   const homePath = localePath('/', locale)
-  const title = locale === 'en' ? siteConfig.titleEn : siteConfig.titleRu
-  const description = locale === 'en' ? siteConfig.descriptionEn : siteConfig.descriptionRu
+  const isRu = contentLocale(locale) === 'ru'
+  const title = isRu ? siteConfig.titleRu : siteConfig.titleEn
+  const description = isRu ? siteConfig.descriptionRu : siteConfig.descriptionEn
 
   return {
     '@context': 'https://schema.org',
@@ -26,6 +31,7 @@ export function buildHomeJsonLd(locale: Locale) {
         url: siteConfig.url,
         slogan: siteConfig.seo.slogan,
         email: siteConfig.email,
+        telephone: siteConfig.phoneE164,
         description,
         knowsAbout: siteConfig.seo.knowsAbout,
         logo: {
@@ -39,12 +45,13 @@ export function buildHomeJsonLd(locale: Locale) {
             '@type': 'ContactPoint',
             contactType: 'customer support',
             email: siteConfig.email,
+            telephone: siteConfig.phoneE164,
             url: siteConfig.telegramOperatorUrl,
-            availableLanguage: ['Russian', 'English'],
+            availableLanguage: ['English', 'German', 'Russian', 'Ukrainian', 'French'],
             areaServed: siteConfig.seo.areaServed,
           },
         ],
-        sameAs: [siteConfig.telegramChannelUrl, siteConfig.telegramOperatorUrl],
+        sameAs: [siteConfig.telegramChannelUrl, siteConfig.trustpilotUrl],
       },
       {
         '@type': 'WebSite',
@@ -53,24 +60,24 @@ export function buildHomeJsonLd(locale: Locale) {
         url: siteConfig.url,
         description,
         publisher: { '@id': `${siteConfig.url}/#organization` },
-        inLanguage: ['ru', 'en'],
+        inLanguage: ['en', 'de', 'ru', 'uk', 'fr'],
         potentialAction: [
           {
             '@type': 'CommunicateAction',
             target: absoluteUrl(`${homePath}#kontakt`),
-            name: locale === 'en' ? 'Submit a request' : 'Оставить заявку',
+            name: isRu ? 'Записаться на консультацию' : 'Book a consultation',
           },
           {
             '@type': 'ReadAction',
             target: absoluteUrl(localePath('/blog', locale)),
-            name: locale === 'en' ? `Read ${siteConfig.name} blog` : `Читать блог ${siteConfig.name}`,
+            name: `Read ${siteConfig.name} blog`,
           },
         ],
       },
       {
-        '@type': 'FinancialService',
+        '@type': 'ProfessionalService',
         '@id': `${siteConfig.url}/#service`,
-        name: `${siteConfig.name} — ${locale === 'en' ? 'Stripe processing' : 'процессинг Stripe'}`,
+        name: `${siteConfig.name} — UK business consulting`,
         description,
         url: absoluteUrl(homePath),
         provider: { '@id': `${siteConfig.url}/#organization` },
@@ -78,27 +85,8 @@ export function buildHomeJsonLd(locale: Locale) {
           '@type': 'Place',
           name,
         })),
-        serviceType: [
-          'Stripe payment processing',
-          'Stripe account setup',
-          'Payment routing',
-          'International payment acceptance',
-          'High-risk payment processing',
-        ],
+        serviceType: siteConfig.seo.knowsAbout,
         termsOfService: absoluteUrl(localePath('/privacy', locale)),
-        offers: {
-          '@type': 'Offer',
-          name: locale === 'en' ? 'Stripe processing from 1.5%' : 'Процессинг Stripe от 1.5%',
-          description,
-          priceSpecification: {
-            '@type': 'UnitPriceSpecification',
-            price: '1.5',
-            priceCurrency: 'USD',
-            unitText: 'percent commission',
-          },
-          availability: 'https://schema.org/InStock',
-          url: absoluteUrl(`${homePath}#kontakt`),
-        },
       },
       {
         '@type': 'WebPage',
@@ -112,7 +100,7 @@ export function buildHomeJsonLd(locale: Locale) {
           '@type': 'ImageObject',
           url: absoluteUrl(siteConfig.ogImage),
         },
-        inLanguage: locale,
+        inLanguage: locale === 'ua' ? 'uk' : locale,
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['h1', '#faq-heading'],
@@ -122,7 +110,7 @@ export function buildHomeJsonLd(locale: Locale) {
       {
         '@type': 'ItemList',
         '@id': `${absoluteUrl(homePath)}#services-list`,
-        name: locale === 'en' ? `${siteConfig.name} services` : `Услуги ${siteConfig.name}`,
+        name: `${siteConfig.name} services`,
         itemListElement: SERVICE_SLUGS.map((slug, index) => {
           const service = getServiceBySlug(slug)
           if (!service) return null
@@ -139,11 +127,8 @@ export function buildHomeJsonLd(locale: Locale) {
         '@type': 'HowTo',
         '@id': `${absoluteUrl(homePath)}#how-to`,
         name: copy.howWeWork.heading,
-        description:
-          locale === 'en'
-            ? `How ${siteConfig.name} connects Stripe: entity, bank, account, reporting and expert support.`
-            : `Как ${siteConfig.name} подключает Stripe: юрлицо, банк, аккаунт, отчётность и поддержка экспертов.`,
-        totalTime: 'P3D',
+        description: siteConfig.seo.slogan,
+        totalTime: 'P3M',
         step: HOW_WE_WORK_STEPS.map((key, index) => ({
           '@type': 'HowToStep',
           position: index + 1,

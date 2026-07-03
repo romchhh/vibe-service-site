@@ -1,80 +1,37 @@
-import type { BlogLocale, BlogPost } from './blog'
-import { localePath } from './i18n/config'
+import type { BlogPost } from './blog'
+import { contentLocale, localePath, type Locale } from './i18n/config'
 import { absoluteUrl } from './seo'
 import { siteConfig } from './site'
 
 const postKeywords: Record<string, { ru: string[]; en: string[] }> = {
-  'stripe-for-your-business': {
-    ru: ['Stripe для бизнеса', 'приём платежей Stripe', 'Stripe аккаунт в аренду', 'подключение Stripe', 'международные платежи'],
-    en: ['Stripe for business', 'Stripe payment acceptance', 'rented Stripe account', 'Stripe integration', 'international payments'],
+  'what-is-substance-in-uk': {
+    ru: ['substance в UK', 'реальное присутствие UK', 'юрадрес Великобритания', 'HMRC substance', 'Vibe Services'],
+    en: ['substance in UK', 'UK real presence', 'registered office UK', 'HMRC substance', 'Vibe Services'],
   },
-  'stripe-via-php-api': {
-    ru: ['Stripe PHP', 'интеграция Stripe API', 'Stripe Checkout', 'Stripe webhooks PHP', 'платёжный шлюз Stripe'],
-    en: ['Stripe PHP', 'Stripe API integration', 'Stripe Checkout', 'Stripe webhooks PHP', 'Stripe payment gateway'],
+  'uk-bank-account-non-resident': {
+    ru: ['банковский счёт UK', 'счёт нерезиденту', 'открыть счёт Великобритания', 'UK banking', 'Vibe Services'],
+    en: ['UK bank account', 'non-resident bank account', 'open UK account', 'UK banking', 'Vibe Services'],
   },
-  'fast-payment-system': {
-    ru: ['быстрые платежи', 'checkout интернет-магазин', 'конверсия оплаты', 'Stripe Payment Element', 'payment routing'],
-    en: ['fast payments', 'e-commerce checkout', 'payment conversion', 'Stripe Payment Element', 'payment routing'],
+  'risks-no-real-office-uk': {
+    ru: ['риски без офиса UK', 'блокировка счёта UK', 'HMRC претензии', 'substance UK', 'Vibe Services'],
+    en: ['no office UK risks', 'UK account freeze', 'HMRC compliance', 'UK substance', 'Vibe Services'],
   },
-  'business-categories-stripe': {
-    ru: ['high-risk Stripe', 'ниши Stripe', 'блокировка Stripe', 'прогретый аккаунт', 'процессинг платежей'],
-    en: ['high-risk Stripe', 'Stripe niches', 'Stripe account block', 'warmed Stripe account', 'payment processing'],
+  'choose-uk-business-structure': {
+    ru: ['структура бизнеса UK', 'LTD или LLP', 'регистрация компании UK', 'холдинг UK', 'Vibe Services'],
+    en: ['UK business structure', 'LTD vs LLP', 'UK company registration', 'UK holding', 'Vibe Services'],
   },
-  'stripe-webhooks-guide': {
-    ru: ['Stripe webhooks', 'настройка webhook', 'Stripe-Signature', 'payment_intent.succeeded', 'обработка событий Stripe'],
-    en: ['Stripe webhooks', 'webhook setup', 'Stripe-Signature', 'payment_intent.succeeded', 'Stripe event handling'],
-  },
-  'stripe-subscriptions-saas': {
-    ru: ['Stripe подписки', 'рекуррентные платежи', 'Stripe Billing', 'SaaS монетизация', 'trial period Stripe'],
-    en: ['Stripe subscriptions', 'recurring payments', 'Stripe Billing', 'SaaS monetisation', 'Stripe trial period'],
-  },
-  'stripe-chargeback-prevention': {
-    ru: ['чарджбек Stripe', 'chargeback rate', 'диспуты Stripe', '3D Secure Stripe', 'защита от возвратов'],
-    en: ['Stripe chargeback', 'chargeback rate', 'Stripe disputes', '3D Secure Stripe', 'chargeback protection'],
-  },
-  'fast-payment-system-ecommerce': {
-    ru: ['оплата интернет-магазин', 'Stripe e-commerce', 'Apple Pay Google Pay', 'PCI DSS Stripe', 'онлайн-оплата'],
-    en: ['online store payments', 'Stripe e-commerce', 'Apple Pay Google Pay', 'PCI DSS Stripe', 'online checkout'],
-  },
-  'stripe-restricted-business-categories': {
-    ru: ['ограничения Stripe', 'запрещённые ниши Stripe', 'форекс Stripe', 'гейминг Stripe', 'high-risk процессинг'],
-    en: ['Stripe restrictions', 'restricted Stripe niches', 'forex Stripe', 'gaming Stripe', 'high-risk processing'],
-  },
-  'stripe-platform-rules': {
-    ru: ['правила Stripe', 'PCI DSS Level 1', 'политика Stripe', 'подключение Stripe СНГ', 'платёжный шлюз'],
-    en: ['Stripe rules', 'PCI DSS Level 1', 'Stripe policy', 'Stripe CIS connection', 'payment gateway'],
-  },
-  'how-to-choose-payment-system': {
-    ru: ['выбор платёжной системы', 'Stripe vs PayPal', 'платёжный провайдер', 'Stripe WooCommerce', 'процессинг 2026'],
-    en: ['choose payment system', 'Stripe vs PayPal', 'payment provider', 'Stripe WooCommerce', 'payment processing 2026'],
-  },
-  'stripe-wordpress-integration': {
-    ru: ['Stripe WordPress', 'плагин Stripe WooCommerce', 'интеграция Stripe API', 'платежи WordPress', 'Stripe под ключ'],
-    en: ['Stripe WordPress', 'Stripe WooCommerce plugin', 'Stripe API integration', 'WordPress payments', 'Stripe turnkey'],
-  },
-  'what-is-stripe-scaling-business': {
-    ru: ['что такое Stripe', 'масштабирование бизнеса', 'международные платежи Stripe', 'Stripe Connect', 'рекуррентные платежи'],
-    en: ['what is Stripe', 'scale online business', 'Stripe international payments', 'Stripe Connect', 'recurring payments'],
-  },
-  'stripe-international-payments-integration': {
-    ru: ['международные платежи Stripe', 'интеграция Stripe', 'Stripe СНГ', 'аренда Stripe аккаунта', 'Payoneer вывод'],
-    en: ['Stripe international payments', 'Stripe integration', 'Stripe CIS', 'rent Stripe account', 'Payoneer withdrawal'],
-  },
-  'international-payments-for-business': {
-    ru: ['приём международных платежей', 'Stripe для ИП', 'зарубежные рынки', 'международный e-commerce', 'процессинг СНГ'],
-    en: ['international payment acceptance', 'Stripe for sole traders', 'foreign markets', 'international e-commerce', 'CIS processing'],
-  },
-  'stripe-payment-routing-uptime': {
-    ru: ['payment routing Stripe', 'аптайм 99.9%', 'резервный Stripe аккаунт', 'отказоустойчивый процессинг', 'маршрутизация платежей'],
-    en: ['Stripe payment routing', '99.9% uptime', 'backup Stripe account', 'fault-tolerant processing', 'payment routing'],
+  'patent-box-uk-tech-companies': {
+    ru: ['Patent Box UK', 'налоговые льготы tech', 'corporation tax UK', 'R&D UK', 'Vibe Services'],
+    en: ['Patent Box UK', 'UK tech tax relief', 'corporation tax UK', 'R&D tax credits', 'Vibe Services'],
   },
 }
 
-export function getPostKeywords(post: BlogPost, locale: BlogLocale): string[] {
-  const custom = postKeywords[post.slug]?.[locale]
+export function getPostKeywords(post: BlogPost, locale: Locale): string[] {
+  const lang = contentLocale(locale)
+  const custom = postKeywords[post.slug]?.[lang]
   if (custom) return custom
-  const view = post[locale]
-  return [view.title, view.category, 'Stripe', siteConfig.name]
+  const view = post[lang]
+  return [view.title, view.category, 'UK business', siteConfig.name]
 }
 
 export function getPostImageUrl(image: string): string {
@@ -90,8 +47,9 @@ function excerptArticleBody(body: string, maxLength = 500): string {
   return plain.length <= maxLength ? plain : `${plain.slice(0, maxLength).trim()}…`
 }
 
-export function buildBlogPostingJsonLd(post: BlogPost, locale: BlogLocale = 'ru') {
-  const view = post[locale]
+export function buildBlogPostingJsonLd(post: BlogPost, locale: Locale = 'en') {
+  const lang = contentLocale(locale)
+  const view = post[lang]
   const path = `/blog/${post.slug}`
   const localizedPath = localePath(path, locale)
   const url = absoluteUrl(localizedPath)
@@ -125,24 +83,25 @@ export function buildBlogPostingJsonLd(post: BlogPost, locale: BlogLocale = 'ru'
       '@type': 'Thing',
       name,
     })),
-    inLanguage: locale === 'en' ? 'en-US' : 'ru-RU',
+    inLanguage: locale === 'ua' ? 'uk-UA' : locale === 'en' ? 'en-GB' : locale,
     isAccessibleForFree: true,
     isPartOf: { '@id': `${absoluteUrl(blogPath)}#blog` },
     url,
   }
 }
 
-export function buildBlogItemListJsonLd(posts: BlogPost[], locale: BlogLocale = 'ru') {
+export function buildBlogItemListJsonLd(posts: BlogPost[], locale: Locale = 'en') {
+  const lang = contentLocale(locale)
   const blogPath = localePath('/blog', locale)
   return {
     '@type': 'ItemList',
     '@id': `${absoluteUrl(blogPath)}#itemlist`,
-    name: locale === 'en' ? `${siteConfig.name} Blog Articles` : `Статьи блога ${siteConfig.name}`,
+    name: lang === 'en' ? `${siteConfig.name} Blog Articles` : `Статьи блога ${siteConfig.name}`,
     numberOfItems: posts.length,
     itemListElement: posts.map((post, index) => ({
       '@type': 'ListItem',
       position: index + 1,
-      name: post[locale].title,
+      name: post[lang].title,
       url: absoluteUrl(localePath(`/blog/${post.slug}`, locale)),
     })),
   }

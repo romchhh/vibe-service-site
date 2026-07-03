@@ -1,6 +1,14 @@
-export const locales = ['ru', 'en'] as const
+export const locales = ['en', 'de', 'ru', 'ua', 'fr'] as const
 export type Locale = (typeof locales)[number]
-export const defaultLocale: Locale = 'ru'
+export const defaultLocale: Locale = 'en'
+
+const OG_LOCALE_MAP: Record<Locale, string> = {
+  en: 'en_GB',
+  de: 'de_DE',
+  ru: 'ru_RU',
+  ua: 'uk_UA',
+  fr: 'fr_FR',
+}
 
 export function isValidLocale(value: string): value is Locale {
   return locales.includes(value as Locale)
@@ -39,5 +47,10 @@ export function switchLocalePath(pathname: string, locale: Locale): string {
 }
 
 export function localeOgLocale(locale: Locale): string {
-  return locale === 'en' ? 'en_US' : 'ru_RU'
+  return OG_LOCALE_MAP[locale]
+}
+
+/** Content locale for JSON data that only has en/ru variants */
+export function contentLocale(locale: Locale): 'en' | 'ru' {
+  return locale === 'ru' || locale === 'ua' ? 'ru' : 'en'
 }

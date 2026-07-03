@@ -1,46 +1,31 @@
-# Denté — Next.js 14 Website
+# Vibe Services — Website
 
-Strona stomatologiczna marki **Denté** zbudowana w Next.js 14 + TypeScript + CSS Modules.
+Multilingual marketing site for [Vibe Services](https://vibe-service.co.uk) — UK business consulting (substance, registration, accounting, sales).
 
-## Uruchomienie
+## Stack
+
+Next.js 14 · TypeScript · CSS Modules · i18next (en, de, ru, ua, fr)
+
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Otwórz [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000)
 
-## Struktura
+## Configuration
 
+- Site metadata & contacts: `src/lib/site.ts`
+- Translations: `src/locales/*.json`
+- Services content: `src/data/services.json`
+- Blog posts: `src/data/blog.json`
+- Contact form → Telegram: set `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` in `.env`
+
+## Build
+
+```bash
+npm run build
+npm start
 ```
-src/app/
-├── layout.tsx              # Root layout (fonts, metadata)
-├── page.tsx                # Strona główna
-├── globals.css             # Zmienne CSS + globalne style
-└── components/
-    ├── Navbar.tsx/.module.css      # Nawigacja (desktop + mobile drawer)
-    ├── Hero.tsx/.module.css        # Sekcja hero z countdown
-    ├── ContactSection.tsx/.module.css  # Formularz kontaktowy
-    └── Footer.tsx/.module.css      # Stopka z wordmarkiem
-```
-
-## Konfiguracja
-
-Zmień dane kontaktowe w:
-- `components/Hero.tsx` — telefon, adres
-- `components/Footer.tsx` — godziny, kontakt, social media
-- `app/layout.tsx` — metadata (tytuł, opis)
-
-## Zamiana formularza
-
-W `ContactSection.tsx` znajdź komentarz `// Simulate async request` i zastąp symulację rzeczywistym wywołaniem API (np. Resend, EmailJS, własny endpoint `/api/contact`).
-
-## Kolory marki (globals.css)
-
-| Zmienna   | Wartość   |
-|-----------|-----------|
-| `--deep`  | `#052C40` |
-| `--sky`   | `#649AAD` |
-| `--slate` | `#7c898b` |
-| `--sand`  | `#e4e2dd` |

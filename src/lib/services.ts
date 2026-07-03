@@ -1,18 +1,18 @@
 import servicesData from '@/data/services.json'
-import type { Locale } from './i18n/config'
+import { contentLocale, type Locale } from './i18n/config'
 
 export const SERVICE_SLUGS = [
-  'stripe-account-rent',
-  'stripe-account-buy',
-  'processing-turnkey',
-  'legal-entity-bank',
+  'substance-in-uk',
+  'company-registration',
+  'accounting',
+  'sales-organisation',
 ] as const
 
 export const SERVICE_IMAGES: Record<ServiceSlug, string> = {
-  'stripe-account-rent': '/images/service-rent.png',
-  'stripe-account-buy': '/images/service-buy.png',
-  'processing-turnkey': '/images/service-processing.png',
-  'legal-entity-bank': '/images/service-legal.png',
+  'substance-in-uk': 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+  'company-registration': 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
+  'accounting': 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
+  'sales-organisation': 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
 }
 
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number]
@@ -20,21 +20,6 @@ export type ServiceSlug = (typeof SERVICE_SLUGS)[number]
 export type ServiceFaqItem = {
   question: string
   answer: string
-}
-
-export type ServiceStat = {
-  value: string
-  label: string
-}
-
-export type ServiceStep = {
-  title: string
-  description: string
-}
-
-export type ServiceFeature = {
-  title: string
-  description: string
 }
 
 export type ServiceSection = {
@@ -89,7 +74,7 @@ export function getServiceBySlug(slug: string): Service | undefined {
 }
 
 export function getServiceView(service: Service, locale: Locale): ServiceView {
-  return service[locale]
+  return service[contentLocale(locale)]
 }
 
 export function servicePath(slug: ServiceSlug): string {

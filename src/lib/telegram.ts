@@ -1,3 +1,5 @@
+import { siteConfig } from './site'
+
 const TELEGRAM_API = 'https://api.telegram.org'
 
 type LeadPayload = {
@@ -23,7 +25,7 @@ function formatLeadMessage({ name, phone, comment, source }: LeadPayload): strin
     source === 'modal' ? 'Модальное окно' : 'Форма на странице'
 
   const lines = [
-    '🆕 Новая заявка с сайта WayOfProcessing',
+    `🆕 Новая заявка с сайта ${siteConfig.name}`,
     '',
     `👤 Имя: ${name}`,
     `📞 Контакт: ${phone}`,

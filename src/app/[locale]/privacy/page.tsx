@@ -12,7 +12,7 @@ type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale } = await params
-  const locale = (isValidLocale(rawLocale) ? rawLocale : 'ru') as Locale
+  const locale = (isValidLocale(rawLocale) ? rawLocale : 'en') as Locale
   const isEn = locale === 'en'
 
   return buildPageMetadata({
@@ -21,14 +21,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: '/privacy',
     locale,
     keywords: isEn
-      ? [`${siteConfig.name} privacy policy`, 'personal data', 'Stripe processing privacy']
-      : [`политика конфиденциальности ${siteConfig.name}`, 'обработка персональных данных', 'privacy policy'],
+      ? [`${siteConfig.name} privacy policy`, 'personal data', 'GDPR', 'UK business']
+      : [`политика конфиденциальности ${siteConfig.name}`, 'обработка персональных данных', 'GDPR'],
   })
 }
 
 export default async function Privacy({ params }: Props) {
   const { locale: rawLocale } = await params
-  const locale = (isValidLocale(rawLocale) ? rawLocale : 'ru') as Locale
+  const locale = (isValidLocale(rawLocale) ? rawLocale : 'en') as Locale
   const isEn = locale === 'en'
 
   const breadcrumb = buildBreadcrumbJsonLd(

@@ -5,8 +5,8 @@ import Footer from '../../components/Footer'
 import Breadcrumbs from '../../components/seo/Breadcrumbs'
 import JsonLdScript from '../../components/seo/JsonLdScript'
 import { buildBlogItemListJsonLd } from '@/lib/blog-seo'
-import { getAllPosts } from '@/lib/blog'
-import { isValidLocale, localePath, type Locale } from '@/lib/i18n/config'
+import { getAllPosts, localizePost } from '@/lib/blog'
+import { contentLocale, isValidLocale, localePath, type Locale } from '@/lib/i18n/config'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildGraphJsonLd, buildPageMetadata, buildWebPageJsonLd } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
@@ -14,8 +14,9 @@ type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale } = await params
-  const locale = (isValidLocale(rawLocale) ? rawLocale : 'ru') as Locale
-  const isEn = locale === 'en'
+  const locale = (isValidLocale(rawLocale) ? rawLocale : 'en') as Locale
+  const lang = contentLocale(locale)
+  const isEn = lang === 'en'
 
   return {
     ...buildPageMetadata({
@@ -24,8 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       path: '/blog',
       locale,
       keywords: isEn
-        ? [`${siteConfig.name} blog`, 'Stripe articles', 'payment processing', 'Stripe integration', 'payment routing']
-        : [`блог ${siteConfig.name}`, 'статьи Stripe', 'процессинг платежей', 'интеграция Stripe', 'payment routing'],
+        ? [`${siteConfig.name} blog`, 'UK substance', 'UK company registration', 'UK banking', 'Patent Box']
+        : [`блог ${siteConfig.name}`, 'substance UK', 'регистрация компании UK', 'банковский счёт UK', 'Patent Box'],
     }),
     alternates: {
       canonical: localePath('/blog', locale),
@@ -46,8 +47,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Blog({ params }: Props) {
   const { locale: rawLocale } = await params
-  const locale = (isValidLocale(rawLocale) ? rawLocale : 'ru') as Locale
-  const isEn = locale === 'en'
+  const locale = (isValidLocale(rawLocale) ? rawLocale : 'en') as Locale
+  const lang = contentLocale(locale)
+  const isEn = lang === 'en'
   const posts = getAllPosts()
   const blogPath = localePath('/blog', locale)
 
@@ -76,8 +78,8 @@ export default async function Blog({ params }: Props) {
     blogPost: posts.map((post) => ({
       '@type': 'BlogPosting',
       '@id': `${absoluteUrl(localePath(`/blog/${post.slug}`, locale))}#article`,
-      headline: post[locale].title,
-      description: post[locale].excerpt,
+      headline: localizePost(post, locale).title,
+      description: localizePost(post, locale).excerpt,
       datePublished: post.date,
       url: absoluteUrl(localePath(`/blog/${post.slug}`, locale)),
     })),

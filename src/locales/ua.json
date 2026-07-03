@@ -32,28 +32,28 @@
     ]
   },
   "nav": {
-    "services": "Services",
-    "clients": "Case studies",
-    "about": "Team",
+    "services": "Послуги",
+    "clients": "Кейси",
+    "about": "Команда",
     "blog": "Blog",
-    "reviews": "Reviews",
-    "cta": "Book a call",
+    "reviews": "Відгуки",
+    "cta": "Записатися",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "language": "Language",
-    "openContact": "Get a consultation"
+    "openContact": "Отримати консультацію"
   },
   "hero": {
-    "headline": "Business setup and support in Great Britain",
-    "accent": "turnkey",
-    "badge": "Substance in UK, sales organisation, accounting — from idea to first sale in 3 months",
-    "cta": "Get a consultation",
-    "trustedBy": "Trusted by",
+    "headline": "Відкриття та супровід бізнесу у Великобританії",
+    "accent": "під ключ",
+    "badge": "Substance in UK, організація продажів, бухгалтерія — від ідеї до першого продажу за 3 місяці",
+    "cta": "Отримати консультацію",
+    "trustedBy": "Нам довіряють",
     "trustpilotRating": "4.9",
-    "trustpilotReviews": "47 reviews"
+    "trustpilotReviews": "47 відгуків"
   },
   "stats": {
-    "heading": "Why international businesses choose us",
+    "heading": "Чому обирають нас",
     "stat1": {
       "value": "3 mo",
       "desc": "from idea to operational UK presence — not 12 months"
@@ -92,7 +92,7 @@
     }
   },
   "team": {
-    "heading": "Meet the team",
+    "heading": "Команда",
     "description": "Three specialists with deep expertise in international structuring, UK law and on-the-ground operations.",
     "cta": "Book a consultation",
     "members": {
@@ -114,7 +114,7 @@
     }
   },
   "cases": {
-    "heading": "Case studies",
+    "heading": "Кейси",
     "subheading": "International brands we've helped enter the UK market",
     "alteg": {
       "title": "Alteg",
@@ -142,9 +142,9 @@
     }
   },
   "homeBlog": {
-    "heading": "From our blog",
-    "subheading": "Guides on UK substance, company registration, banking and tax compliance.",
-    "viewAll": "Read all articles"
+    "heading": "Блог",
+    "subheading": "Статті про substance у UK, реєстрацію компаній, банківські рахунки та податковий комплаєнс.",
+    "viewAll": "Читати всі статті"
   },
   "trustpilot": {
     "heading": "What our clients say",
@@ -173,11 +173,6 @@
       "text": "Clear process from start to finish. They handled registration, accounting and our first UK sales hire.",
       "author": "James, Braz"
     }
-  },
-  "float": {
-    "label": "Quick contact",
-    "whatsapp": "Message on WhatsApp",
-    "telegram": "Message on Telegram"
   },
   "blog": {
     "title": "Vibe Services Blog",
@@ -354,5 +349,10 @@
     "aboutText": "We help international businesses establish real substance and operations in the UK — from company registration to first sale in 3 months.",
     "privacy": "Privacy Policy",
     "developedBy": "Developed by"
+  },
+  "float": {
+    "label": "Швидкий звʼязок",
+    "whatsapp": "Написати в WhatsApp",
+    "telegram": "Написати в Telegram"
   }
 }

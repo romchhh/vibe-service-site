@@ -4,26 +4,39 @@ import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { siteConfig } from '@/lib/site'
 import { SERVICE_SLUGS, getServiceBySlug, getServiceView } from '@/lib/services'
-import { useLocalizedPath } from '@/lib/i18n/use-locale'
+import { useLocale, useLocalizedPath } from '@/lib/i18n/use-locale'
 import { TelegramIcon, SupportIcon } from './icons/SocialIcons'
 import { useContactModal } from './ContactModalProvider'
 import SectionLink from './SectionLink'
 import styles from './Footer.module.css'
 
 const NAV_LINKS = [
-  { key: 'about', sectionId: 'specialists' },
-  { key: 'clients', sectionId: 'clients' },
+  { key: 'about', sectionId: 'team' },
+  { key: 'clients', sectionId: 'cases' },
+  { key: 'reviews', sectionId: 'reviews' },
   { key: 'blog', path: '/blog' },
 ] as const
 
 export default function Footer() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const { open: openContactModal } = useContactModal()
   const lp = useLocalizedPath()
-  const locale = i18n.language === 'en' ? 'en' : 'ru'
+  const locale = useLocale()
   const year = new Date().getFullYear()
 
   const contactItems = [
+    {
+      key: 'email' as const,
+      href: `mailto:${siteConfig.email}`,
+      icon: <SupportIcon size={20} />,
+      iconClass: styles.contactIconSupport,
+    },
+    {
+      key: 'phone' as const,
+      href: siteConfig.phoneTelUrl,
+      icon: <SupportIcon size={20} />,
+      iconClass: styles.contactIconSupport,
+    },
     {
       key: 'telegramChannel' as const,
       href: siteConfig.telegramChannelUrl,
@@ -32,7 +45,7 @@ export default function Footer() {
     },
     {
       key: 'telegramOperator' as const,
-      href: siteConfig.telegramOperatorUrl,
+      href: siteConfig.whatsappUrl,
       icon: <TelegramIcon size={20} />,
       iconClass: styles.contactIconTelegram,
     },
@@ -99,16 +112,16 @@ export default function Footer() {
                 <span className={`${styles.contactIcon} ${iconClass}`}>{icon}</span>
                 {'onClick' in item && item.onClick ? (
                   <button type="button" className={styles.contactLink} onClick={item.onClick}>
-                    {t(`footer.${key}`)}
+                    {key === 'email' ? siteConfig.email : key === 'phone' ? siteConfig.phone : t(`footer.${key}`)}
                   </button>
                 ) : (
                   <a
                     href={'href' in item ? item.href : '#'}
                     className={styles.contactLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={key === 'email' || key === 'phone' ? undefined : '_blank'}
+                    rel={key === 'email' || key === 'phone' ? undefined : 'noopener noreferrer'}
                   >
-                    {t(`footer.${key}`)}
+                    {key === 'email' ? siteConfig.email : key === 'phone' ? siteConfig.phone : t(`footer.${key}`)}
                   </a>
                 )}
               </li>
