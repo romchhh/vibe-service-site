@@ -208,6 +208,28 @@ a.logoItem:hover {
   border-radius: 100px;
   border: 1px solid rgba(201, 169, 78, 0.35);
   backdrop-filter: blur(8px);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s var(--ease-out);
+}
+
+.trustpilot:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(201, 169, 78, 0.55);
+  transform: translateY(-1px);
+}
+
+.trustLogoWrap {
+  display: flex;
+  align-items: center;
+  padding: 3px 8px;
+  background: #fff;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.trustLogo {
+  width: auto;
+  height: 16px;
 }
 
 .trustStars {
@@ -240,7 +262,7 @@ a.logoItem:hover {
   }
 
   .body {
-    padding: 104px var(--hero-header-padding-x) max(32px, env(safe-area-inset-bottom));
+    padding: 104px var(--hero-header-padding-x) max(48px, calc(env(safe-area-inset-bottom) + 24px));
     justify-content: flex-end;
   }
 
@@ -290,7 +312,7 @@ a.logoItem:hover {
   }
 
   .body {
-    padding: 96px 16px max(24px, env(safe-area-inset-bottom));
+    padding: 96px 16px max(44px, calc(env(safe-area-inset-bottom) + 20px));
   }
 
   .mainRow {
@@ -324,7 +346,7 @@ a.logoItem:hover {
 
 @media (max-width: 390px) {
   .body {
-    padding: 88px 14px max(20px, env(safe-area-inset-bottom));
+    padding: 88px 14px max(40px, calc(env(safe-area-inset-bottom) + 16px));
   }
 
   .headline {

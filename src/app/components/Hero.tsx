@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
 import { PARTNERS } from '@/data/partners'
 import { IMAGE_QUALITY, optimizeRemoteImageUrl } from '@/lib/image-url'
+import { siteConfig } from '@/lib/site'
 import { useContactModal } from './ContactModalProvider'
 import styles from './Hero.module.css'
 
@@ -85,12 +86,28 @@ export default function Hero() {
             </div>
 
             <div className={styles.trustRow}>
-              <div className={styles.trustpilot}>
+              <a
+                href={siteConfig.trustpilotUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.trustpilot}
+                aria-label={`Trustpilot ${t('hero.trustpilotRating')} · ${t('hero.trustpilotReviews')}`}
+              >
+                <span className={styles.trustLogoWrap}>
+                  <Image
+                    src="/images/logos/trust-pilot-stacked-black.svg"
+                    alt=""
+                    width={88}
+                    height={20}
+                    className={styles.trustLogo}
+                    aria-hidden="true"
+                  />
+                </span>
                 <span className={styles.trustStars} aria-hidden="true">★★★★★</span>
                 <span className={styles.trustRating}>
                   {t('hero.trustpilotRating')} · {t('hero.trustpilotReviews')}
                 </span>
-              </div>
+              </a>
             </div>
           </div>
 
