@@ -35,12 +35,12 @@
     "services": "Послуги",
     "clients": "Кейси",
     "about": "Команда",
-    "blog": "Blog",
+    "blog": "Блог",
     "reviews": "Відгуки",
     "cta": "Записатися",
-    "openMenu": "Open menu",
-    "closeMenu": "Close menu",
-    "language": "Language",
+    "openMenu": "Відкрити меню",
+    "closeMenu": "Закрити меню",
+    "language": "Мова",
     "openContact": "Отримати консультацію"
   },
   "hero": {
@@ -55,90 +55,90 @@
   "stats": {
     "heading": "Чому обирають нас",
     "stat1": {
-      "value": "3 mo",
-      "desc": "from idea to operational UK presence — not 12 months"
+      "value": "3 міс",
+      "desc": "від ідеї до операційної присутності в UK — не 12 місяців"
     },
     "stat2": {
       "value": "6+",
-      "desc": "successful market entries for international brands"
+      "desc": "успішних виходів на ринок для міжнародних брендів"
     },
     "stat3": {
       "value": "100%",
-      "desc": "HMRC and banking compliance focus from day one"
+      "desc": "фокус на комплаєнсі HMRC і банків з першого дня"
     },
-    "cta": "Book a free consultation"
+    "cta": "Отримати консультацію"
   },
   "services": {
-    "heading": "What we do for your UK business",
-    "more": "Learn more"
+    "heading": "Що ми робимо для вашого бізнесу в UK",
+    "more": "Детальніше"
   },
   "howWeWork": {
-    "heading": "How we work",
+    "heading": "Як ми працюємо",
     "step1": {
-      "title": "Discovery & structure",
-      "desc": "We analyse your business model, recommend LTD or LLP, and design a compliant UK structure with real substance."
+      "title": "Аналіз і структура",
+      "desc": "Вивчаємо вашу бізнес-модель, рекомендуємо LTD або LLP і проєктуємо compliant структуру з реальним substance."
     },
     "step2": {
-      "title": "Registration & substance",
-      "desc": "Company registration, registered office, local director and operational presence — everything HMRC and banks expect."
+      "title": "Реєстрація та substance",
+      "desc": "Реєстрація компанії, юридична адреса, локальний директор і операційна присутність — усе, що очікують HMRC і банки."
     },
     "step3": {
-      "title": "Accounting & compliance",
-      "desc": "VAT registration, bookkeeping, payroll and annual filings. We keep you compliant so you can focus on growth."
+      "title": "Бухгалтерія та комплаєнс",
+      "desc": "VAT, ведення обліку, payroll і річна звітність. Ви залишаєтесь compliant — ми беремо рутину на себе."
     },
     "step4": {
-      "title": "Sales & go-to-market",
-      "desc": "Market analysis, marketing setup and UK sales team organisation — from launch to first revenue."
+      "title": "Продажі та вихід на ринок",
+      "desc": "Аналіз ринку, маркетинг і формування команди в UK — від запуску до першого доходу."
     }
   },
   "team": {
     "heading": "Команда",
-    "description": "Three specialists with deep expertise in international structuring, UK law and on-the-ground operations.",
-    "cta": "Book a consultation",
+    "description": "Троє спеціалістів із глибокою експертизою в міжнародному структуруванні, UK-праві та операційному управлінні.",
+    "cta": "Отримати консультацію",
     "members": {
       "alex": {
         "name": "Alex Valor",
-        "role": "Founder",
-        "bio": "Expert in international structuring and UK market entry. Alex has led dozens of cross-border setups and knows how to build substance that satisfies HMRC and banks."
+        "role": "Засновник",
+        "bio": "Експерт з міжнародного структурування та виходу на UK-ринок. Alex провів десятки кросс-бордерних setup і знає, як побудувати substance, який задовольняє HMRC і банки."
       },
       "dmitry": {
         "name": "Dmitry Lakshin",
-        "role": "Partner, Legal Director",
-        "bio": "Specialises in UK corporate law, company structures and regulatory compliance. Dmitry ensures every setup is legally sound and tax-efficient."
+        "role": "Партнер, юридичний директор",
+        "bio": "Спеціалізується на корпоративному праві UK, структурах компаній і регуляторному комплаєнсі. Дмитро забезпечує юридичну та податкову коректність кожного проєкту."
       },
       "geoff": {
         "name": "Geoff Madd",
-        "role": "Partner, UK Operations Director",
-        "bio": "Manages day-to-day operations in the UK: office, staff, banking relationships and local representation for international clients."
+        "role": "Партнер, операційний директор у UK",
+        "bio": "Керує операціями у Великобританії: офіс, персонал, банківські відносини та локальне представництво для міжнародних клієнтів."
       }
     }
   },
   "cases": {
     "heading": "Кейси",
-    "subheading": "International brands we've helped enter the UK market",
+    "subheading": "Міжнародні бренди, яким ми допомогли вийти на ринок UK",
     "alteg": {
       "title": "Alteg",
-      "desc": "UK representative office setup and sales channel configuration."
+      "desc": "Відкриття представництва та налаштування каналів продажів."
     },
     "alpengold": {
       "title": "Alpengold",
-      "desc": "Operational presence and full accounting support in the UK."
+      "desc": "Організація присутності та бухгалтерський супровід."
     },
     "greenup": {
       "title": "Green Up",
-      "desc": "Company registration and compliant substance package."
+      "desc": "Реєстрація компанії та пакет compliant substance."
     },
     "beehave": {
       "title": "Beehave",
-      "desc": "End-to-end UK business launch — from entity to operations."
+      "desc": "Повний цикл відкриття бізнесу в UK — від юрособи до операцій."
     },
     "mirax": {
       "title": "Mirax",
-      "desc": "Legal and tax compliance support for UK operations."
+      "desc": "Юридичний і податковий супровід UK-операцій."
     },
     "braz": {
       "title": "Braz",
-      "desc": "UK sales organisation and marketing launch."
+      "desc": "Організація продажів і маркетинговий запуск у UK."
     }
   },
   "homeBlog": {
@@ -147,44 +147,44 @@
     "viewAll": "Читати всі статті"
   },
   "trustpilot": {
-    "heading": "What our clients say",
+    "heading": "Відгуки клієнтів",
     "rating": "4.9",
-    "reviews": "47 reviews",
+    "reviews": "47 відгуків",
     "country": "GB",
     "trustScore": "TrustScore {{rating}}/5 • {{reviews}}",
-    "ratedOn": "Rated {{rating}} out of 5 on Trustpilot",
-    "cta": "Leave a review on Trustpilot",
-    "ctaQuote": "Book a consultation",
-    "ctaContact": "Contact us",
-    "prevReview": "Previous review",
-    "nextReview": "Next review",
+    "ratedOn": "Оцінка {{rating}} з 5 на Trustpilot",
+    "cta": "Залишити відгук на Trustpilot",
+    "ctaQuote": "Записатися на консультацію",
+    "ctaContact": "Зв'язатися з нами",
+    "prevReview": "Попередній відгук",
+    "nextReview": "Наступний відгук",
     "testimonial1": {
-      "timeAgo": "2 weeks ago",
-      "text": "Vibe Services set up our UK presence in under 3 months. Professional, transparent and always available.",
+      "timeAgo": "2 тижні тому",
+      "text": "Vibe Services налаштували наше присутність у UK менше ніж за 3 місяці. Професійно, прозоро і завжди на зв'язку.",
       "author": "Dmitry, Alteg"
     },
     "testimonial2": {
-      "timeAgo": "1 month ago",
-      "text": "Finally a team that understands substance requirements. Our bank account was approved without issues.",
+      "timeAgo": "1 місяць тому",
+      "text": "Нарешті команда, яка розуміє вимоги до substance. Банківський рахунок схвалили без проблем.",
       "author": "Maria, Green Up"
     },
     "testimonial3": {
-      "timeAgo": "3 weeks ago",
-      "text": "Clear process from start to finish. They handled registration, accounting and our first UK sales hire.",
+      "timeAgo": "3 тижні тому",
+      "text": "Зрозумілий процес від початку до кінця. Взяли на себе реєстрацію, бухгалтерію та першого співробітника з продажів у UK.",
       "author": "James, Braz"
     }
   },
   "blog": {
-    "title": "Vibe Services Blog",
-    "description": "Articles on UK substance, company registration, banking for non-residents and tax compliance.",
-    "backToBlog": "Back to blog",
-    "backHome": "Back to home",
-    "readAlso": "Read also",
-    "readMore": "Read more",
-    "viewAll": "View all articles",
-    "ctaTitle": "Ready to enter the UK market?",
-    "ctaText": "Book a free 15-minute consultation — we'll assess your situation and propose a turnkey plan.",
-    "ctaButton": "Book a consultation"
+    "title": "Блог Vibe Services",
+    "description": "Статті про substance у UK, реєстрацію компаній, банківські рахунки для нерезидентів і податковий комплаєнс.",
+    "backToBlog": "Повернутися до блогу",
+    "backHome": "На головну",
+    "readAlso": "Читайте також",
+    "readMore": "Читати далі",
+    "viewAll": "Усі статті",
+    "ctaTitle": "Готові вийти на ринок UK?",
+    "ctaText": "Запишіться на безкоштовну 15-хвилинну консультацію — оцінимо ситуацію та запропонуємо план під ключ.",
+    "ctaButton": "Записатися на консультацію"
   },
   "contact": {
     "heading": "Запишіться на безкоштовну консультацію",
@@ -215,149 +215,149 @@
     "imageAlt": "Консалтинг з бізнесу в UK"
   },
   "privacy": {
-    "title": "Privacy Policy",
-    "updated": "Last updated: 3 July 2026",
-    "intro": "This Privacy Policy describes how Vibe Services collects, uses and protects personal data when you visit vibe-service.co.uk and submit enquiries.",
+    "title": "Політика конфіденційності",
+    "updated": "Останнє оновлення: 3 липня 2026 р.",
+    "intro": "Ця Політика описує, як Vibe Services збирає, використовує та захищає персональні дані під час відвідування vibe-service.co.uk.",
     "sections": {
       "general": {
-        "title": "1. General",
+        "title": "1. Загальні положення",
         "paragraphs": [
-          "Vibe Services provides UK business consulting including company registration, substance, accounting and sales support.",
-          "By using our website you confirm you have read this Policy. If you disagree, please do not submit personal data."
+          "Vibe Services надає консалтингові послуги з відкриття та супроводу бізнесу у Великобританії.",
+          "Користуючись сайтом, ви підтверджуєте ознайомлення з Політикою. Якщо не погоджуєтесь — не надсилайте персональні дані."
         ]
       },
       "dataCollected": {
-        "title": "2. Data we collect",
+        "title": "2. Які дані збираємо",
         "paragraphs": [
-          "We collect data you voluntarily provide:"
+          "Збираємо дані, які ви добровільно надаєте:"
         ],
         "list": [
-          "name;",
-          "phone number or email;",
-          "preferred call time and comments;",
-          "technical data: IP address, browser type, language (server logs)."
+          "ім'я;",
+          "телефон або email;",
+          "зручний час дзвінка та коментар;",
+          "технічні дані: IP, браузер, мова (серверні журнали)."
         ]
       },
       "purposes": {
-        "title": "3. Purposes",
+        "title": "3. Цілі обробки",
         "paragraphs": [
-          "We use your data to:"
+          "Використовуємо дані для:"
         ],
         "list": [
-          "process enquiries and book consultations;",
-          "provide UK business consulting services;",
-          "improve our website and services;",
-          "comply with applicable law."
+          "обробки заявок і запису на консультації;",
+          "надання консалтингових послуг;",
+          "покращення сайту та сервісу;",
+          "дотримання законодавства."
         ]
       },
       "legalBasis": {
-        "title": "4. Legal basis",
+        "title": "4. Правові підстави",
         "paragraphs": [
-          "Processing is based on your consent when submitting the contact form.",
-          "We may also rely on legitimate interest for website security."
+          "Обробка на підставі згоди при надсиланні форми.",
+          "Також можемо покладатися на законний інтерес для безпеки сайту."
         ]
       },
       "sharing": {
-        "title": "5. Third parties",
+        "title": "5. Передача третім особам",
         "paragraphs": [
-          "We do not sell your data. Sharing is limited to:"
+          "Не продаємо дані. Передача можлива:"
         ],
         "list": [
-          "hosting and infrastructure providers;",
-          "communication tools (Telegram, WhatsApp) if you provided such contact;",
-          "authorities when legally required."
+          "постачальникам хостингу;",
+          "месенджерам (Telegram, WhatsApp), якщо вказано такий контакт;",
+          "державним органам за законною вимогою."
         ]
       },
       "retention": {
-        "title": "6. Retention",
+        "title": "6. Термін зберігання",
         "paragraphs": [
-          "Contact form data is kept as long as needed for your enquiry, up to 3 years from last contact.",
-          "Server logs are kept up to 12 months."
+          "Дані форм зберігаються до 3 років від останнього контакту.",
+          "Серверні журнали — до 12 місяців."
         ]
       },
       "cookies": {
-        "title": "7. Cookies",
+        "title": "7. Cookie",
         "paragraphs": [
-          "We use technically necessary cookies (e.g. language preference).",
-          "Analytics tools may be added in future — this Policy will be updated accordingly."
+          "Використовуємо технічно необхідні cookie (наприклад, мова інтерфейсу).",
+          "При підключенні аналітики оновимо Політику."
         ]
       },
       "rights": {
-        "title": "8. Your rights",
+        "title": "8. Ваші права",
         "paragraphs": [
-          "Depending on applicable law, you may:"
+          "Ви можете:"
         ],
         "list": [
-          "request access to your data;",
-          "request correction or deletion;",
-          "withdraw consent;",
-          "lodge a complaint with a supervisory authority."
+          "запросити доступ до даних;",
+          "вимагати виправлення або видалення;",
+          "відкликати згоду;",
+          "подати скаргу до наглядового органу."
         ]
       },
       "security": {
-        "title": "9. Security",
+        "title": "9. Безпека",
         "paragraphs": [
-          "We apply organisational and technical measures to protect your data.",
-          "Data is transmitted over HTTPS."
+          "Застосовуємо заходи захисту даних.",
+          "Передача через HTTPS."
         ]
       },
       "transfers": {
-        "title": "10. International transfers",
+        "title": "10. Міжнародна передача",
         "paragraphs": [
-          "We work with clients worldwide. Data may be processed outside your country of residence with appropriate safeguards."
+          "Працюємо з клієнтами по всьому світу. Дані можуть оброблятися за межами вашої країни."
         ]
       },
       "children": {
-        "title": "11. Children",
+        "title": "11. Неповнолітні",
         "paragraphs": [
-          "Our services are for businesses. We do not knowingly collect data from persons under 18."
+          "Послуги для бізнесу. Не збираємо дані осіб молодше 18 років."
         ]
       },
       "changes": {
-        "title": "12. Changes",
+        "title": "12. Зміни",
         "paragraphs": [
-          "We may update this Policy. The current version is always on this page with the update date."
+          "Можемо оновлювати Політику. Актуальна версія завжди на цій сторінці."
         ]
       },
       "contact": {
-        "title": "13. Contact",
+        "title": "13. Контакти",
         "paragraphs": [
-          "For privacy enquiries contact:"
+          "З питань конфіденційності:"
         ]
       }
     }
   },
   "servicePages": {
-    "aboutService": "About this service",
-    "introCta": "Book a free consultation",
-    "benefitsHeading": "Key benefits",
-    "ctaHeading": "Ready to start?",
-    "ctaDescription": "Book a free consultation and get a tailored plan for your UK market entry",
-    "relatedServices": "Other services",
-    "relatedBlog": "Related articles"
+    "aboutService": "Про послугу",
+    "introCta": "Записатися на безкоштовну консультацію",
+    "benefitsHeading": "Ключові переваги",
+    "ctaHeading": "Готові почати?",
+    "ctaDescription": "Запишіться на безкоштовну консультацію та отримайте індивідуальний план виходу на ринок UK",
+    "relatedServices": "Інші послуги",
+    "relatedBlog": "Схожі статті"
   },
   "footer": {
-    "navLabel": "Navigation",
+    "navLabel": "Навігація",
     "brandBold": "VIBE",
     "brandRegular": "SERVICES",
-    "copyright": "All rights reserved ©{{year}} Vibe Services",
-    "legal": "UK business consulting: substance, company registration, accounting and sales. Registered in Great Britain.",
-    "infoHeading": "Information",
-    "servicesHeading": "Services",
-    "about": "Team",
-    "services": "All services",
-    "clients": "Case studies",
-    "blog": "Blog",
-    "reviews": "Reviews",
-    "contactHeading": "Contact us",
+    "copyright": "Усі права захищені ©{{year}} Vibe Services",
+    "legal": "Консалтинг з бізнесу в UK: substance, реєстрація компаній, бухгалтерія та продажі.",
+    "infoHeading": "Інформація",
+    "servicesHeading": "Послуги",
+    "about": "Команда",
+    "services": "Усі послуги",
+    "clients": "Кейси",
+    "blog": "Блог",
+    "reviews": "Відгуки",
+    "contactHeading": "Зв'язок",
     "email": "info@vibe-service.co.uk",
     "telegramChannel": "Telegram",
     "telegramOperator": "WhatsApp",
-    "support247": "Book a consultation",
+    "support247": "Записатися на консультацію",
     "aboutHeading": "Vibe Services",
-    "aboutText": "We help international businesses establish real substance and operations in the UK — from company registration to first sale in 3 months.",
-    "privacy": "Privacy Policy",
-    "developedBy": "Developed by"
+    "aboutText": "Допомагаємо міжнародному бізнесу створити реальний substance і операції в UK — від реєстрації до першого продажу за 3 місяці.",
+    "privacy": "Політика конфіденційності",
+    "developedBy": "Розроблено"
   },
   "float": {
     "label": "Швидкий звʼязок",

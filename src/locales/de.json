@@ -38,153 +38,153 @@
     "blog": "Blog",
     "reviews": "Bewertungen",
     "cta": "Termin buchen",
-    "openMenu": "Open menu",
-    "closeMenu": "Close menu",
-    "language": "Language",
-    "openContact": "Book a consultation"
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "language": "Sprache",
+    "openContact": "Beratung buchen"
   },
   "hero": {
     "headline": "Geschäftsaufbau und -betreuung in Großbritannien",
     "accent": "schlüsselfertig",
     "badge": "Substance in UK, Vertriebsorganisation, Buchhaltung — von der Idee bis zum ersten Verkauf in 3 Monaten",
     "cta": "Beratung anfordern",
-    "trustedBy": "Trusted by",
+    "trustedBy": "Vertrauen uns",
     "trustpilotRating": "4.9",
     "trustpilotReviews": "47 Bewertungen"
   },
   "stats": {
     "heading": "Warum uns internationale Unternehmen wählen",
     "stat1": {
-      "value": "3 mo",
-      "desc": "from idea to operational UK presence — not 12 months"
+      "value": "3 Mon.",
+      "desc": "von der Idee zur operativen Präsenz in UK — nicht 12 Monate"
     },
     "stat2": {
       "value": "6+",
-      "desc": "successful market entries for international brands"
+      "desc": "erfolgreiche Markteintritte für internationale Marken"
     },
     "stat3": {
       "value": "100%",
-      "desc": "HMRC and banking compliance focus from day one"
+      "desc": "Fokus auf HMRC- und Banking-Compliance ab dem ersten Tag"
     },
-    "cta": "Book a free consultation"
+    "cta": "Kostenlose Beratung buchen"
   },
   "services": {
-    "heading": "What we do for your UK business",
-    "more": "Learn more"
+    "heading": "Was wir für Ihr UK-Geschäft tun",
+    "more": "Mehr erfahren"
   },
   "howWeWork": {
-    "heading": "How we work",
+    "heading": "So arbeiten wir",
     "step1": {
-      "title": "Discovery & structure",
-      "desc": "We analyse your business model, recommend LTD or LLP, and design a compliant UK structure with real substance."
+      "title": "Analyse & Struktur",
+      "desc": "Wir analysieren Ihr Geschäftsmodell, empfehlen LTD oder LLP und entwerfen eine compliant UK-Struktur mit echter Substance."
     },
     "step2": {
-      "title": "Registration & substance",
-      "desc": "Company registration, registered office, local director and operational presence — everything HMRC and banks expect."
+      "title": "Registrierung & Substance",
+      "desc": "Firmengründung, Registered Office, lokaler Director und operative Präsenz — alles, was HMRC und Banken erwarten."
     },
     "step3": {
-      "title": "Accounting & compliance",
-      "desc": "VAT registration, bookkeeping, payroll and annual filings. We keep you compliant so you can focus on growth."
+      "title": "Buchhaltung & Compliance",
+      "desc": "VAT-Registrierung, Buchführung, Payroll und Jahresabschlüsse. Wir halten Sie compliant, damit Sie sich auf Wachstum konzentrieren können."
     },
     "step4": {
-      "title": "Sales & go-to-market",
-      "desc": "Market analysis, marketing setup and UK sales team organisation — from launch to first revenue."
+      "title": "Vertrieb & Markteintritt",
+      "desc": "Marktanalyse, Marketing-Setup und Aufbau eines UK-Vertriebsteams — von der Markteinführung bis zum ersten Umsatz."
     }
   },
   "team": {
     "heading": "Unser Team",
-    "description": "Three specialists with deep expertise in international structuring, UK law and on-the-ground operations.",
-    "cta": "Book a consultation",
+    "description": "Drei Spezialisten mit tiefgreifender Expertise in internationaler Strukturierung, britischem Recht und operativer Umsetzung vor Ort.",
+    "cta": "Beratung buchen",
     "members": {
       "alex": {
         "name": "Alex Valor",
-        "role": "Founder",
-        "bio": "Expert in international structuring and UK market entry. Alex has led dozens of cross-border setups and knows how to build substance that satisfies HMRC and banks."
+        "role": "Gründer",
+        "bio": "Experte für internationale Strukturierung und UK-Markteintritt. Alex hat Dutzende grenzüberschreitende Setups geleitet und weiß, wie man Substance aufbaut, die HMRC und Banken überzeugt."
       },
       "dmitry": {
         "name": "Dmitry Lakshin",
         "role": "Partner, Legal Director",
-        "bio": "Specialises in UK corporate law, company structures and regulatory compliance. Dmitry ensures every setup is legally sound and tax-efficient."
+        "bio": "Spezialist für britisches Gesellschaftsrecht, Unternehmensstrukturen und regulatorische Compliance. Dmitry stellt sicher, dass jedes Setup rechtlich solide und steuereffizient ist."
       },
       "geoff": {
         "name": "Geoff Madd",
         "role": "Partner, UK Operations Director",
-        "bio": "Manages day-to-day operations in the UK: office, staff, banking relationships and local representation for international clients."
+        "bio": "Verantwortet den Tagesbetrieb in UK: Büro, Personal, Bankbeziehungen und lokale Vertretung für internationale Kunden."
       }
     }
   },
   "cases": {
     "heading": "Referenzen",
-    "subheading": "International brands we've helped enter the UK market",
+    "subheading": "Internationale Marken, die wir beim Eintritt in den UK-Markt unterstützt haben",
     "alteg": {
       "title": "Alteg",
-      "desc": "UK representative office setup and sales channel configuration."
+      "desc": "Einrichtung eines UK-Vertretungsbüros und Konfiguration der Vertriebskanäle."
     },
     "alpengold": {
       "title": "Alpengold",
-      "desc": "Operational presence and full accounting support in the UK."
+      "desc": "Operative Präsenz und vollständige Buchhaltungsbetreuung in UK."
     },
     "greenup": {
       "title": "Green Up",
-      "desc": "Company registration and compliant substance package."
+      "desc": "Firmengründung und compliant Substance-Paket."
     },
     "beehave": {
       "title": "Beehave",
-      "desc": "End-to-end UK business launch — from entity to operations."
+      "desc": "Schlüsselfertiger UK-Geschäftsstart — von der Gesellschaft bis zum operativen Betrieb."
     },
     "mirax": {
       "title": "Mirax",
-      "desc": "Legal and tax compliance support for UK operations."
+      "desc": "Rechtliche und steuerliche Compliance-Betreuung für UK-Operationen."
     },
     "braz": {
       "title": "Braz",
-      "desc": "UK sales organisation and marketing launch."
+      "desc": "UK-Vertriebsorganisation und Marketing-Launch."
     }
   },
   "homeBlog": {
-    "heading": "From our blog",
-    "subheading": "Guides on UK substance, company registration, banking and tax compliance.",
-    "viewAll": "Read all articles"
+    "heading": "Aus unserem Blog",
+    "subheading": "Leitfäden zu Substance in UK, Firmengründung, Bankkonten und steuerlicher Compliance.",
+    "viewAll": "Alle Artikel lesen"
   },
   "trustpilot": {
-    "heading": "What our clients say",
+    "heading": "Das sagen unsere Kunden",
     "rating": "4.9",
-    "reviews": "47 reviews",
+    "reviews": "47 Bewertungen",
     "country": "GB",
     "trustScore": "TrustScore {{rating}}/5 • {{reviews}}",
-    "ratedOn": "Rated {{rating}} out of 5 on Trustpilot",
-    "cta": "Leave a review on Trustpilot",
-    "ctaQuote": "Book a consultation",
-    "ctaContact": "Contact us",
-    "prevReview": "Previous review",
-    "nextReview": "Next review",
+    "ratedOn": "Bewertet mit {{rating}} von 5 auf Trustpilot",
+    "cta": "Bewertung auf Trustpilot hinterlassen",
+    "ctaQuote": "Beratung buchen",
+    "ctaContact": "Kontakt aufnehmen",
+    "prevReview": "Vorherige Bewertung",
+    "nextReview": "Nächste Bewertung",
     "testimonial1": {
-      "timeAgo": "2 weeks ago",
-      "text": "Vibe Services set up our UK presence in under 3 months. Professional, transparent and always available.",
+      "timeAgo": "vor 2 Wochen",
+      "text": "Vibe Services hat unsere UK-Präsenz in unter 3 Monaten aufgebaut. Professionell, transparent und jederzeit erreichbar.",
       "author": "Dmitry, Alteg"
     },
     "testimonial2": {
-      "timeAgo": "1 month ago",
-      "text": "Finally a team that understands substance requirements. Our bank account was approved without issues.",
+      "timeAgo": "vor 1 Monat",
+      "text": "Endlich ein Team, das die Substance-Anforderungen versteht. Unser Bankkonto wurde ohne Probleme freigegeben.",
       "author": "Maria, Green Up"
     },
     "testimonial3": {
-      "timeAgo": "3 weeks ago",
-      "text": "Clear process from start to finish. They handled registration, accounting and our first UK sales hire.",
+      "timeAgo": "vor 3 Wochen",
+      "text": "Klarer Prozess von Anfang bis Ende. Sie übernahmen Registrierung, Buchhaltung und unsere erste UK-Vertriebsstelle.",
       "author": "James, Braz"
     }
   },
   "blog": {
     "title": "Vibe Services Blog",
-    "description": "Articles on UK substance, company registration, banking for non-residents and tax compliance.",
-    "backToBlog": "Back to blog",
-    "backHome": "Back to home",
-    "readAlso": "Read also",
-    "readMore": "Read more",
-    "viewAll": "View all articles",
-    "ctaTitle": "Ready to enter the UK market?",
-    "ctaText": "Book a free 15-minute consultation — we'll assess your situation and propose a turnkey plan.",
-    "ctaButton": "Book a consultation"
+    "description": "Artikel zu Substance in UK, Firmengründung, Bankkonten für Nichtansässige und steuerliche Compliance.",
+    "backToBlog": "Zurück zum Blog",
+    "backHome": "Zur Startseite",
+    "readAlso": "Lesen Sie auch",
+    "readMore": "Weiterlesen",
+    "viewAll": "Alle Artikel",
+    "ctaTitle": "Bereit für den UK-Markt?",
+    "ctaText": "Buchen Sie eine kostenlose 15-minütige Beratung — wir bewerten Ihre Situation und schlagen einen Schlüsselfertig-Plan vor.",
+    "ctaButton": "Beratung buchen"
   },
   "contact": {
     "heading": "Kostenlose Beratung buchen",
@@ -215,149 +215,149 @@
     "imageAlt": "UK-Geschäftsberatung"
   },
   "privacy": {
-    "title": "Privacy Policy",
-    "updated": "Last updated: 3 July 2026",
-    "intro": "This Privacy Policy describes how Vibe Services collects, uses and protects personal data when you visit vibe-service.co.uk and submit enquiries.",
+    "title": "Datenschutzerklärung",
+    "updated": "Zuletzt aktualisiert: 3. Juli 2026",
+    "intro": "Diese Datenschutzerklärung beschreibt, wie Vibe Services personenbezogene Daten erhebt, nutzt und schützt, wenn Sie vibe-service.co.uk besuchen und Anfragen übermitteln.",
     "sections": {
       "general": {
-        "title": "1. General",
+        "title": "1. Allgemeines",
         "paragraphs": [
-          "Vibe Services provides UK business consulting including company registration, substance, accounting and sales support.",
-          "By using our website you confirm you have read this Policy. If you disagree, please do not submit personal data."
+          "Vibe Services bietet UK-Geschäftsberatung einschließlich Firmengründung, Substance, Buchhaltung und Vertriebsunterstützung.",
+          "Durch die Nutzung unserer Website bestätigen Sie, dass Sie diese Erklärung gelesen haben. Wenn Sie nicht einverstanden sind, übermitteln Sie bitte keine personenbezogenen Daten."
         ]
       },
       "dataCollected": {
-        "title": "2. Data we collect",
+        "title": "2. Erhobene Daten",
         "paragraphs": [
-          "We collect data you voluntarily provide:"
+          "Wir erheben Daten, die Sie freiwillig bereitstellen:"
         ],
         "list": [
-          "name;",
-          "phone number or email;",
-          "preferred call time and comments;",
-          "technical data: IP address, browser type, language (server logs)."
+          "Name;",
+          "Telefonnummer oder E-Mail;",
+          "bevorzugte Anrufzeit und Kommentare;",
+          "technische Daten: IP-Adresse, Browsertyp, Sprache (Server-Logs)."
         ]
       },
       "purposes": {
-        "title": "3. Purposes",
+        "title": "3. Zwecke der Verarbeitung",
         "paragraphs": [
-          "We use your data to:"
+          "Wir nutzen Ihre Daten, um:"
         ],
         "list": [
-          "process enquiries and book consultations;",
-          "provide UK business consulting services;",
-          "improve our website and services;",
-          "comply with applicable law."
+          "Anfragen zu bearbeiten und Beratungen zu vereinbaren;",
+          "UK-Geschäftsberatungsleistungen zu erbringen;",
+          "unsere Website und Leistungen zu verbessern;",
+          "geltendes Recht einzuhalten."
         ]
       },
       "legalBasis": {
-        "title": "4. Legal basis",
+        "title": "4. Rechtsgrundlage",
         "paragraphs": [
-          "Processing is based on your consent when submitting the contact form.",
-          "We may also rely on legitimate interest for website security."
+          "Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung bei der Übermittlung des Kontaktformulars.",
+          "Wir können uns außerdem auf berechtigte Interessen für die Sicherheit der Website stützen."
         ]
       },
       "sharing": {
-        "title": "5. Third parties",
+        "title": "5. Dritte",
         "paragraphs": [
-          "We do not sell your data. Sharing is limited to:"
+          "Wir verkaufen Ihre Daten nicht. Eine Weitergabe ist beschränkt auf:"
         ],
         "list": [
-          "hosting and infrastructure providers;",
-          "communication tools (Telegram, WhatsApp) if you provided such contact;",
-          "authorities when legally required."
+          "Hosting- und Infrastrukturanbieter;",
+          "Kommunikationstools (Telegram, WhatsApp), sofern Sie solche Kontaktdaten angegeben haben;",
+          "Behörden, wenn dies gesetzlich vorgeschrieben ist."
         ]
       },
       "retention": {
-        "title": "6. Retention",
+        "title": "6. Aufbewahrung",
         "paragraphs": [
-          "Contact form data is kept as long as needed for your enquiry, up to 3 years from last contact.",
-          "Server logs are kept up to 12 months."
+          "Kontaktformulardaten werden so lange aufbewahrt, wie es für Ihre Anfrage erforderlich ist, höchstens 3 Jahre ab dem letzten Kontakt.",
+          "Server-Logs werden bis zu 12 Monate gespeichert."
         ]
       },
       "cookies": {
         "title": "7. Cookies",
         "paragraphs": [
-          "We use technically necessary cookies (e.g. language preference).",
-          "Analytics tools may be added in future — this Policy will be updated accordingly."
+          "Wir verwenden technisch notwendige Cookies (z. B. Spracheinstellung).",
+          "Analyse-Tools können künftig ergänzt werden — diese Erklärung wird entsprechend aktualisiert."
         ]
       },
       "rights": {
-        "title": "8. Your rights",
+        "title": "8. Ihre Rechte",
         "paragraphs": [
-          "Depending on applicable law, you may:"
+          "Je nach geltendem Recht können Sie:"
         ],
         "list": [
-          "request access to your data;",
-          "request correction or deletion;",
-          "withdraw consent;",
-          "lodge a complaint with a supervisory authority."
+          "Auskunft über Ihre Daten verlangen;",
+          "Berichtigung oder Löschung verlangen;",
+          "Ihre Einwilligung widerrufen;",
+          "Beschwerde bei einer Aufsichtsbehörde einreichen."
         ]
       },
       "security": {
-        "title": "9. Security",
+        "title": "9. Sicherheit",
         "paragraphs": [
-          "We apply organisational and technical measures to protect your data.",
-          "Data is transmitted over HTTPS."
+          "Wir treffen organisatorische und technische Maßnahmen zum Schutz Ihrer Daten.",
+          "Daten werden über HTTPS übertragen."
         ]
       },
       "transfers": {
-        "title": "10. International transfers",
+        "title": "10. Internationale Übermittlungen",
         "paragraphs": [
-          "We work with clients worldwide. Data may be processed outside your country of residence with appropriate safeguards."
+          "Wir arbeiten mit Kunden weltweit. Daten können außerhalb Ihres Wohnsitzlandes mit angemessenen Schutzmaßnahmen verarbeitet werden."
         ]
       },
       "children": {
-        "title": "11. Children",
+        "title": "11. Kinder",
         "paragraphs": [
-          "Our services are for businesses. We do not knowingly collect data from persons under 18."
+          "Unsere Leistungen richten sich an Unternehmen. Wir erheben wissentlich keine Daten von Personen unter 18 Jahren."
         ]
       },
       "changes": {
-        "title": "12. Changes",
+        "title": "12. Änderungen",
         "paragraphs": [
-          "We may update this Policy. The current version is always on this page with the update date."
+          "Wir können diese Erklärung aktualisieren. Die aktuelle Version finden Sie stets auf dieser Seite mit dem Aktualisierungsdatum."
         ]
       },
       "contact": {
-        "title": "13. Contact",
+        "title": "13. Kontakt",
         "paragraphs": [
-          "For privacy enquiries contact:"
+          "Bei Datenschutzanfragen wenden Sie sich an:"
         ]
       }
     }
   },
   "servicePages": {
-    "aboutService": "About this service",
-    "introCta": "Book a free consultation",
-    "benefitsHeading": "Key benefits",
-    "ctaHeading": "Ready to start?",
-    "ctaDescription": "Book a free consultation and get a tailored plan for your UK market entry",
-    "relatedServices": "Other services",
-    "relatedBlog": "Related articles"
+    "aboutService": "Über diese Leistung",
+    "introCta": "Kostenlose Beratung buchen",
+    "benefitsHeading": "Wichtigste Vorteile",
+    "ctaHeading": "Bereit zu starten?",
+    "ctaDescription": "Buchen Sie eine kostenlose Beratung und erhalten Sie einen maßgeschneiderten Plan für Ihren UK-Markteintritt",
+    "relatedServices": "Weitere Leistungen",
+    "relatedBlog": "Verwandte Artikel"
   },
   "footer": {
     "navLabel": "Navigation",
     "brandBold": "VIBE",
     "brandRegular": "SERVICES",
-    "copyright": "All rights reserved ©{{year}} Vibe Services",
-    "legal": "UK business consulting: substance, company registration, accounting and sales. Registered in Great Britain.",
-    "infoHeading": "Information",
-    "servicesHeading": "Services",
+    "copyright": "Alle Rechte vorbehalten ©{{year}} Vibe Services",
+    "legal": "UK-Geschäftsberatung: Substance, Firmengründung, Buchhaltung und Vertrieb. Registriert in Großbritannien.",
+    "infoHeading": "Informationen",
+    "servicesHeading": "Leistungen",
     "about": "Team",
-    "services": "All services",
-    "clients": "Case studies",
+    "services": "Alle Leistungen",
+    "clients": "Referenzen",
     "blog": "Blog",
-    "reviews": "Reviews",
-    "contactHeading": "Contact us",
+    "reviews": "Bewertungen",
+    "contactHeading": "Kontakt",
     "email": "info@vibe-service.co.uk",
     "telegramChannel": "Telegram",
     "telegramOperator": "WhatsApp",
-    "support247": "Book a consultation",
+    "support247": "Beratung buchen",
     "aboutHeading": "Vibe Services",
-    "aboutText": "We help international businesses establish real substance and operations in the UK — from company registration to first sale in 3 months.",
-    "privacy": "Privacy Policy",
-    "developedBy": "Developed by"
+    "aboutText": "Wir helfen internationalen Unternehmen, echte Substance und operative Präsenz in UK aufzubauen — von der Firmengründung bis zum ersten Verkauf in 3 Monaten.",
+    "privacy": "Datenschutzerklärung",
+    "developedBy": "Entwickelt von"
   },
   "float": {
     "label": "Schnellkontakt",

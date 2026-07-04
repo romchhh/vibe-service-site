@@ -70,7 +70,7 @@ export function localeSchemaLanguage(locale: Locale): string {
   return HTML_LANG_MAP[locale]
 }
 
-/** Content locale for JSON data that only has en/ru variants */
-export function contentLocale(locale: Locale): 'en' | 'ru' {
-  return locale === 'ru' || locale === 'ua' ? 'ru' : 'en'
+/** Locale used for JSON content (services, blog) — one variant per UI locale */
+export function contentLocale(locale: Locale): Locale {
+  return locale
 }

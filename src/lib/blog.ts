@@ -1,5 +1,9 @@
 import blogData from '@/data/blog.json'
-import { contentLocale, type Locale } from './i18n/config'
+import blogDe from '@/data/blog-locales/de.json'
+import blogFr from '@/data/blog-locales/fr.json'
+import blogUa from '@/data/blog-locales/ua.json'
+import { pickLocalized } from './content-locale'
+import type { Locale } from './i18n/config'
 import { optimizeRemoteImageUrl } from './image-url'
 
 export type BlogLocalePost = {
@@ -11,12 +15,18 @@ export type BlogLocalePost = {
   body: string
 }
 
-export type BlogPost = {
+type BlogPostBase = {
   slug: string
   date: string
   image: string
-  ru: BlogLocalePost
   en: BlogLocalePost
+  ru: BlogLocalePost
+}
+
+export type BlogPost = BlogPostBase & {
+  ua: BlogLocalePost
+  de: BlogLocalePost
+  fr: BlogLocalePost
 }
 
 export type BlogPostView = BlogLocalePost & {
@@ -27,21 +37,30 @@ export type BlogPostView = BlogLocalePost & {
 
 export type BlogPostPreview = Omit<BlogPostView, 'body'>
 
-export type BlogContentLocale = 'ru' | 'en'
+const localePosts = {
+  ua: blogUa,
+  de: blogDe,
+  fr: blogFr,
+} as const
 
-const posts = blogData.posts as BlogPost[]
-
-function toBlogLocale(locale: Locale): BlogContentLocale {
-  return contentLocale(locale)
+function buildPosts(): BlogPost[] {
+  return (blogData.posts as BlogPostBase[]).map((post) => ({
+    ...post,
+    ua: localePosts.ua[post.slug as keyof typeof localePosts.ua] as BlogLocalePost,
+    de: localePosts.de[post.slug as keyof typeof localePosts.de] as BlogLocalePost,
+    fr: localePosts.fr[post.slug as keyof typeof localePosts.fr] as BlogLocalePost,
+  }))
 }
 
-export function localizePost(post: BlogPost, locale: Locale | BlogContentLocale): BlogPostView {
-  const lang = locale === 'en' || locale === 'ru' ? locale : toBlogLocale(locale)
+const posts = buildPosts()
+
+export function localizePost(post: BlogPost, locale: Locale): BlogPostView {
+  const localized = pickLocalized(post, locale)
   return {
     slug: post.slug,
     date: post.date,
     image: optimizeRemoteImageUrl(post.image, 800, 75),
-    ...post[lang],
+    ...localized,
   }
 }
 
@@ -77,10 +96,18 @@ export function getAllSlugs(): string[] {
   return posts.map((post) => post.slug)
 }
 
-export function formatBlogDate(date: string, locale: string): string {
+const DATE_LOCALE_MAP: Record<Locale, string> = {
+  en: 'en-GB',
+  de: 'de-DE',
+  ru: 'ru-RU',
+  ua: 'uk-UA',
+  fr: 'fr-FR',
+}
+
+export function formatBlogDate(date: string, locale: Locale): string {
   const [year, month, day] = date.split('-').map(Number)
   const parsed = new Date(year, month - 1, day)
-  return parsed.toLocaleDateString(locale === 'en' ? 'en-GB' : 'ru-RU', {
+  return parsed.toLocaleDateString(DATE_LOCALE_MAP[locale], {
     day: '2-digit',
     month: '2-digit',
     year: 'numeric',

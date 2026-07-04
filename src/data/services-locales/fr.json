@@ -1,0 +1,181 @@
+{
+  "substance-in-uk": {
+    "meta": {
+      "title": "Substance in UK — Bureau réel & présence locale | Vibe Services",
+      "description": "Substance conforme au Royaume-Uni : adresse enregistrée, bureau réel, directeur local et gestion de la présence. Nous réduisons les risques HMRC et bancaires.",
+      "keywords": ["substance in UK", "adresse enregistrée UK", "directeur local UK", "Vibe Services"]
+    },
+    "h1": "Substance in UK",
+    "lead": "Nous créons une présence opérationnelle réelle au Royaume-Uni — adresse enregistrée, bureau, représentant local et gestion continue de la présence. Ce qu'exigent HMRC et les banques britanniques.",
+    "offer": {
+      "badge": "Conforme HMRC",
+      "highlight": "3 mois",
+      "sub": "De la structure vide à une substance UK réelle"
+    },
+    "sections": [
+      {
+        "title": "Ce qui est inclus",
+        "paragraphs": [
+          "Adresse de registered office, bureau réel ou espace de coworking, directeur local ou représentant sur place, et gestion continue de la présence. Votre entité UK ressemble et fonctionne comme une vraie entreprise.",
+          "Sans substance, les sociétés internationales risquent le blocage de comptes, des contrôles fiscaux et une atteinte à leur réputation. Nous résolvons cela dès le premier jour."
+        ]
+      },
+      {
+        "title": "À qui s'adresse ce service",
+        "paragraphs": [
+          "Propriétaires et dirigeants d'Europe, d'Asie et du Moyen-Orient qui souhaitent mener leur activité via une structure UK sans déménager personnellement.",
+          "Idéal lorsque vous avez besoin d'un compte bancaire, d'une immatriculation VAT ou d'une conformité HMRC, mais que vous n'avez pas de présence physique au Royaume-Uni."
+        ]
+      }
+    ],
+    "benefits": [
+      "Registered office et espace de travail réel",
+      "Directeur local ou représentant",
+      "Focus sur la conformité HMRC et bancaire",
+      "Gestion continue de la présence",
+      "Mise en place en ~3 mois"
+    ],
+    "faq": [
+      {
+        "question": "Pourquoi les banques britanniques exigent-elles de la substance ?",
+        "answer": "Les banques doivent respecter les règles anti-blanchiment. Une coquille sans activité réelle est un risque élevé — la substance prouve des opérations commerciales authentiques."
+      },
+      {
+        "question": "Pouvez-vous gérer la substance pendant que notre équipe est à l'étranger ?",
+        "answer": "Oui. Nous assurons la représentation locale, le courrier, les réunions et le reporting de conformité pendant que vous dirigez l'activité depuis l'étranger."
+      }
+    ],
+    "card": {
+      "title": "Substance in UK",
+      "desc": "Adresse enregistrée, bureau réel, représentant et gestion de la présence — conforme HMRC."
+    },
+    "relatedServices": ["company-registration", "accounting", "sales-organisation"],
+    "relatedBlogSlugs": []
+  },
+  "company-registration": {
+    "meta": {
+      "title": "Création de société UK — LTD & LLP | Vibe Services",
+      "description": "Création de société au Royaume-Uni clé en main : LTD ou LLP, choix de structure, documents et dépôt auprès de Companies House.",
+      "keywords": ["création société UK", "LTD UK", "LLP UK", "Vibe Services"]
+    },
+    "h1": "Création de société UK",
+    "lead": "Créez votre société UK correctement — LTD ou LLP, structure optimale, préparation complète des documents et dépôt auprès de Companies House. Nous gérons la complexité pour vous.",
+    "offer": {
+      "badge": "LTD / LLP",
+      "highlight": "Clé en main",
+      "sub": "Structure, documents et immatriculation"
+    },
+    "sections": [
+      {
+        "title": "LTD vs LLP",
+        "paragraphs": [
+          "La limited company (LTD) convient à la plupart des entreprises internationales entrant au Royaume-Uni. La LLP s'adapte à certains modèles de partenariat. Notre directeur juridique conseille la forme la plus adaptée à votre structure de propriété et à votre position fiscale.",
+          "Nous préparons le memorandum, les articles, les shareholder agreements et tous les dépôts auprès de Companies House."
+        ]
+      }
+    ],
+    "benefits": [
+      "Immatriculation LTD ou LLP",
+      "Conseil en structure et fiscalité",
+      "Dossier documentaire complet",
+      "Dépôt auprès de Companies House",
+      "Prêt pour la mise en place de substance"
+    ],
+    "faq": [
+      {
+        "question": "Combien de temps prend la création d'une société UK ?",
+        "answer": "L'immatriculation auprès de Companies House peut être finalisée en quelques jours. La mise en place complète clé en main avec substance et compte bancaire prend généralement environ 3 mois."
+      }
+    ],
+    "card": {
+      "title": "Création de société",
+      "desc": "LTD / LLP clé en main — structure, documents et dépôt."
+    },
+    "relatedServices": ["substance-in-uk", "accounting", "sales-organisation"],
+    "relatedBlogSlugs": []
+  },
+  "accounting": {
+    "meta": {
+      "title": "Comptabilité UK & VAT — Tenue de livres & Payroll | Vibe Services",
+      "description": "Comptabilité UK : tenue de livres, VAT, payroll, comptes annuels et conseil fiscal pour les entreprises internationales.",
+      "keywords": ["comptabilité UK", "VAT UK", "payroll UK", "Vibe Services"]
+    },
+    "h1": "Comptabilité & conformité UK",
+    "lead": "Restez conforme à HMRC — tenue de livres, immatriculation et déclarations VAT, payroll, comptes annuels et conseil fiscal. Nous maintenons votre entité UK en règle.",
+    "offer": {
+      "badge": "Prêt pour HMRC",
+      "highlight": "Service complet",
+      "sub": "VAT, payroll, comptes annuels"
+    },
+    "sections": [
+      {
+        "title": "Ce que nous prenons en charge",
+        "paragraphs": [
+          "Tenue de livres mensuelle, immatriculation VAT et déclarations trimestrielles, payroll pour le personnel UK, comptes annuels et déclarations de corporation tax. Plus un conseil fiscal continu pour les structures internationales.",
+          "Vous vous concentrez sur la croissance — nous gérons la paperasse et les échéances."
+        ]
+      }
+    ],
+    "benefits": [
+      "Tenue de livres et comptes de gestion",
+      "Immatriculation VAT et déclarations",
+      "Payroll et PAYE",
+      "Comptes annuels et CT600",
+      "Conseil fiscal"
+    ],
+    "faq": [
+      {
+        "question": "Ai-je besoin d'un comptable UK si mon équipe est à l'étranger ?",
+        "answer": "Oui. Les sociétés UK doivent déposer auprès de HMRC et Companies House. Nous agissons comme votre partenaire comptable au Royaume-Uni, quel que soit le lieu de résidence des propriétaires."
+      }
+    ],
+    "card": {
+      "title": "Comptabilité",
+      "desc": "Tenue de livres, VAT, payroll, comptes annuels et conseil fiscal."
+    },
+    "relatedServices": ["substance-in-uk", "company-registration", "sales-organisation"],
+    "relatedBlogSlugs": []
+  },
+  "sales-organisation": {
+    "meta": {
+      "title": "Organisation commerciale UK — Entrée sur le marché & Marketing | Vibe Services",
+      "description": "Organiser les ventes au Royaume-Uni : analyse de marché, mise en place marketing et recrutement d'une équipe locale pour les marques internationales.",
+      "keywords": ["ventes UK", "entrée marché UK", "marketing UK", "Vibe Services"]
+    },
+    "h1": "Organisation commerciale UK",
+    "lead": "Au-delà de l'immatriculation — nous analysons le marché UK, mettons en place le marketing et construisons une équipe commerciale locale. De la stratégie go-to-market au premier chiffre d'affaires.",
+    "offer": {
+      "badge": "Go-to-market",
+      "highlight": "Ventes UK",
+      "sub": "Analyse de marché, marketing, équipe"
+    },
+    "sections": [
+      {
+        "title": "Notre approche",
+        "paragraphs": [
+          "Nous évaluons votre product-market fit au Royaume-Uni, concevons un plan go-to-market, mettons en place les canaux digitaux et offline, et aidons à recruter ou contractualiser des talents commerciaux locaux.",
+          "Combiné à la substance et à la comptabilité, vous obtenez une opération UK complète — pas seulement une coquille immatriculée."
+        ]
+      }
+    ],
+    "benefits": [
+      "Analyse du marché UK",
+      "Mise en place marketing et canaux",
+      "Recrutement de l'équipe commerciale",
+      "Stratégie go-to-market",
+      "Intégré au pack substance"
+    ],
+    "faq": [
+      {
+        "question": "Pouvez-vous nous aider si nous avons déjà une société UK ?",
+        "answer": "Oui. Nous pouvons ajouter l'organisation commerciale à une entité existante — entrée sur le marché, marketing et constitution d'équipe sans réimmatriculation."
+      }
+    ],
+    "card": {
+      "title": "Organisation commerciale",
+      "desc": "Analyse de marché, marketing et mise en place d'une équipe commerciale UK."
+    },
+    "relatedServices": ["substance-in-uk", "company-registration", "accounting"],
+    "relatedBlogSlugs": []
+  }
+}

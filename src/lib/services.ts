@@ -1,5 +1,9 @@
 import servicesData from '@/data/services.json'
-import { contentLocale, type Locale } from './i18n/config'
+import servicesDe from '@/data/services-locales/de.json'
+import servicesFr from '@/data/services-locales/fr.json'
+import servicesUa from '@/data/services-locales/ua.json'
+import { pickLocalized } from './content-locale'
+import type { Locale } from './i18n/config'
 
 export const SERVICE_SLUGS = [
   'substance-in-uk',
@@ -71,13 +75,34 @@ export type ServiceView = {
   relatedBlogSlugs: string[]
 }
 
-export type Service = {
+type ServiceBase = {
   slug: ServiceSlug
-  ru: ServiceView
   en: ServiceView
+  ru: ServiceView
 }
 
-const services = servicesData.services as Service[]
+export type Service = ServiceBase & {
+  ua: ServiceView
+  de: ServiceView
+  fr: ServiceView
+}
+
+const localeViews = {
+  ua: servicesUa,
+  de: servicesDe,
+  fr: servicesFr,
+} as const
+
+function buildServices(): Service[] {
+  return (servicesData.services as ServiceBase[]).map((service) => ({
+    ...service,
+    ua: localeViews.ua[service.slug] as ServiceView,
+    de: localeViews.de[service.slug] as ServiceView,
+    fr: localeViews.fr[service.slug] as ServiceView,
+  }))
+}
+
+const services = buildServices()
 
 export function isValidServiceSlug(slug: string): slug is ServiceSlug {
   return (SERVICE_SLUGS as readonly string[]).includes(slug)
@@ -92,7 +117,7 @@ export function getServiceBySlug(slug: string): Service | undefined {
 }
 
 export function getServiceView(service: Service, locale: Locale): ServiceView {
-  return service[contentLocale(locale)]
+  return pickLocalized(service, locale)
 }
 
 export function servicePath(slug: ServiceSlug): string {
