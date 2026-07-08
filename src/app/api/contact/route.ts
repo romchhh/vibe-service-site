@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { isTelegramConfigured, sendLeadToTelegram } from '@/lib/telegram'
+import { deliverConsultationLead, isLeadDeliveryConfigured } from '@/lib/lead-delivery'
 
 const MAX_NAME = 120
 const MAX_PHONE = 80
@@ -20,7 +20,7 @@ function trimField(value: unknown, max: number): string {
 }
 
 export async function POST(request: Request) {
-  if (!isTelegramConfigured()) {
+  if (!isLeadDeliveryConfigured()) {
     return NextResponse.json({ error: 'Service unavailable' }, { status: 503 })
   }
 
@@ -38,15 +38,29 @@ export async function POST(request: Request) {
   const comment = trimField(body.comment, MAX_COMMENT)
   const source = body.source === 'modal' ? 'modal' : 'section'
 
-  if (!name || !phone || !preferredTime) {
-    return NextResponse.json({ error: 'Name, contact and preferred time are required' }, { status: 400 })
+  if (!name || name.length < 2) {
+    return NextResponse.json({ error: 'Name is required' }, { status: 400 })
   }
 
-  const sent = await sendLeadToTelegram({ name, phone, preferredTime, comment, source })
+  if (!phone || phone.length < 5) {
+    return NextResponse.json({ error: 'Contact is required' }, { status: 400 })
+  }
 
-  if (!sent) {
+  if (!preferredTime) {
+    return NextResponse.json({ error: 'Preferred time is required' }, { status: 400 })
+  }
+
+  const result = await deliverConsultationLead({
+    name,
+    phone,
+    preferredTime,
+    comment,
+    source,
+  })
+
+  if (!result.ok) {
     return NextResponse.json({ error: 'Failed to send' }, { status: 502 })
   }
 
-  return NextResponse.json({ ok: true })
+  return NextResponse.json({ ok: true, leadId: result.leadId })
 }
