@@ -410,6 +410,11 @@
     "relatedServices": "Weitere Leistungen",
     "relatedBlog": "Verwandte Artikel"
   },
+  "map": {
+    "heading": "Finden Sie uns auf der Karte",
+    "openInMaps": "In Google Maps öffnen — {{company}}",
+    "iframeTitle": "Google Maps — Büro {{company}}"
+  },
   "footer": {
     "navLabel": "Navigation",
     "brandBold": "VIBE",

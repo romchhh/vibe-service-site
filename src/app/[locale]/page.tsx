@@ -10,6 +10,7 @@ import BlogPreviewSection from '../components/BlogPreviewSection'
 import TrustpilotSection from '../components/TrustpilotSection'
 import FaqSection from '../components/FaqSection'
 import ContactSection from '../components/ContactSection'
+import MapSection from '../components/MapSection'
 import SeoTextSection from '../components/SeoTextSection'
 import Footer from '../components/Footer'
 import ScrollReveal from '../components/ScrollReveal'
@@ -59,6 +60,7 @@ export default async function Home({ params }: Props) {
         <ScrollReveal delay={40}><TrustpilotSection /></ScrollReveal>
         <ScrollReveal delay={40}><FaqSection /></ScrollReveal>
         <ScrollReveal delay={40}><ContactSection /></ScrollReveal>
+        <MapSection />
         <SeoTextSection />
       </main>
       <Footer />

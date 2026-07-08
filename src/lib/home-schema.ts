@@ -78,6 +78,14 @@ export function buildHomeJsonLd(locale: Locale) {
           },
         ],
         sameAs: [siteConfig.telegramChannelUrl, siteConfig.trustpilotUrl],
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: siteConfig.office.streetAddress,
+          addressLocality: 'Littlehampton',
+          addressRegion: 'West Sussex',
+          postalCode: siteConfig.office.postalCode,
+          addressCountry: siteConfig.office.country,
+        },
       },
       {
         '@type': 'WebSite',

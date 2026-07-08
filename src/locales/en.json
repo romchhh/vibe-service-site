@@ -452,6 +452,11 @@
     "relatedServices": "Other services",
     "relatedBlog": "Related articles"
   },
+  "map": {
+    "heading": "Find Us on the Map",
+    "openInMaps": "Open in Google Maps — {{company}}",
+    "iframeTitle": "Google Maps — {{company}} office"
+  },
   "footer": {
     "navLabel": "Navigation",
     "brandBold": "VIBE",

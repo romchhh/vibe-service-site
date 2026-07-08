@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { siteConfig } from '@/lib/site'
 import { SERVICE_SLUGS, getServiceBySlug, getServiceView } from '@/lib/services'
 import { useLocale, useLocalizedPath } from '@/lib/i18n/use-locale'
-import { TelegramIcon, SupportIcon } from './icons/SocialIcons'
+import { TelegramIcon, SupportIcon, LocationIcon } from './icons/SocialIcons'
 import { useContactModal } from './ContactModalProvider'
 import SectionLink from './SectionLink'
 import styles from './Footer.module.css'
@@ -25,6 +25,13 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   const contactItems = [
+    {
+      key: 'address' as const,
+      href: siteConfig.googleMapsUrl,
+      icon: <LocationIcon size={20} />,
+      iconClass: styles.contactIconSupport,
+      label: `${siteConfig.name}\n${siteConfig.office.formatted}`,
+    },
     {
       key: 'email' as const,
       href: `mailto:${siteConfig.email}`,
@@ -107,7 +114,7 @@ export default function Footer() {
         <div className={styles.col}>
           <h3 className={styles.heading}>{t('footer.contactHeading')}</h3>
           <ul className={styles.contacts}>
-            {contactItems.map(({ key, icon, iconClass, ...item }) => (
+            {contactItems.map(({ key, icon, iconClass, label, ...item }) => (
               <li key={key}>
                 <span className={`${styles.contactIcon} ${iconClass}`}>{icon}</span>
                 {'onClick' in item && item.onClick ? (
@@ -117,11 +124,11 @@ export default function Footer() {
                 ) : (
                   <a
                     href={'href' in item ? item.href : '#'}
-                    className={styles.contactLink}
+                    className={`${styles.contactLink} ${key === 'address' ? styles.contactAddress : ''}`}
                     target={key === 'email' || key === 'phone' ? undefined : '_blank'}
                     rel={key === 'email' || key === 'phone' ? undefined : 'noopener noreferrer'}
                   >
-                    {key === 'email' ? siteConfig.email : key === 'phone' ? siteConfig.phone : t(`footer.${key}`)}
+                    {label ?? (key === 'email' ? siteConfig.email : key === 'phone' ? siteConfig.phone : t(`footer.${key}`))}
                   </a>
                 )}
               </li>

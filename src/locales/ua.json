@@ -410,6 +410,11 @@
     "relatedServices": "Інші послуги",
     "relatedBlog": "Схожі статті"
   },
+  "map": {
+    "heading": "Знайдіть нас на карті",
+    "openInMaps": "Відкрити в Google Maps — {{company}}",
+    "iframeTitle": "Google Maps — офіс {{company}}"
+  },
   "footer": {
     "navLabel": "Навігація",
     "brandBold": "VIBE",

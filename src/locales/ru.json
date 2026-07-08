@@ -452,6 +452,11 @@
     "relatedServices": "Другие услуги",
     "relatedBlog": "Полезные статьи"
   },
+  "map": {
+    "heading": "Найдите нас на карте",
+    "openInMaps": "Открыть в Google Maps — {{company}}",
+    "iframeTitle": "Google Maps — офис {{company}}"
+  },
   "footer": {
     "navLabel": "Навигация",
     "brandBold": "VIBE",

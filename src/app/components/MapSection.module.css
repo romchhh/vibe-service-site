@@ -1,0 +1,121 @@
+.section {
+  background: var(--white);
+  padding: 56px var(--page-padding-x) 48px;
+  border-top: 1px solid rgba(10, 37, 64, 0.06);
+}
+
+.inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: var(--font-sans);
+  font-size: var(--section-heading);
+  font-weight: 800;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  color: var(--gray-900);
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.mapWrap {
+  position: relative;
+  min-height: 320px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(10, 37, 64, 0.1);
+  box-shadow: var(--shadow-md);
+  background: var(--gray-100);
+}
+
+.map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border: 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  padding: 28px 32px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(10, 37, 64, 0.08);
+}
+
+.company {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.address {
+  font-style: normal;
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--gray-600);
+}
+
+.mapsLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--stripe-blue);
+  text-decoration: none;
+  transition: color 0.2s, gap 0.2s;
+}
+
+.mapsLink:hover {
+  color: var(--stripe-blue-hover);
+  gap: 9px;
+}
+
+.mapsLink svg {
+  flex-shrink: 0;
+  transition: transform 0.2s var(--ease-out);
+}
+
+.mapsLink:hover svg {
+  transform: translateX(2px);
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .mapWrap,
+  .map {
+    min-height: 280px;
+  }
+
+  .details {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 44px var(--page-padding-x-md) 36px;
+  }
+
+  .heading {
+    margin-bottom: 28px;
+  }
+}

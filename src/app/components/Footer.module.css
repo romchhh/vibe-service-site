@@ -129,6 +129,11 @@
   color: #fff;
 }
 
+.contactAddress {
+  white-space: pre-line;
+  line-height: 1.55;
+}
+
 .colAbout {
   gap: 12px;
 }
