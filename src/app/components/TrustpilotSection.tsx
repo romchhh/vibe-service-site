@@ -2,15 +2,16 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
-import { REVIEW_PHOTOS } from '@/data/reviews'
+import { HOME_REVIEW_KEYS, REVIEW_PHOTOS } from '@/data/reviews'
 import { siteConfig } from '@/lib/site'
+import { useLocalizedPath } from '@/lib/i18n/use-locale'
 import { useContactModal } from './ContactModalProvider'
 import SectionLink from './SectionLink'
 import styles from './TrustpilotSection.module.css'
-const AUTO_PLAY_MS = 6000
 
-const REVIEWS = ['testimonial1', 'testimonial2', 'testimonial3'] as const
+const AUTO_PLAY_MS = 6000
 
 function ReviewStars() {
   return (
@@ -35,16 +36,17 @@ function ArrowIcon({ direction }: { direction: 'prev' | 'next' }) {
 export default function TrustpilotSection() {
   const { t } = useTranslation()
   const { open: openContactModal } = useContactModal()
-  const rating = t('trustpilot.rating')
+  const lp = useLocalizedPath()
+  const rating = t('reviews.rating')
   const [activeIndex, setActiveIndex] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
 
-  const reviewKey = REVIEWS[activeIndex]
-  const author = t(`trustpilot.${reviewKey}.author`)
+  const reviewKey = HOME_REVIEW_KEYS[activeIndex]
+  const author = t(`reviews.${reviewKey}.author`)
 
   const goTo = useCallback((index: number) => {
     setIsAnimating(true)
-    setActiveIndex((index + REVIEWS.length) % REVIEWS.length)
+    setActiveIndex((index + HOME_REVIEW_KEYS.length) % HOME_REVIEW_KEYS.length)
   }, [])
 
   const goNext = useCallback(() => {
@@ -62,7 +64,7 @@ export default function TrustpilotSection() {
 
   useEffect(() => {
     const interval = window.setInterval(() => {
-      setActiveIndex((current) => (current + 1) % REVIEWS.length)
+      setActiveIndex((current) => (current + 1) % HOME_REVIEW_KEYS.length)
       setIsAnimating(true)
     }, AUTO_PLAY_MS)
 
@@ -127,11 +129,11 @@ export default function TrustpilotSection() {
                 <div className={styles.reviewContent}>
                   <div className={styles.reviewMeta}>
                     <ReviewStars />
-                    <span className={styles.timeAgo}>{t(`trustpilot.${reviewKey}.timeAgo`)}</span>
+                    <span className={styles.timeAgo}>{t(`reviews.${reviewKey}.date`)}</span>
                   </div>
-                  <p className={styles.reviewText}>{t(`trustpilot.${reviewKey}.text`)}</p>
+                  <p className={styles.reviewText}>{t(`reviews.${reviewKey}.text`)}</p>
                   <p className={styles.author}>
-                    {author} • {t('trustpilot.country')}
+                    {author} • {t(`reviews.${reviewKey}.company`)}
                   </p>
                 </div>
               </div>
@@ -147,13 +149,13 @@ export default function TrustpilotSection() {
             </div>
 
             <div className={styles.dots} role="tablist" aria-label={t('trustpilot.heading')}>
-              {REVIEWS.map((key, index) => (
+              {HOME_REVIEW_KEYS.map((key, index) => (
                 <button
                   key={key}
                   type="button"
                   role="tab"
                   aria-selected={index === activeIndex}
-                  aria-label={`${index + 1} / ${REVIEWS.length}`}
+                  aria-label={`${index + 1} / ${HOME_REVIEW_KEYS.length}`}
                   className={`${styles.dot} ${index === activeIndex ? styles.dotActive : ''}`}
                   onClick={() => goTo(index)}
                 />
@@ -162,11 +164,17 @@ export default function TrustpilotSection() {
 
             <div className={styles.cardFooter}>
               <p className={styles.trustScore}>
-                {t('trustpilot.trustScore', { rating, reviews: t('trustpilot.reviews') })}
+                {t('trustpilot.trustScore', { rating, reviews: t('reviews.count') })}
               </p>
               <p className={styles.ratedOn}>
                 {t('trustpilot.ratedOn', { rating })}
               </p>
+              <Link href={lp('/reviews')} className={styles.viewAllLink}>
+                {t('trustpilot.viewAll')}
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M2 7 H12 M8 3 L12 7 L8 11" />
+                </svg>
+              </Link>
             </div>
           </article>
 
@@ -181,11 +189,6 @@ export default function TrustpilotSection() {
             </button>
             <SectionLink sectionId="kontakt" className={styles.btnSecondary}>
               {t('trustpilot.ctaContact')}
-              <span className={styles.btnArrowOutline} aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M2 12 L12 2 M5 2 H12 V9" />
-                </svg>
-              </span>
             </SectionLink>
           </div>
         </div>

@@ -5,7 +5,7 @@ import { localePath, locales } from '@/lib/i18n/config'
 import { buildHreflangLanguages } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
-const staticPaths = ['/', '/blog', '/privacy'] as const
+const staticPaths = ['/', '/blog', '/reviews', '/privacy'] as const
 
 function withAlternates(path: string, entry: Omit<MetadataRoute.Sitemap[number], 'url' | 'alternates'>) {
   return locales.map((locale) => ({

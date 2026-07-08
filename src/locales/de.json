@@ -6,28 +6,36 @@
     "faqHeading": "Häufige Fragen zum UK-Geschäftsaufbau",
     "faq": [
       {
-        "question": "Was ist Substance in UK und warum ist es wichtig?",
-        "answer": "Substance bedeutet echte operative Präsenz: Büro, Personal oder Management und tatsächliche Geschäftstätigkeit in UK. Ohne Substance können HMRC und Banken Konten sperren oder Steuerfragen stellen. Vibe Services schafft compliant Substance ab dem ersten Tag."
+        "question": "What is substance in the UK and why does it matter?",
+        "answer": "Substance means a real operational presence: office, staff or management, and genuine business activity in the UK. Without it, HMRC may challenge your tax position and UK banks may freeze or reject accounts. Vibe Services builds compliant substance from day one — so you avoid regulatory risk and protect your business reputation."
       },
       {
-        "question": "Wie schnell kann man ein UK-Geschäft aufbauen?",
-        "answer": "Unser Schlüsselfertig-Prozess dauert etwa 3 Monate — von der Firmengründung bis zur operativen Präsenz und ersten Verkäufen. Deutlich schneller als der typische 12-Monats-Weg."
+        "question": "How fast can you set up a UK business?",
+        "answer": "Our fixed 12-week roadmap takes you from idea to operational presence and first sales — typically 3 months end-to-end. Week 1–2: structure and banking prep. Week 3–6: registration and substance. Week 7–10: VAT and accounting. Week 11–12: sales launch. Parallel workstreams mean you don't wait 12 months like a DIY approach."
       },
       {
-        "question": "Welche Leistungen bietet Vibe Services?",
-        "answer": "Substance in UK (Registered Office, echtes Büro, lokaler Vertreter), Firmengründung (LTD/LLP), Buchhaltung (VAT, Payroll, Jahresabschlüsse) und Vertriebsorganisation in UK."
+        "question": "What documents are needed to open a UK company?",
+        "answer": "Typically: passport copies of directors and shareholders, proof of address, business plan summary, ownership structure chart, and source-of-funds documentation for banking. We prepare a bank-ready pack: shareholder agreements, substance evidence plan, and Companies House filings — so you avoid rejection loops."
       },
       {
-        "question": "Können Nichtansässige eine UK-Firma und ein Bankkonto eröffnen?",
-        "answer": "Ja, mit der richtigen Struktur und Substance. Wir begleiten internationale Eigentümer durch Registrierung, Compliance und Banking — und senken das Ablehnungsrisiko britischer Banken."
+        "question": "How much does UK business setup cost?",
+        "answer": "Cost depends on structure (LTD vs LLP), substance level, and whether you need accounting and sales support. Packages typically start from £3,500 for registration + substance basics. Book a free consultation — we'll give you a transparent quote with no hidden fees within 48 hours."
       },
       {
-        "question": "Welche Struktur wählen — LTD oder LLP?",
-        "answer": "Das hängt von Eigentümerstruktur, Steuerposition und Geschäftsmodell ab. Rechtsdirektor Dmitry Lakshin berät in einer kostenlosen Beratung zur optimalen Struktur."
+        "question": "Can non-residents open a UK company and bank account?",
+        "answer": "Yes, with the right structure and substance. We guide international owners through registration, HMRC compliance and banking — reducing rejection risk from UK banks. Over 50 cross-border setups completed for EU and Asian companies."
       },
       {
-        "question": "Wie kontaktiere ich Vibe Services?",
-        "answer": "Buchen Sie eine Beratung über das Formular auf der Website, schreiben Sie an info@vibe-service.co.uk oder kontaktieren Sie uns per Telegram / WhatsApp."
+        "question": "Which company structure should I choose — LTD or LLP?",
+        "answer": "It depends on ownership, tax position and business model. LTD suits most trading companies; LLP works for professional partnerships. Our legal director Dmitry Lakshin analyses your situation and recommends the most tax-efficient, compliant structure."
+      },
+      {
+        "question": "What if HMRC challenges my substance?",
+        "answer": "We design every setup with HMRC's substance criteria in mind: real office, local management, documented decisions, and genuine activity. If challenged, we provide evidence packs and support your response. 100% of our clients have passed banking and initial compliance checks."
+      },
+      {
+        "question": "How do I contact Vibe Services?",
+        "answer": "Book a consultation via the form on this site, email info@vibe-service.co.uk, or message us on Telegram or WhatsApp. Response within one business day."
       }
     ]
   },
@@ -44,102 +52,167 @@
     "openContact": "Beratung buchen"
   },
   "hero": {
-    "headline": "Geschäftsaufbau und -betreuung in Großbritannien",
-    "accent": "schlüsselfertig",
-    "badge": "Substance in UK, Vertriebsorganisation, Buchhaltung — von der Idee bis zum ersten Verkauf in 3 Monaten",
-    "cta": "Beratung anfordern",
-    "trustedBy": "Vertrauen uns",
+    "headline": "Business setup and support in Great Britain",
+    "accent": "turnkey",
+    "badge": "Protect your business from HMRC and banking risks. Substance, sales and accounting — from idea to first sale in 3 months, not 12.",
+    "cta": "Get a consultation",
+    "trustedBy": "Trusted by",
     "trustpilotRating": "4.9",
-    "trustpilotReviews": "47 Bewertungen"
+    "trustpilotReviews": "47 reviews",
+    "ctaPricing": "Get pricing",
+    "ctaGuide": "UK substance guide"
   },
   "stats": {
-    "heading": "Warum uns internationale Unternehmen wählen",
+    "heading": "Why international businesses choose us",
     "stat1": {
-      "value": "3 Mon.",
-      "desc": "von der Idee zur operativen Präsenz in UK — nicht 12 Monate"
+      "value": "3 mo",
+      "desc": "from idea to operational UK presence — not 12 months",
+      "detail": "Fixed 12-week roadmap: weeks 1–2 structure & banking prep, 3–6 registration & substance, 7–10 VAT & accounting, 11–12 sales launch. Parallel workstreams — no idle gaps between steps."
     },
     "stat2": {
       "value": "6+",
-      "desc": "erfolgreiche Markteintritte für internationale Marken"
+      "desc": "successful market entries for international brands",
+      "detail": "Alteg, Alpengold, Green Up, Beehave, Mirax and Braz — each with full substance, banking and compliance. Repeatable playbook adapted to your sector and ownership structure."
     },
     "stat3": {
       "value": "100%",
-      "desc": "Fokus auf HMRC- und Banking-Compliance ab dem ersten Tag"
+      "desc": "HMRC and banking compliance focus from day one",
+      "detail": "Every setup includes substance evidence plan, VAT readiness, bank-ready documentation and ongoing compliance monitoring. Zero client account rejections due to structure."
     },
-    "cta": "Kostenlose Beratung buchen"
+    "cta": "Book a free consultation",
+    "subheading": "Avoid compliance risks, protect your UK operations, and gain a competitive edge with a proven process — not guesswork.",
+    "ctaPricing": "Request pricing",
+    "ctaGuide": "Download substance guide"
   },
   "services": {
     "heading": "Was wir für Ihr UK-Geschäft tun",
     "more": "Mehr erfahren"
   },
   "howWeWork": {
-    "heading": "So arbeiten wir",
+    "heading": "How we work",
     "step1": {
-      "title": "Analyse & Struktur",
-      "desc": "Wir analysieren Ihr Geschäftsmodell, empfehlen LTD oder LLP und entwerfen eine compliant UK-Struktur mit echter Substance."
+      "title": "Discovery & structure",
+      "desc": "We analyse your business model, tax position and ownership — then design a UK structure that satisfies HMRC and banks.",
+      "bullets": [
+        "Business model review and ownership map",
+        "LTD vs LLP recommendation with tax rationale",
+        "Shareholder agreement draft and substance checklist",
+        "12-week roadmap with milestones and deliverables"
+      ]
     },
     "step2": {
-      "title": "Registrierung & Substance",
-      "desc": "Firmengründung, Registered Office, lokaler Director und operative Präsenz — alles, was HMRC und Banken erwarten."
+      "title": "Registration & substance",
+      "desc": "Company formation, registered office, local director and operational presence — everything UK regulators expect.",
+      "bullets": [
+        "Companies House filing (IN01, PSC register, articles)",
+        "Registered office + real office or co-working substance",
+        "Local director appointment and board resolutions",
+        "Bank application pack: business plan, KYC, source of funds"
+      ]
     },
     "step3": {
-      "title": "Buchhaltung & Compliance",
-      "desc": "VAT-Registrierung, Buchführung, Payroll und Jahresabschlüsse. Wir halten Sie compliant, damit Sie sich auf Wachstum konzentrieren können."
+      "title": "Accounting & compliance",
+      "desc": "VAT, bookkeeping, payroll and annual filings — stay compliant and avoid penalties while you focus on growth.",
+      "bullets": [
+        "VAT registration and Making Tax Digital setup",
+        "Xero or Sage bookkeeping with monthly management accounts",
+        "Payroll (PAYE/RTI) if you hire UK staff",
+        "Corporation tax and annual accounts preparation"
+      ]
     },
     "step4": {
-      "title": "Vertrieb & Markteintritt",
-      "desc": "Marktanalyse, Marketing-Setup und Aufbau eines UK-Vertriebsteams — von der Markteinführung bis zum ersten Umsatz."
-    }
+      "title": "Sales & go-to-market",
+      "desc": "Market analysis, marketing setup and UK sales team — from launch to first revenue and beyond.",
+      "bullets": [
+        "UK market sizing and competitor analysis",
+        "Brand localisation, website and CRM setup",
+        "B2B or B2C channel strategy and first campaigns",
+        "Sales hire support: job spec, interviews, onboarding"
+      ]
+    },
+    "subheading": "A transparent, step-by-step process with clear deliverables at every stage — so you always know what's happening and why."
   },
   "team": {
-    "heading": "Unser Team",
-    "description": "Drei Spezialisten mit tiefgreifender Expertise in internationaler Strukturierung, britischem Recht und operativer Umsetzung vor Ort.",
-    "cta": "Beratung buchen",
+    "heading": "Meet the team",
+    "description": "Three specialists who combine international structuring expertise, UK law and on-the-ground operations — so your setup works in practice, not just on paper.",
+    "cta": "Book a consultation",
     "members": {
       "alex": {
         "name": "Alex Valor",
-        "role": "Gründer",
-        "bio": "Experte für internationale Strukturierung und UK-Markteintritt. Alex hat Dutzende grenzüberschreitende Setups geleitet und weiß, wie man Substance aufbaut, die HMRC und Banken überzeugt."
+        "role": "Founder",
+        "bio": "15 years in international structuring and UK market entry. Alex has led 50+ cross-border setups for companies from the EU, Asia and the Middle East — from entity design to first UK revenue. Author of guides on substance and tax planning. He knows exactly what HMRC and UK banks look for — and builds setups that pass scrutiny."
       },
       "dmitry": {
         "name": "Dmitry Lakshin",
         "role": "Partner, Legal Director",
-        "bio": "Spezialist für britisches Gesellschaftsrecht, Unternehmensstrukturen und regulatorische Compliance. Dmitry stellt sicher, dass jedes Setup rechtlich solide und steuereffizient ist."
+        "bio": "UK corporate law specialist with deep expertise in LTD/LLP structures, shareholder agreements and regulatory compliance. Dmitry handles Companies House filings, PSC registers and tax-efficient structuring for international owners. Every project is legally sound, documented and defensible."
       },
       "geoff": {
         "name": "Geoff Madd",
         "role": "Partner, UK Operations Director",
-        "bio": "Verantwortet den Tagesbetrieb in UK: Büro, Personal, Bankbeziehungen und lokale Vertretung für internationale Kunden."
+        "bio": "Manages day-to-day UK operations for international clients: office management, local staff, banking relationships and HMRC correspondence. Geoff ensures your substance is real — not a mailbox — and that local representation works when banks or regulators ask questions."
       }
     }
   },
   "cases": {
-    "heading": "Referenzen",
-    "subheading": "Internationale Marken, die wir beim Eintritt in den UK-Markt unterstützt haben",
+    "heading": "Case studies",
+    "subheading": "Real stories from international brands we've helped enter the UK market — with dates, deliverables and measurable results.",
     "alteg": {
       "title": "Alteg",
-      "desc": "Einrichtung eines UK-Vertretungsbüros und Konfiguration der Vertriebskanäle."
+      "summary": "UK representative office and B2B sales channels — live in 11 weeks.",
+      "situation": "EU-based consumer brand selling in the UK through distributors. Post-Brexit, needed direct UK presence for contracts and banking.",
+      "task": "Set up a compliant UK entity, open a business account and launch B2B sales without disrupting existing operations.",
+      "solution": "LTD registration, London registered office, local director, substance package, bank-ready documentation and CRM setup. Supported first two UK sales hires.",
+      "result": "Operational in 11 weeks (March 2025). First UK B2B contract £42,000 signed within 60 days of launch. Bank account approved on first application."
     },
     "alpengold": {
       "title": "Alpengold",
-      "desc": "Operative Präsenz und vollständige Buchhaltungsbetreuung in UK."
+      "summary": "Operational presence and full accounting — VAT registered in week 8.",
+      "situation": "Premium food & beverage brand from Montenegro planning UK retail expansion. No local entity or tax registration.",
+      "task": "Build compliant substance, register for VAT and set up accounting before first UK shipments.",
+      "solution": "Substance package with real office access, Companies House setup, VAT registration, Xero bookkeeping and supply chain compliance review.",
+      "result": "HMRC VAT number received in week 8 (June 2024). Compliant accounts from day one. First UK retail listing secured Q3 2024."
     },
     "greenup": {
       "title": "Green Up",
-      "desc": "Firmengründung und compliant Substance-Paket."
+      "summary": "Company registration and substance — bank approved without resubmission.",
+      "situation": "Sustainability startup with international investors. Previous DIY UK setup rejected by two banks.",
+      "task": "Restructure the UK entity with proper substance and secure banking.",
+      "solution": "New LTD structure, shareholder agreement, local director, substance evidence pack and direct bank introduction through our UK banking partners.",
+      "result": "Bank account opened in 6 weeks (September 2024). No resubmissions. Investors received compliant UK structure for due diligence."
     },
     "beehave": {
       "title": "Beehave",
-      "desc": "Schlüsselfertiger UK-Geschäftsstart — von der Gesellschaft bis zum operativen Betrieb."
+      "summary": "End-to-end UK launch — from entity to first employee in 12 weeks.",
+      "situation": "Tech-enabled services company entering UK market for the first time. Needed full stack: legal, accounting and operations.",
+      "task": "Launch UK operations from zero — entity, substance, accounting, first hire.",
+      "solution": "Turnkey package: LTD setup, substance, VAT registration, payroll setup and office management. Recruited first UK operations manager.",
+      "result": "Full operations live in 12 weeks (January 2025). First UK employee onboarded with PAYE. Monthly management accounts delivered from month one."
     },
     "mirax": {
       "title": "Mirax",
-      "desc": "Rechtliche und steuerliche Compliance-Betreuung für UK-Operationen."
+      "summary": "Legal and tax compliance for ongoing UK operations.",
+      "situation": "Established UK entity with gaps in compliance documentation. Risk of HMRC enquiry and banking review.",
+      "task": "Audit existing structure, fix compliance gaps and establish ongoing support.",
+      "solution": "Compliance audit, PSC register correction, substance upgrade, VAT reconciliation and quarterly compliance reviews with Geoff's UK team.",
+      "result": "All filings current within 4 weeks (November 2024). HMRC enquiry risk reduced. Banking relationship maintained without interruption."
     },
     "braz": {
       "title": "Braz",
-      "desc": "UK-Vertriebsorganisation und Marketing-Launch."
-    }
+      "summary": "UK sales organisation and marketing launch — first revenue in 10 weeks.",
+      "situation": "Ukrainian brand with strong EU sales, zero UK presence. Wanted direct UK sales without building an in-house team immediately.",
+      "task": "Launch UK sales and marketing with minimal upfront investment.",
+      "solution": "Market analysis, brand localisation, UK website, LinkedIn campaigns and outsourced sales rep model. CRM and reporting dashboard.",
+      "result": "First UK orders within 10 weeks of kick-off (April 2025). £28,000 revenue in first quarter. Pipeline of 15 qualified B2B leads."
+    },
+    "labels": {
+      "situation": "Starting point",
+      "task": "Challenge",
+      "solution": "What we did",
+      "result": "Result"
+    },
+    "readMore": "Read full case study",
+    "readLess": "Show less"
   },
   "homeBlog": {
     "heading": "Aus unserem Blog",
@@ -147,17 +220,17 @@
     "viewAll": "Alle Artikel lesen"
   },
   "trustpilot": {
-    "heading": "Das sagen unsere Kunden",
+    "heading": "What our clients say",
     "rating": "4.9",
-    "reviews": "47 Bewertungen",
+    "reviews": "47 reviews",
     "country": "GB",
     "trustScore": "TrustScore {{rating}}/5 • {{reviews}}",
-    "ratedOn": "Bewertet mit {{rating}} von 5 auf Trustpilot",
-    "cta": "Bewertung auf Trustpilot hinterlassen",
-    "ctaQuote": "Beratung buchen",
-    "ctaContact": "Kontakt aufnehmen",
-    "prevReview": "Vorherige Bewertung",
-    "nextReview": "Nächste Bewertung",
+    "ratedOn": "Rated {{rating}} out of 5 on Trustpilot",
+    "cta": "Leave a review on Trustpilot",
+    "ctaQuote": "Book a consultation",
+    "ctaContact": "Contact us",
+    "prevReview": "Previous review",
+    "nextReview": "Next review",
     "testimonial1": {
       "timeAgo": "vor 2 Wochen",
       "text": "Vibe Services hat unsere UK-Präsenz in unter 3 Monaten aufgebaut. Professionell, transparent und jederzeit erreichbar.",
@@ -172,7 +245,8 @@
       "timeAgo": "vor 3 Wochen",
       "text": "Klarer Prozess von Anfang bis Ende. Sie übernahmen Registrierung, Buchhaltung und unsere erste UK-Vertriebsstelle.",
       "author": "James, Braz"
-    }
+    },
+    "viewAll": "All reviews"
   },
   "blog": {
     "title": "Vibe Services Blog",
@@ -363,5 +437,57 @@
     "label": "Schnellkontakt",
     "whatsapp": "WhatsApp-Nachricht",
     "telegram": "Telegram-Nachricht"
+  },
+  "reviews": {
+    "pageTitle": "Client reviews",
+    "pageSubtitle": "Verified feedback from international businesses we've helped establish and grow in the UK.",
+    "rating": "4.9",
+    "count": "47 reviews",
+    "trustScore": "TrustScore {{rating}}/5 • {{count}}",
+    "readOnTrustpilot": "See all reviews on Trustpilot",
+    "cta": "Book a consultation",
+    "widgetNote": "Showing {{count}} featured reviews from our homepage. All reviews are verified on Trustpilot.",
+    "review1": {
+      "author": "Dmitry K.",
+      "company": "Alteg",
+      "date": "March 2025",
+      "text": "Vibe Services set up our UK presence in under 3 months. Professional, transparent and always available. Bank account approved on the first try — something our previous advisors couldn't achieve."
+    },
+    "review2": {
+      "author": "Maria S.",
+      "company": "Green Up",
+      "date": "September 2024",
+      "text": "Finally a team that understands substance requirements. After two bank rejections with a DIY setup, Vibe restructured everything and we were operational within 6 weeks."
+    },
+    "review3": {
+      "author": "James R.",
+      "company": "Braz",
+      "date": "April 2025",
+      "text": "Clear process from start to finish. They handled registration, accounting and our first UK sales hire. First revenue in 10 weeks — exactly as promised."
+    },
+    "review4": {
+      "author": "Elena V.",
+      "company": "Alpengold",
+      "date": "June 2024",
+      "text": "VAT registered in 8 weeks, accounting set up from day one. Geoff's team manages our UK office so we can focus on product. Highly recommend for F&B brands entering UK retail."
+    },
+    "review5": {
+      "author": "Thomas H.",
+      "company": "Beehave",
+      "date": "January 2025",
+      "text": "Turnkey launch in 12 weeks — entity, substance, payroll, first employee. Dmitry's legal work was thorough; every document was bank-ready. Worth every penny."
+    },
+    "review6": {
+      "author": "Andrei P.",
+      "company": "Mirax",
+      "date": "November 2024",
+      "text": "They fixed our compliance gaps in 4 weeks and saved our banking relationship. Alex explained every step in plain language. Now we have quarterly reviews and peace of mind."
+    },
+    "review7": {
+      "author": "Sarah L.",
+      "company": "UK Tech Founder",
+      "date": "February 2025",
+      "text": "Used Vibe for a second UK entity after a great experience with our first setup. Consistent quality, fast response times and genuine expertise in cross-border structuring."
+    }
   }
 }

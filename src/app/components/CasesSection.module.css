@@ -85,6 +85,60 @@ a.logo:hover {
   font-size: var(--text-sm);
   color: var(--gray-500);
   line-height: var(--leading-body);
+  margin-bottom: 8px;
+}
+
+.story {
+  width: 100%;
+  margin: 12px 0 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.storyRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.storyLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.storyText {
+  font-size: var(--text-sm);
+  line-height: var(--leading-body);
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.toggle {
+  margin-top: auto;
+  padding: 8px 0 0;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--stripe-blue);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.toggle:hover {
+  color: var(--stripe-blue-hover);
+}
+
+.cardExpanded {
+  border-color: var(--accent-light);
+  box-shadow: var(--shadow-md);
 }
 
 @media (max-width: 900px) {

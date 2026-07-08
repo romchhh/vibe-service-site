@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { stripLocalePrefix } from '@/lib/i18n/config'
@@ -19,6 +20,7 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const blogPath = lp('/blog')
+  const reviewsPath = lp('/reviews')
 
   useEffect(() => {
     let frame = 0
@@ -63,7 +65,7 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
             <SectionLink sectionId="team">{t('nav.about')}</SectionLink>
             <SectionLink sectionId="services">{t('nav.services')}</SectionLink>
             <SectionLink sectionId="cases">{t('nav.clients')}</SectionLink>
-            <SectionLink sectionId="reviews">{t('nav.reviews')}</SectionLink>
+            <Link href={reviewsPath}>{t('nav.reviews')}</Link>
             <a href={blogPath} className={isBlogActive ? styles.activeLink : ''}>{t('nav.blog')}</a>
           </div>
         </div>
@@ -114,9 +116,9 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
         <SectionLink sectionId="cases" onNavigate={() => setMenuOpen(false)}>
           {t('nav.clients')}
         </SectionLink>
-        <SectionLink sectionId="reviews" onNavigate={() => setMenuOpen(false)}>
+        <Link href={reviewsPath} onClick={() => setMenuOpen(false)}>
           {t('nav.reviews')}
-        </SectionLink>
+        </Link>
         <a href={blogPath} onClick={() => setMenuOpen(false)}>{t('nav.blog')}</a>
         <button
           type="button"

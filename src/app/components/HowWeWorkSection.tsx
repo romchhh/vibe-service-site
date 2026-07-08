@@ -35,6 +35,9 @@ export default function HowWeWorkSection() {
     <section id="how-we-work" className={styles.section}>
       <div className={styles.inner}>
         <h2 className={styles.heading}>{t('howWeWork.heading')}</h2>
+        {t('howWeWork.subheading') ? (
+          <p className={styles.subheading}>{t('howWeWork.subheading')}</p>
+        ) : null}
 
         <div className={styles.steps}>
           <div className={styles.numbersTrack} aria-hidden="true">
@@ -51,20 +54,31 @@ export default function HowWeWorkSection() {
           </div>
 
           <div className={styles.contentTrack}>
-            {STEPS.map((key, index) => (
-              <article key={key} className={styles.step}>
-                <div className={styles.numberCol}>
-                  <span className={`${styles.number} ${styles.numberMobile}`}>
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  {index < STEPS.length - 1 && <VerticalArrow />}
-                </div>
-                <div className={styles.content}>
-                  <h3 className={styles.title}>{t(`howWeWork.${key}.title`)}</h3>
-                  <p className={styles.desc}>{t(`howWeWork.${key}.desc`)}</p>
-                </div>
-              </article>
-            ))}
+            {STEPS.map((key, index) => {
+              const bullets = t(`howWeWork.${key}.bullets`, { returnObjects: true }) as string[]
+
+              return (
+                <article key={key} className={styles.step}>
+                  <div className={styles.numberCol}>
+                    <span className={`${styles.number} ${styles.numberMobile}`}>
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    {index < STEPS.length - 1 && <VerticalArrow />}
+                  </div>
+                  <div className={styles.content}>
+                    <h3 className={styles.title}>{t(`howWeWork.${key}.title`)}</h3>
+                    <p className={styles.desc}>{t(`howWeWork.${key}.desc`)}</p>
+                    {Array.isArray(bullets) && bullets.length > 0 && (
+                      <ul className={styles.bullets}>
+                        {bullets.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </article>
+              )
+            })}
           </div>
         </div>
       </div>

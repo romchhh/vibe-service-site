@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { PARTNERS } from '@/data/partners'
 import { IMAGE_QUALITY, optimizeRemoteImageUrl } from '@/lib/image-url'
 import { siteConfig } from '@/lib/site'
+import { useLocalizedPath } from '@/lib/i18n/use-locale'
 import { useContactModal } from './ContactModalProvider'
 import styles from './Hero.module.css'
 
@@ -17,6 +18,7 @@ const HERO_IMAGE = optimizeRemoteImageUrl(
 export default function Hero() {
   const { t } = useTranslation()
   const { open: openContactModal } = useContactModal()
+  const lp = useLocalizedPath()
 
   return (
     <section className={styles.hero}>
@@ -111,16 +113,26 @@ export default function Hero() {
             </div>
           </div>
 
-          <button type="button" className={styles.card} onClick={openContactModal}>
-            <div className={styles.cardText}>
-              <p className={styles.cardHighlight}>{t('hero.cta')}</p>
+          <div className={styles.ctaColumn}>
+            <button type="button" className={styles.card} onClick={openContactModal}>
+              <div className={styles.cardText}>
+                <p className={styles.cardHighlight}>{t('hero.cta')}</p>
+              </div>
+              <div className={styles.cardArrow}>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M2 14 L14 2 M6 2 H14 V10" />
+                </svg>
+              </div>
+            </button>
+            <div className={styles.secondaryCtas}>
+              <button type="button" className={styles.secondaryBtn} onClick={openContactModal}>
+                {t('hero.ctaPricing')}
+              </button>
+              <a href={lp('/blog/what-is-substance-in-uk')} className={styles.secondaryBtnOutline}>
+                {t('hero.ctaGuide')}
+              </a>
             </div>
-            <div className={styles.cardArrow}>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M2 14 L14 2 M6 2 H14 V10" />
-              </svg>
-            </div>
-          </button>
+          </div>
         </div>
       </div>
     </section>

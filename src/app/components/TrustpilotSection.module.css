@@ -193,6 +193,32 @@
 .ratedOn {
   font-size: var(--text-sm);
   color: var(--gray-400);
+  margin-bottom: 14px;
+}
+
+.viewAllLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #00b67a;
+  text-decoration: none;
+  transition: color 0.2s, gap 0.2s;
+}
+
+.viewAllLink:hover {
+  color: #00965d;
+  gap: 9px;
+}
+
+.viewAllLink svg {
+  flex-shrink: 0;
+  transition: transform 0.2s var(--ease-out);
+}
+
+.viewAllLink:hover svg {
+  transform: translateX(2px);
 }
 
 .actions {

@@ -13,7 +13,7 @@ import styles from './Footer.module.css'
 const NAV_LINKS = [
   { key: 'about', sectionId: 'team' },
   { key: 'clients', sectionId: 'cases' },
-  { key: 'reviews', sectionId: 'reviews' },
+  { key: 'reviews', path: '/reviews' },
   { key: 'blog', path: '/blog' },
 ] as const
 

@@ -290,8 +290,56 @@ export function getServiceSeoMeta(
   return fallback
 }
 
+export const REVIEWS_SEO: Record<Locale, PageSeoMeta> = {
+  en: {
+    title: 'Client Reviews — Vibe Services UK Business Consulting',
+    description:
+      'Read verified client reviews about UK business setup, substance, accounting and market entry. Rated 4.9/5 on Trustpilot.',
+    keywords: [
+      'Vibe Services reviews',
+      'UK business setup reviews',
+      'Trustpilot Vibe Services',
+      'substance UK testimonials',
+    ],
+    ogImageAlt: 'Vibe Services client reviews',
+  },
+  de: {
+    title: 'Kundenbewertungen — Vibe Services UK-Geschäftsberatung',
+    description:
+      'Echte Kundenbewertungen zu UK-Geschäftsaufbau, Substance, Buchhaltung und Markteintritt. 4,9/5 auf Trustpilot.',
+    keywords: ['Vibe Services Bewertungen', 'UK Geschäftsaufbau', 'Trustpilot'],
+    ogImageAlt: 'Vibe Services Kundenbewertungen',
+  },
+  ru: {
+    title: 'Отзывы клиентов — Vibe Services консалтинг по бизнесу в UK',
+    description:
+      'Отзывы клиентов об открытии бизнеса в Великобритании: substance, регистрация, бухгалтерия. Рейтинг 4.9/5 на Trustpilot.',
+    keywords: ['отзывы Vibe Services', 'открытие бизнеса UK отзывы', 'Trustpilot'],
+    ogImageAlt: 'Отзывы клиентов Vibe Services',
+  },
+  ua: {
+    title: 'Відгуки клієнтів — Vibe Services консалтинг з бізнесу у UK',
+    description:
+      'Відгуки клієнтів про відкриття бізнесу у Великобританії: substance, реєстрація, бухгалтерія. Рейтинг 4.9/5 на Trustpilot.',
+    keywords: ['відгуки Vibe Services', 'відкриття бізнесу UK', 'Trustpilot'],
+    ogImageAlt: 'Відгуки клієнтів Vibe Services',
+  },
+  fr: {
+    title: 'Avis clients — Vibe Services conseil business UK',
+    description:
+      'Avis clients sur la création d\'entreprise au UK : substance, immatriculation, comptabilité. Note 4,9/5 sur Trustpilot.',
+    keywords: ['avis Vibe Services', 'création entreprise UK', 'Trustpilot'],
+    ogImageAlt: 'Avis clients Vibe Services',
+  },
+}
+
+export function getReviewsSeo(locale: Locale): PageSeoMeta {
+  return REVIEWS_SEO[locale]
+}
+
 export const BREADCRUMB_LABELS = {
   blog: { en: 'Blog', de: 'Blog', ru: 'Блог', ua: 'Блог', fr: 'Blog' },
+  reviews: { en: 'Reviews', de: 'Bewertungen', ru: 'Отзывы', ua: 'Відгуки', fr: 'Avis' },
   services: { en: 'Services', de: 'Leistungen', ru: 'Услуги', ua: 'Послуги', fr: 'Services' },
   privacy: {
     en: 'Privacy Policy',
