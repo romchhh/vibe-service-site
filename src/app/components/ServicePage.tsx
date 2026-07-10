@@ -84,9 +84,7 @@ export default function ServicePage({ slug, breadcrumbs }: Props) {
 
             <button type="button" className={styles.heroCard} onClick={openContactModal}>
               <div className={styles.heroCardText}>
-                <p className={styles.heroCardLabel}>{t('hero.cardLabel')}</p>
-                <p className={styles.heroCardHighlight}>{view.offer.highlight}</p>
-                <p className={styles.heroCardSub}>{view.offer.sub}</p>
+                <p className={styles.heroCardHighlight}>{t('servicePages.introCta')}</p>
               </div>
               <div className={styles.heroCardArrow}>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
