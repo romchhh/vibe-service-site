@@ -307,8 +307,13 @@
     "subheading": "15-minute call with our UK experts — no obligations and completely confidential",
     "name": "Name",
     "namePlaceholder": "Your name",
-    "phone": "Phone or email",
-    "phonePlaceholder": "Your contact",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "phone": "Phone",
+    "phonePlaceholder": "Phone number",
+    "countryCode": "Country code",
+    "countrySearch": "Search country or code",
+    "countryEmpty": "No countries found",
     "preferredTime": "Preferred call time",
     "preferredTimePlaceholder": "Select date and time",
     "scheduleHint": "Mon–Fri, 10:00–14:00 (GMT)",
@@ -349,7 +354,8 @@
         ],
         "list": [
           "name;",
-          "phone number or email;",
+          "phone number;",
+          "email address;",
           "preferred call time and comments;",
           "technical data: IP address, browser type, language (server logs)."
         ]

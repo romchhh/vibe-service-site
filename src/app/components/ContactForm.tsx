@@ -3,15 +3,26 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import PreferredTimePicker from './PreferredTimePicker'
+import PhoneInput from './PhoneInput'
 import styles from './ContactForm.module.css'
 
-type FormState = { name: string; phone: string; preferredTime: string; comment: string; consent: boolean }
+type FormState = {
+  name: string
+  email: string
+  phone: string
+  preferredTime: string
+  comment: string
+  consent: boolean
+}
 type Status = 'idle' | 'loading' | 'success' | 'error'
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export default function ContactForm({ modal = false, onSuccess }: { modal?: boolean; onSuccess?: () => void }) {
   const { t } = useTranslation()
   const [form, setForm] = useState<FormState>({
     name: '',
+    email: '',
     phone: '',
     preferredTime: '',
     comment: '',
@@ -27,6 +38,14 @@ export default function ContactForm({ modal = false, onSuccess }: { modal?: bool
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!form.consent) return
+    if (!EMAIL_RE.test(form.email.trim())) {
+      setStatus('error')
+      return
+    }
+    if (!form.phone || form.phone.replace(/\D/g, '').length < 8) {
+      setStatus('error')
+      return
+    }
     setStatus('loading')
 
     try {
@@ -35,6 +54,7 @@ export default function ContactForm({ modal = false, onSuccess }: { modal?: bool
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: form.name,
+          email: form.email.trim(),
           phone: form.phone,
           preferredTime: form.preferredTime,
           comment: form.comment,
@@ -72,11 +92,29 @@ export default function ContactForm({ modal = false, onSuccess }: { modal?: bool
     >
       <div className={styles.field}>
         <label htmlFor="contact-name">{t('contact.name')}</label>
-        <input id="contact-name" type="text" placeholder={t('contact.namePlaceholder')} value={form.name} onChange={set('name')} required />
+        <input id="contact-name" type="text" placeholder={t('contact.namePlaceholder')} value={form.name} onChange={set('name')} required autoComplete="name" />
+      </div>
+      <div className={styles.field}>
+        <label htmlFor="contact-email">{t('contact.email')}</label>
+        <input
+          id="contact-email"
+          type="email"
+          placeholder={t('contact.emailPlaceholder')}
+          value={form.email}
+          onChange={set('email')}
+          required
+          autoComplete="email"
+        />
       </div>
       <div className={styles.field}>
         <label htmlFor="contact-phone">{t('contact.phone')}</label>
-        <input id="contact-phone" type="text" placeholder={t('contact.phonePlaceholder')} value={form.phone} onChange={set('phone')} required autoComplete="tel email" />
+        <PhoneInput
+          id="contact-phone"
+          value={form.phone}
+          onChange={(phone) => setForm((f) => ({ ...f, phone }))}
+          required
+          compact={modal}
+        />
       </div>
       <div className={styles.field}>
         <label htmlFor="contact-time">{t('contact.preferredTime')}</label>

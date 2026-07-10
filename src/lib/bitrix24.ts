@@ -5,6 +5,7 @@ const SOURCE_DESCRIPTION = 'Lead web B2B — Vibe Services consultation'
 
 export type ConsultationLeadPayload = {
   name: string
+  email: string
   phone: string
   preferredTime: string
   comment?: string
@@ -33,10 +34,6 @@ function getAssignedUserId(): number | undefined {
   return Number.isFinite(id) && id > 0 ? id : undefined
 }
 
-function isEmail(value: string): boolean {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
-}
-
 function formatComments(payload: ConsultationLeadPayload): string {
   const sourceLabel =
     payload.source === 'modal'
@@ -49,7 +46,8 @@ function formatComments(payload: ConsultationLeadPayload): string {
     `Site: ${siteConfig.url}`,
     '',
     `Name: ${payload.name}`,
-    `Contact: ${payload.phone}`,
+    `Email: ${payload.email}`,
+    `Phone: ${payload.phone}`,
     `Preferred call time: ${payload.preferredTime}`,
   ]
 
@@ -98,41 +96,62 @@ async function bitrixCall<T>(method: string, params: Record<string, unknown>): P
   }
 }
 
-async function findContactId(contact: string): Promise<number | undefined> {
-  const filter = isEmail(contact) ? { EMAIL: contact } : { PHONE: contact }
-
-  const ids = await bitrixCall<number[] | { ID: string }[]>('crm.contact.list', {
-    filter,
+async function findContactId(email: string, phone: string): Promise<number | undefined> {
+  const byEmail = await bitrixCall<number[] | { ID: string }[]>('crm.contact.list', {
+    filter: { EMAIL: email },
     select: ['ID'],
   })
 
-  if (!ids?.length) return undefined
+  if (byEmail?.length) {
+    const first = byEmail[0]
+    const id = typeof first === 'object' && first !== null && 'ID' in first ? Number(first.ID) : Number(first)
+    if (Number.isFinite(id)) return id
+  }
 
-  const first = ids[0]
+  const byPhone = await bitrixCall<number[] | { ID: string }[]>('crm.contact.list', {
+    filter: { PHONE: phone },
+    select: ['ID'],
+  })
+
+  if (!byPhone?.length) return undefined
+
+  const first = byPhone[0]
   const id = typeof first === 'object' && first !== null && 'ID' in first ? Number(first.ID) : Number(first)
   return Number.isFinite(id) ? id : undefined
 }
 
-async function findCompanyId(contact: string): Promise<number | undefined> {
-  const filter = isEmail(contact) ? { EMAIL: contact } : { PHONE: contact }
-
-  const ids = await bitrixCall<number[] | { ID: string }[]>('crm.company.list', {
-    filter,
+async function findCompanyId(email: string, phone: string): Promise<number | undefined> {
+  const byEmail = await bitrixCall<number[] | { ID: string }[]>('crm.company.list', {
+    filter: { EMAIL: email },
     select: ['ID'],
   })
 
-  if (!ids?.length) return undefined
+  if (byEmail?.length) {
+    const first = byEmail[0]
+    const id = typeof first === 'object' && first !== null && 'ID' in first ? Number(first.ID) : Number(first)
+    if (Number.isFinite(id)) return id
+  }
 
-  const first = ids[0]
+  const byPhone = await bitrixCall<number[] | { ID: string }[]>('crm.company.list', {
+    filter: { PHONE: phone },
+    select: ['ID'],
+  })
+
+  if (!byPhone?.length) return undefined
+
+  const first = byPhone[0]
   const id = typeof first === 'object' && first !== null && 'ID' in first ? Number(first.ID) : Number(first)
   return Number.isFinite(id) ? id : undefined
 }
 
-async function resolveLeadLinks(contact: string): Promise<{ contactId?: number; companyId?: number }> {
-  const contactId = await findContactId(contact)
+async function resolveLeadLinks(
+  email: string,
+  phone: string,
+): Promise<{ contactId?: number; companyId?: number }> {
+  const contactId = await findContactId(email, phone)
   if (contactId) return { contactId }
 
-  const companyId = await findCompanyId(contact)
+  const companyId = await findCompanyId(email, phone)
   if (companyId) return { companyId }
 
   return {}
@@ -149,7 +168,7 @@ export async function createConsultationLead(
     return { ok: false }
   }
 
-  const links = await resolveLeadLinks(payload.phone)
+  const links = await resolveLeadLinks(payload.email, payload.phone)
   const assignedById = getAssignedUserId()
 
   const fields: Record<string, unknown> = {
@@ -159,6 +178,8 @@ export async function createConsultationLead(
     SOURCE_DESCRIPTION,
     COMMENTS: formatComments(payload),
     OPENED: 'Y',
+    EMAIL: [{ VALUE: payload.email, VALUE_TYPE: 'WORK' } satisfies BitrixEmail],
+    PHONE: [{ VALUE: payload.phone, VALUE_TYPE: 'WORK' } satisfies BitrixPhone],
   }
 
   if (assignedById) {
@@ -171,12 +192,6 @@ export async function createConsultationLead(
 
   if (links.companyId) {
     fields.COMPANY_ID = links.companyId
-  }
-
-  if (isEmail(payload.phone)) {
-    fields.EMAIL = [{ VALUE: payload.phone, VALUE_TYPE: 'WORK' } satisfies BitrixEmail]
-  } else {
-    fields.PHONE = [{ VALUE: payload.phone, VALUE_TYPE: 'WORK' } satisfies BitrixPhone]
   }
 
   const leadId = await bitrixCall<number>('crm.lead.add', { fields })

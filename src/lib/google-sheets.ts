@@ -7,14 +7,15 @@ import type { ConsultationLeadPayload } from './bitrix24'
 const SHEET_HEADERS = [
   'Timestamp',
   'Name',
-  'Contact',
+  'Phone',
+  'Email',
   'Preferred time',
   'Comment',
   'Source',
   'Site',
 ] as const
 
-const HEADER_RANGE = 'A1:G1'
+const HEADER_RANGE = 'A1:H1'
 
 function getSpreadsheetId(): string | null {
   const fromEnv = process.env.GOOGLE_SHEETS_ID?.trim()
@@ -136,6 +137,7 @@ export async function appendConsultationLead(
     formatTimestamp(),
     payload.name,
     payload.phone,
+    payload.email,
     payload.preferredTime,
     payload.comment?.trim() || '',
     formatSource(payload.source),
@@ -146,7 +148,7 @@ export async function appendConsultationLead(
     console.log('[Google Sheets] Appending lead row')
     await sheets.spreadsheets.values.append({
       spreadsheetId,
-      range: 'A:G',
+      range: 'A:H',
       valueInputOption: 'USER_ENTERED',
       insertDataOption: 'INSERT_ROWS',
       requestBody: {

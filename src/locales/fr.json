@@ -265,8 +265,13 @@
     "subheading": "Appel de 15 minutes avec nos experts UK — sans engagement et entièrement confidentiel",
     "name": "Nom",
     "namePlaceholder": "Votre nom",
-    "phone": "Téléphone ou e-mail",
-    "phonePlaceholder": "Votre contact",
+    "email": "E-mail",
+    "emailPlaceholder": "you@company.com",
+    "phone": "Téléphone",
+    "phonePlaceholder": "Numéro de téléphone",
+    "countryCode": "Indicatif pays",
+    "countrySearch": "Rechercher un pays ou un indicatif",
+    "countryEmpty": "Aucun pays trouvé",
     "preferredTime": "Créneau préféré pour l'appel",
     "preferredTimePlaceholder": "Choisir la date et l'heure",
     "scheduleHint": "Lun–ven, 10h00–14h00 (GMT)",
@@ -307,7 +312,8 @@
         ],
         "list": [
           "nom ;",
-          "numéro de téléphone ou adresse e-mail ;",
+          "numéro de téléphone ;",
+          "adresse e-mail ;",
           "créneau d'appel préféré et commentaires ;",
           "données techniques : adresse IP, type de navigateur, langue (journaux serveur)."
         ]

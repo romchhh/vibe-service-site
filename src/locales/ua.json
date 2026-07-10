@@ -265,8 +265,13 @@
     "subheading": "15-хвилинний дзвінок з експертами з UK — без зобовʼязань і повністю конфіденційно",
     "name": "Ім'я",
     "namePlaceholder": "Ваше ім'я",
-    "phone": "Телефон або email",
-    "phonePlaceholder": "Ваш контакт",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "phone": "Телефон",
+    "phonePlaceholder": "Номер телефону",
+    "countryCode": "Код країни",
+    "countrySearch": "Пошук країни або коду",
+    "countryEmpty": "Країни не знайдено",
     "preferredTime": "Зручний час для дзвінка",
     "preferredTimePlaceholder": "Оберіть дату та час",
     "scheduleHint": "Пн–пт, 10:00–14:00 (GMT)",
@@ -307,7 +312,8 @@
         ],
         "list": [
           "ім'я;",
-          "телефон або email;",
+          "телефон;",
+          "email;",
           "зручний час дзвінка та коментар;",
           "технічні дані: IP, браузер, мова (серверні журнали)."
         ]

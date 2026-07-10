@@ -307,8 +307,13 @@
     "subheading": "15-минутный звонок с экспертами по UK — без обязательств и полностью конфиденциально",
     "name": "Имя",
     "namePlaceholder": "Ваше имя",
-    "phone": "Телефон или email",
-    "phonePlaceholder": "Ваш контакт",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "phone": "Телефон",
+    "phonePlaceholder": "Номер телефона",
+    "countryCode": "Код страны",
+    "countrySearch": "Поиск страны или кода",
+    "countryEmpty": "Страны не найдены",
     "preferredTime": "Удобное время для звонка",
     "preferredTimePlaceholder": "Выберите дату и время",
     "scheduleHint": "Пн–пт, 10:00–14:00 (GMT)",
@@ -349,7 +354,8 @@
         ],
         "list": [
           "имя;",
-          "телефон или email;",
+          "телефон;",
+          "email;",
           "удобное время звонка и комментарий;",
           "технические данные: IP, браузер, язык (серверные журналы)."
         ]

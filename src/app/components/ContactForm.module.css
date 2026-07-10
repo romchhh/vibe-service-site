@@ -10,7 +10,8 @@
   gap: 8px;
 }
 
-.field:has([data-schedule-open="true"]) {
+.field:has([data-schedule-open="true"]),
+.field:has([data-phone-open="true"]) {
   position: relative;
   z-index: 50;
 }

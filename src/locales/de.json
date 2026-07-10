@@ -265,8 +265,13 @@
     "subheading": "15-minütiges Gespräch mit UK-Experten — unverbindlich und vollständig vertraulich",
     "name": "Name",
     "namePlaceholder": "Ihr Name",
-    "phone": "Telefon oder E-Mail",
-    "phonePlaceholder": "Ihre Kontaktdaten",
+    "email": "E-Mail",
+    "emailPlaceholder": "you@company.com",
+    "phone": "Telefon",
+    "phonePlaceholder": "Telefonnummer",
+    "countryCode": "Ländervorwahl",
+    "countrySearch": "Land oder Vorwahl suchen",
+    "countryEmpty": "Keine Länder gefunden",
     "preferredTime": "Bevorzugte Anrufzeit",
     "preferredTimePlaceholder": "Datum und Uhrzeit wählen",
     "scheduleHint": "Mo–Fr, 10:00–14:00 (GMT)",
@@ -307,7 +312,8 @@
         ],
         "list": [
           "Name;",
-          "Telefonnummer oder E-Mail;",
+          "Telefonnummer;",
+          "E-Mail-Adresse;",
           "bevorzugte Anrufzeit und Kommentare;",
           "technische Daten: IP-Adresse, Browsertyp, Sprache (Server-Logs)."
         ]
