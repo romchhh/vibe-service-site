@@ -182,9 +182,9 @@ export const PRIVACY_SEO: Record<Locale, PageSeoMeta> = {
 
 const SERVICE_META_DE: Record<ServiceSlug, Pick<PageSeoMeta, 'title' | 'description' | 'keywords'>> = {
   'substance-in-uk': {
-    title: 'Substance in UK — echtes Büro & lokale Präsenz | Vibe Services',
+    title: 'Substance in the UK — echtes Büro & lokale Präsenz | Vibe Services',
     description:
-      'Compliant Substance in UK: Registered Office, echtes Büro, lokaler Director und Präsenzmanagement. Weniger HMRC- und Bankrisiken.',
+      'Wir schaffen echte operative Präsenz im UK: Registered Office, physisches Büro, lokaler Director und Präsenzmanagement — vollständig HMRC- und bankenkonform.',
     keywords: ['Substance UK', 'Registered Office UK', 'lokaler Director UK', 'Vibe Services'],
   },
   'company-registration': {
@@ -209,9 +209,9 @@ const SERVICE_META_DE: Record<ServiceSlug, Pick<PageSeoMeta, 'title' | 'descript
 
 const SERVICE_META_FR: Record<ServiceSlug, Pick<PageSeoMeta, 'title' | 'description' | 'keywords'>> = {
   'substance-in-uk': {
-    title: 'Substance au UK — bureau réel & présence locale | Vibe Services',
+    title: 'Substance in the UK — bureau réel & présence locale | Vibe Services',
     description:
-      'Substance conforme au UK : adresse enregistrée, bureau réel, directeur local et gestion de présence. Réduisez les risques HMRC et bancaires.',
+      'Nous créons une présence opérationnelle réelle au UK : adresse enregistrée, bureau physique, directeur local et gestion de présence — pleinement conforme HMRC et banques.',
     keywords: ['substance UK', 'adresse enregistrée UK', 'directeur local UK', 'Vibe Services'],
   },
   'company-registration': {
@@ -236,9 +236,9 @@ const SERVICE_META_FR: Record<ServiceSlug, Pick<PageSeoMeta, 'title' | 'descript
 
 const SERVICE_META_UA: Record<ServiceSlug, Pick<PageSeoMeta, 'title' | 'description' | 'keywords'>> = {
   'substance-in-uk': {
-    title: 'Substance in UK — реальний офіс і присутність | Vibe Services',
+    title: 'Substance in the UK — реальний офіс і присутність | Vibe Services',
     description:
-      'Compliant substance у UK: юрадреса, реальний офіс, локальний директор і управління присутністю. Менше ризиків HMRC і банків.',
+      'Створюємо реальну операційну присутність у UK: юрадреса, фізичний офіс, локальний директор і управління присутністю — повна відповідність HMRC і банкам.',
     keywords: ['substance у UK', 'юрадреса UK', 'директор UK', 'Vibe Services'],
   },
   'company-registration': {

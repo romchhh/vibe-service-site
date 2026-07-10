@@ -53,7 +53,7 @@ export default function ContactForm({ modal = false, onSuccess }: { modal?: bool
 
   if (status === 'success') {
     return (
-      <div className={`${styles.success} ${modal ? styles.successModal : ''}`}>
+      <div className={`${styles.success} ${modal ? styles.successModal : ''}`} role="status" aria-live="polite">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="var(--stripe-blue)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <circle cx="24" cy="24" r="20"/>
           <path d="M14 24 L21 31 L34 18"/>

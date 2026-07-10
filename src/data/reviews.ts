@@ -12,8 +12,14 @@ export const REVIEW_KEYS = [
 
 export type ReviewKey = (typeof REVIEW_KEYS)[number]
 
-/** First three shown in the homepage carousel widget */
-export const HOME_REVIEW_KEYS: ReviewKey[] = ['review1', 'review2', 'review3']
+/** First five shown in the homepage carousel widget */
+export const HOME_REVIEW_KEYS: ReviewKey[] = [
+  'review1',
+  'review2',
+  'review3',
+  'review4',
+  'review5',
+]
 
 export const REVIEW_PHOTOS: Record<ReviewKey, string> = {
   review1: optimizeRemoteImageUrl(

@@ -60,7 +60,8 @@
     "trustpilotRating": "4.9",
     "trustpilotReviews": "47 reviews",
     "ctaPricing": "Get pricing",
-    "ctaGuide": "UK substance guide"
+    "ctaGuide": "UK substance guide",
+    "cardLabel": "Prêt en"
   },
   "stats": {
     "heading": "Why international businesses choose us",
@@ -134,13 +135,13 @@
   },
   "team": {
     "heading": "Meet the team",
-    "description": "Three specialists who combine international structuring expertise, UK law and on-the-ground operations — so your setup works in practice, not just on paper.",
+    "description": "Trois spécialistes en structuration internationale, droit britannique et opérations sur le terrain — pour que votre structure fonctionne en pratique, et pas seulement sur le papier.",
     "cta": "Book a consultation",
     "members": {
       "alex": {
         "name": "Alex Valor",
         "role": "Founder",
-        "bio": "15 years in international structuring and UK market entry. Alex has led 50+ cross-border setups for companies from the EU, Asia and the Middle East — from entity design to first UK revenue. Author of guides on substance and tax planning. He knows exactly what HMRC and UK banks look for — and builds setups that pass scrutiny."
+        "bio": "15 ans de structuration internationale et d'entrée sur le marché britannique. Alex a mené plus de 50 projets transfrontaliers pour des entreprises d'Europe, d'Asie et du Moyen-Orient — de la conception de la structure jusqu'au premier chiffre d'affaires au UK. Auteur de guides sur la substance et la planification fiscale. Il sait exactement ce que HMRC et les banques britanniques attendent — et construit des structures qui résistent aux contrôles."
       },
       "dmitry": {
         "name": "Dmitry Lakshin",
@@ -262,7 +263,7 @@
   },
   "contact": {
     "heading": "Réservez votre consultation gratuite",
-    "subheading": "Appel de 15 minutes avec nos experts UK — sans engagement, confidentiel",
+    "subheading": "Appel de 15 minutes avec nos experts UK — sans engagement et entièrement confidentiel",
     "name": "Nom",
     "namePlaceholder": "Votre nom",
     "phone": "Téléphone ou e-mail",
@@ -281,8 +282,8 @@
     "consent": "En envoyant, vous acceptez le traitement des données personnelles",
     "submit": "Réserver une consultation",
     "submitting": "Envoi…",
-    "successTitle": "Merci !",
-    "successText": "Nous vous contacterons pour confirmer l'horaire de la consultation.",
+    "successTitle": "Demande envoyée",
+    "successText": "Vos informations ont bien été envoyées. Veuillez patienter — notre équipe vous contactera sous peu pour confirmer la consultation.",
     "error": "Échec de l'envoi. Réessayez ou écrivez à info@vibe-service.co.uk.",
     "modalTitle": "Réserver une consultation",
     "close": "Fermer",
@@ -406,7 +407,7 @@
     "introCta": "Réserver une consultation gratuite",
     "benefitsHeading": "Avantages clés",
     "ctaHeading": "Prêt à commencer ?",
-    "ctaDescription": "Réservez une consultation gratuite et obtenez un plan sur mesure pour votre entrée sur le marché britannique",
+    "ctaDescription": "Réservez une consultation gratuite de 15 minutes avec nos experts UK — sans engagement et entièrement confidentielle.",
     "relatedServices": "Autres services",
     "relatedBlog": "Articles connexes"
   },

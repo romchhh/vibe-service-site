@@ -24,6 +24,12 @@ yarn-error.log*
 .env*.local
 .env
 
+# Google service account credentials (never commit)
+**/credentials/**
+*service-account*.json
+hazel-field-*.json
+*-*.iam.gserviceaccount.com.json
+
 # typescript
 *.tsbuildinfo
 

@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-import { LOCALE_COOKIE_NAME, resolveLocale } from '@/lib/i18n/locale-preference'
-import { isValidLocale } from '@/lib/i18n/config'
+import { defaultLocale, isValidLocale } from '@/lib/i18n/config'
 
 /** Paths that must live at site root, not under /{locale}/ */
 function stripLocalePrefix(pathname: string): string | null {
@@ -45,11 +44,8 @@ export function proxy(request: NextRequest) {
     return response
   }
 
-  const locale = resolveLocale({
-    cookieValue: request.cookies.get(LOCALE_COOKIE_NAME)?.value,
-    acceptLanguage: request.headers.get('accept-language') ?? undefined,
-  })
-
+  // Root and locale-less paths always open the English version.
+  const locale = defaultLocale
   const url = request.nextUrl.clone()
   url.pathname = pathname === '/' ? `/${locale}` : `/${locale}${pathname}`
   const response = NextResponse.redirect(url)

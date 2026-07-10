@@ -53,8 +53,8 @@ French: /fr/
 
 - Email: info@vibe-service.co.uk
 - Phone: +44 7441 429829
-- WhatsApp: https://api.whatsapp.com/send/?phone=447771656297&text&type=phone_number&app_absent=0
-- Telegram: https://t.me/+447771656297
+- WhatsApp: https://api.whatsapp.com/send/?phone=447340650511&text&type=phone_number&app_absent=0
+- Telegram: https://t.me/+447340650511
 - Website: https://vibe-service.co.uk
 
 ## Technical

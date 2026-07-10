@@ -1,14 +1,14 @@
 {
   "substance-in-uk": {
     "meta": {
-      "title": "Substance in UK — Bureau réel & présence locale | Vibe Services",
-      "description": "Substance conforme au Royaume-Uni : adresse enregistrée, bureau réel, directeur local et gestion de la présence. Nous réduisons les risques HMRC et bancaires.",
-      "keywords": ["substance in UK", "adresse enregistrée UK", "directeur local UK", "Vibe Services"]
+      "title": "Substance in the UK — Bureau réel & présence locale | Vibe Services",
+      "description": "Nous créons une présence opérationnelle réelle au UK : adresse enregistrée, bureau physique, directeur local et gestion de la présence — pleinement conforme HMRC et banques.",
+      "keywords": ["substance in the UK", "adresse enregistrée UK", "directeur local UK", "Vibe Services"]
     },
-    "h1": "Substance in UK",
-    "lead": "Nous créons une présence opérationnelle réelle au Royaume-Uni — adresse enregistrée, bureau, représentant local et gestion continue de la présence. Ce qu'exigent HMRC et les banques britanniques.",
+    "h1": "Substance in the UK : Registered Office, Real Workspace, Local Director & Presence Management — Fully HMRC Compliant",
+    "lead": "Nous construisons pour vous une présence opérationnelle réelle au Royaume-Uni — y compris une adresse enregistrée, un bureau physique, un représentant local et une gestion continue. Le tout aligné sur les attentes de HMRC et des banques.",
     "offer": {
-      "badge": "Conforme HMRC",
+      "badge": "Pleinement conforme HMRC",
       "highlight": "3 mois",
       "sub": "De la structure vide à une substance UK réelle"
     },
@@ -16,24 +16,24 @@
       {
         "title": "Ce qui est inclus",
         "paragraphs": [
-          "Adresse de registered office, bureau réel ou espace de coworking, directeur local ou représentant sur place, et gestion continue de la présence. Votre entité UK ressemble et fonctionne comme une vraie entreprise.",
+          "Nous fournissons une adresse de registered office, un espace de travail physique, un directeur local ou représentant, des services de secrétariat de société, la gestion du courrier et un accompagnement compliance continu.",
           "Sans substance, les sociétés internationales risquent le blocage de comptes, des contrôles fiscaux et une atteinte à leur réputation. Nous résolvons cela dès le premier jour."
         ]
       },
       {
-        "title": "À qui s'adresse ce service",
+        "title": "Pour qui ce service est conçu",
         "paragraphs": [
-          "Propriétaires et dirigeants d'Europe, d'Asie et du Moyen-Orient qui souhaitent mener leur activité via une structure UK sans déménager personnellement.",
-          "Idéal lorsque vous avez besoin d'un compte bancaire, d'une immatriculation VAT ou d'une conformité HMRC, mais que vous n'avez pas de présence physique au Royaume-Uni."
+          "Ce service est conçu pour les propriétaires d'entreprises et dirigeants internationaux d'Europe, d'Asie et du Moyen-Orient qui souhaitent opérer via une structure UK sans avoir besoin de déménager personnellement.",
+          "Il est idéal lorsque vous avez besoin d'un compte bancaire, d'une immatriculation VAT ou d'une conformité HMRC, mais que vous n'avez pas de présence physique au Royaume-Uni."
         ]
       }
     ],
     "benefits": [
+      "Substance opérationnelle complète en 3 mois — pas en 12",
+      "100 % de focus sur la conformité HMRC et bancaire dès le premier jour",
+      "Tarification transparente et un account manager dédié",
       "Registered office et espace de travail réel",
-      "Directeur local ou représentant",
-      "Focus sur la conformité HMRC et bancaire",
-      "Gestion continue de la présence",
-      "Mise en place en ~3 mois"
+      "Directeur local ou représentant"
     ],
     "faq": [
       {
@@ -46,8 +46,8 @@
       }
     ],
     "card": {
-      "title": "Substance in UK",
-      "desc": "Adresse enregistrée, bureau réel, représentant et gestion de la présence — conforme HMRC."
+      "title": "Substance in the UK",
+      "desc": "Registered office, real workspace, local director et gestion de la présence — Fully HMRC Compliant."
     },
     "relatedServices": ["company-registration", "accounting", "sales-organisation"],
     "relatedBlogSlugs": []

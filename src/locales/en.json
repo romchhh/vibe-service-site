@@ -58,6 +58,7 @@
     "cta": "Get a consultation",
     "ctaPricing": "Get pricing",
     "ctaGuide": "UK substance guide",
+    "cardLabel": "Ready in",
     "trustedBy": "Trusted by",
     "trustpilotRating": "4.9",
     "trustpilotReviews": "47 reviews"
@@ -304,7 +305,7 @@
   },
   "contact": {
     "heading": "Book your free consultation",
-    "subheading": "15-minute call with our UK experts — no obligation, fully confidential",
+    "subheading": "15-minute call with our UK experts — no obligations and completely confidential",
     "name": "Name",
     "namePlaceholder": "Your name",
     "phone": "Phone or email",
@@ -323,8 +324,8 @@
     "consent": "By submitting, you agree to the processing of personal data",
     "submit": "Book a consultation",
     "submitting": "Sending…",
-    "successTitle": "Thank you!",
-    "successText": "We'll contact you shortly to confirm your consultation time.",
+    "successTitle": "Request sent",
+    "successText": "Your details have been submitted successfully. Please wait — our team will contact you shortly to confirm the consultation.",
     "error": "Failed to send. Please try again or email info@vibe-service.co.uk.",
     "modalTitle": "Book a consultation",
     "close": "Close",
@@ -448,7 +449,7 @@
     "introCta": "Book a free consultation",
     "benefitsHeading": "Key benefits",
     "ctaHeading": "Ready to start?",
-    "ctaDescription": "Book a free consultation and get a tailored plan for your UK market entry",
+    "ctaDescription": "Book a free 15-minute consultation with our UK experts — no obligations and completely confidential.",
     "relatedServices": "Other services",
     "relatedBlog": "Related articles"
   },

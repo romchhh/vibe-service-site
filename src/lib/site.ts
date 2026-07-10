@@ -18,12 +18,12 @@ export const siteConfig = {
   phone: '+44 7441 429829',
   phoneE164: '+447441429829',
   phoneTelUrl: 'tel:+447441429829',
-  telegram: '+447771656297',
-  telegramChannelUrl: 'https://t.me/+447771656297',
-  telegramOperatorUrl: 'https://t.me/+447771656297',
-  whatsappPhone: '+447771656297',
+  telegram: '+447340650511',
+  telegramChannelUrl: 'https://t.me/+447340650511',
+  telegramOperatorUrl: 'https://t.me/+447340650511',
+  whatsappPhone: '+447340650511',
   whatsappUrl:
-    'https://api.whatsapp.com/send/?phone=447771656297&text&type=phone_number&app_absent=0',
+    'https://api.whatsapp.com/send/?phone=447340650511&text&type=phone_number&app_absent=0',
   trustpilotUrl: 'https://www.trustpilot.com/review/vibe-service.co.uk',
   office: {
     company: 'Vibe Services',

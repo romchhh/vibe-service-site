@@ -19,6 +19,29 @@ function trimField(value: unknown, max: number): string {
   return value.trim().slice(0, max)
 }
 
+function scheduleLeadDelivery(payload: Parameters<typeof deliverConsultationLead>[0]) {
+  // Fire-and-forget: respond to the user immediately, write to Bitrix/Sheets in background.
+  void deliverConsultationLead(payload)
+    .then((result) => {
+      if (!result.ok) {
+        console.error('[Contact] Background lead delivery failed', {
+          bitrix: result.bitrix,
+          sheets: result.sheets,
+        })
+        return
+      }
+
+      console.log('[Contact] Background lead delivery ok', {
+        leadId: result.leadId,
+        bitrix: result.bitrix,
+        sheets: result.sheets,
+      })
+    })
+    .catch((error) => {
+      console.error('[Contact] Background lead delivery error:', error)
+    })
+}
+
 export async function POST(request: Request) {
   if (!isLeadDeliveryConfigured()) {
     return NextResponse.json({ error: 'Service unavailable' }, { status: 503 })
@@ -50,7 +73,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Preferred time is required' }, { status: 400 })
   }
 
-  const result = await deliverConsultationLead({
+  scheduleLeadDelivery({
     name,
     phone,
     preferredTime,
@@ -58,9 +81,5 @@ export async function POST(request: Request) {
     source,
   })
 
-  if (!result.ok) {
-    return NextResponse.json({ error: 'Failed to send' }, { status: 502 })
-  }
-
-  return NextResponse.json({ ok: true, leadId: result.leadId })
+  return NextResponse.json({ ok: true, queued: true })
 }
