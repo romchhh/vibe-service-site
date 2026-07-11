@@ -31,7 +31,7 @@
       },
       {
         "question": "What if HMRC challenges my substance?",
-        "answer": "We design every setup with HMRC's substance criteria in mind: real office, local management, documented decisions, and genuine activity. If challenged, we provide evidence packs and support your response. 100% of our clients have passed banking and initial compliance checks."
+        "answer": "We design every setup with HMRC's substance criteria in mind: real office, local management, documented decisions, and genuine activity. If challenged, we provide evidence packs and support your response. 92% of our clients have passed banking and initial compliance checks."
       },
       {
         "question": "How do I contact Vibe Services?",
@@ -40,11 +40,15 @@
     ]
   },
   "nav": {
+    "whyUs": "Why us",
     "services": "Services",
-    "clients": "Case studies",
-    "about": "Team",
+    "howWeWork": "How we work",
+    "team": "Team",
+    "cases": "Case studies",
     "blog": "Blog",
     "reviews": "Reviews",
+    "faqs": "FAQs",
+    "booking": "Booking",
     "cta": "Book a call",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
@@ -86,7 +90,8 @@
   },
   "services": {
     "heading": "What we do for your UK business",
-    "more": "Learn more"
+    "more": "Learn more",
+    "clickHint": "Click to learn more details"
   },
   "howWeWork": {
     "heading": "How we work",

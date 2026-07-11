@@ -23,13 +23,22 @@ export default function SectionLink({ sectionId, children, className, onNavigate
       href={href}
       className={className}
       onClick={(event) => {
-        onNavigate?.()
-
-        if (!isHome) return
+        if (!isHome) {
+          onNavigate?.()
+          return
+        }
 
         event.preventDefault()
-        scrollToSection(sectionId)
-        window.history.replaceState(null, '', href)
+        onNavigate?.()
+
+        // If the burger/menu closes with body scroll lock, unlock restores the
+        // previous scrollY and would cancel an immediate scrollIntoView.
+        // Wait until after React unlocks the body, then scroll to the section.
+        const delay = onNavigate ? 100 : 0
+        window.setTimeout(() => {
+          scrollToSection(sectionId)
+          window.history.replaceState(null, '', href)
+        }, delay)
       }}
     >
       {children}

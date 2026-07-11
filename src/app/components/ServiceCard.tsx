@@ -34,14 +34,15 @@ export default function ServiceCard({ slug, title, description, href, titleAs: T
           <div className={styles.cardContent}>
             <TitleTag className={styles.title}>{title}</TitleTag>
             <p className={styles.desc}>{description}</p>
-            <span className={styles.more}>
+            <span className={styles.cta}>
               {t('services.more')}
-              <span className={styles.moreArrow} aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M2 6 H10 M7 3 L10 6 L7 9" />
+              <span className={styles.ctaArrow} aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M2 7 H12 M8 3 L12 7 L8 11" />
                 </svg>
               </span>
             </span>
+            <span className={styles.hint}>{t('services.clickHint')}</span>
           </div>
         </div>
       </Link>

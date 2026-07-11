@@ -11,10 +11,15 @@ import SectionLink from './SectionLink'
 import styles from './Footer.module.css'
 
 const NAV_LINKS = [
-  { key: 'about', sectionId: 'team' },
-  { key: 'clients', sectionId: 'cases' },
-  { key: 'reviews', path: '/reviews' },
-  { key: 'blog', path: '/blog' },
+  { key: 'whyUs', sectionId: 'stats' },
+  { key: 'services', sectionId: 'services' },
+  { key: 'howWeWork', sectionId: 'how-we-work' },
+  { key: 'team', sectionId: 'team' },
+  { key: 'cases', sectionId: 'cases' },
+  { key: 'blog', sectionId: 'blog' },
+  { key: 'reviews', sectionId: 'reviews' },
+  { key: 'faqs', sectionId: 'faq' },
+  { key: 'booking', sectionId: 'kontakt' },
 ] as const
 
 export default function Footer() {
@@ -80,17 +85,10 @@ export default function Footer() {
           <h3 className={styles.heading}>{t('footer.infoHeading')}</h3>
           <nav className={styles.nav} aria-label={t('footer.navLabel')}>
             {NAV_LINKS.map((item) => (
-              'path' in item ? (
-                <Link key={item.key} href={lp(item.path)}>
-                  {t(`footer.${item.key}`)}
-                </Link>
-              ) : (
-                <SectionLink key={item.key} sectionId={item.sectionId}>
-                  {t(`footer.${item.key}`)}
-                </SectionLink>
-              )
+              <SectionLink key={item.key} sectionId={item.sectionId}>
+                {t(`nav.${item.key}`)}
+              </SectionLink>
             ))}
-            <SectionLink sectionId="services">{t('footer.services')}</SectionLink>
           </nav>
         </div>
 

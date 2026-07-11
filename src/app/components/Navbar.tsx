@@ -1,10 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
-import { stripLocalePrefix } from '@/lib/i18n/config'
 import { useLocalizedPath } from '@/lib/i18n/use-locale'
 import { useBodyScrollLock } from '@/lib/body-scroll-lock'
 import { useContactModal } from './ContactModalProvider'
@@ -12,15 +9,23 @@ import LangSwitcher from './LangSwitcher'
 import SectionLink from './SectionLink'
 import styles from './Navbar.module.css'
 
+const NAV_SECTIONS = [
+  { key: 'whyUs', sectionId: 'stats' },
+  { key: 'services', sectionId: 'services' },
+  { key: 'howWeWork', sectionId: 'how-we-work' },
+  { key: 'team', sectionId: 'team' },
+  { key: 'cases', sectionId: 'cases' },
+  { key: 'blog', sectionId: 'blog' },
+  { key: 'reviews', sectionId: 'reviews' },
+  { key: 'faqs', sectionId: 'faq' },
+] as const
+
 export default function Navbar({ transparent = false }: { transparent?: boolean }) {
   const { t } = useTranslation()
   const { open: openContactModal } = useContactModal()
-  const pathname = usePathname()
   const lp = useLocalizedPath()
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const blogPath = lp('/blog')
-  const reviewsPath = lp('/reviews')
 
   useEffect(() => {
     let frame = 0
@@ -42,44 +47,41 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
   useBodyScrollLock(menuOpen)
 
   const isDark = !transparent || scrolled
-  const isBlogActive = stripLocalePrefix(pathname) === '/blog' || pathname.includes('/blog/')
 
   return (
     <>
       <nav className={`${styles.nav} ${menuOpen ? styles.navMenuOpen : ''} ${isDark || menuOpen ? styles.solid : styles.transparent} ${isDark || menuOpen ? styles.navDark : styles.navLight}`}>
-        <div className={styles.navStart}>
-          <button
-            type="button"
-            className={styles.mobileCta}
-            onClick={openContactModal}
-          >
-            {t('nav.cta')}
-            <span className={styles.ctaArrow} aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M2 12 L12 2 M5 2 H12 V9" />
-              </svg>
-            </span>
-          </button>
-
-          <div className={styles.center}>
-            <SectionLink sectionId="team">{t('nav.about')}</SectionLink>
-            <SectionLink sectionId="services">{t('nav.services')}</SectionLink>
-            <SectionLink sectionId="cases">{t('nav.clients')}</SectionLink>
-            <Link href={reviewsPath}>{t('nav.reviews')}</Link>
-            <a href={blogPath} className={isBlogActive ? styles.activeLink : ''}>{t('nav.blog')}</a>
-          </div>
-        </div>
+        <button
+          type="button"
+          className={styles.mobileCta}
+          onClick={openContactModal}
+        >
+          {t('nav.booking')}
+          <span className={styles.ctaArrow} aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M2 12 L12 2 M5 2 H12 V9" />
+            </svg>
+          </span>
+        </button>
 
         <a href={lp('/')} className={styles.brand}>
           <span className={styles.brandBold}>{t('footer.brandBold')}</span>
           <span className={styles.brandRegular}>{t('footer.brandRegular')}</span>
         </a>
 
+        <div className={styles.center}>
+          {NAV_SECTIONS.map((item) => (
+            <SectionLink key={item.sectionId} sectionId={item.sectionId}>
+              {t(`nav.${item.key}`)}
+            </SectionLink>
+          ))}
+        </div>
+
         <div className={styles.actions}>
           <div className={styles.desktopRight}>
             <LangSwitcher light={!isDark} />
             <button type="button" className={styles.cta} onClick={openContactModal}>
-              {t('nav.cta')}
+              {t('nav.booking')}
               <span className={styles.ctaArrow} aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M2 12 L12 2 M5 2 H12 V9" />
@@ -107,19 +109,18 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
           </svg>
         </button>
 
-        <SectionLink sectionId="team" onNavigate={() => setMenuOpen(false)}>
-          {t('nav.about')}
+        {NAV_SECTIONS.map((item) => (
+          <SectionLink
+            key={item.sectionId}
+            sectionId={item.sectionId}
+            onNavigate={() => setMenuOpen(false)}
+          >
+            {t(`nav.${item.key}`)}
+          </SectionLink>
+        ))}
+        <SectionLink sectionId="kontakt" onNavigate={() => setMenuOpen(false)}>
+          {t('nav.booking')}
         </SectionLink>
-        <SectionLink sectionId="services" onNavigate={() => setMenuOpen(false)}>
-          {t('nav.services')}
-        </SectionLink>
-        <SectionLink sectionId="cases" onNavigate={() => setMenuOpen(false)}>
-          {t('nav.clients')}
-        </SectionLink>
-        <Link href={reviewsPath} onClick={() => setMenuOpen(false)}>
-          {t('nav.reviews')}
-        </Link>
-        <a href={blogPath} onClick={() => setMenuOpen(false)}>{t('nav.blog')}</a>
         <button
           type="button"
           className={styles.drawerCta}

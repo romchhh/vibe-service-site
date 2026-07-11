@@ -18,7 +18,7 @@ export default function BlogPreviewSection({ posts }: Props) {
   if (posts.length === 0) return null
 
   return (
-    <section className={styles.section}>
+    <section id="blog" className={styles.section}>
       <div className={styles.inner}>
         <h2 className={styles.heading}>{t('homeBlog.heading')}</h2>
         <p className={styles.subheading}>{t('homeBlog.subheading')}</p>

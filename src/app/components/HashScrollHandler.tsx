@@ -11,11 +11,18 @@ export default function HashScrollHandler() {
     const hash = window.location.hash.replace(/^#/, '')
     if (!hash) return
 
-    const frame = window.requestAnimationFrame(() => {
-      scrollToSection(hash)
-    })
+    let attempts = 0
+    let timer = 0
 
-    return () => window.cancelAnimationFrame(frame)
+    const tryScroll = () => {
+      attempts += 1
+      if (scrollToSection(hash) || attempts >= 10) return
+      timer = window.setTimeout(tryScroll, 80)
+    }
+
+    timer = window.setTimeout(tryScroll, 40)
+
+    return () => window.clearTimeout(timer)
   }, [pathname])
 
   return null
