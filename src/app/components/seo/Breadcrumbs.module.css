@@ -77,7 +77,11 @@
   }
 
   .navDark .current {
-    max-width: min(46vw, 320px);
+    max-width: min(58vw, 240px);
+  }
+
+  .list {
+    row-gap: 4px;
   }
 }
 

@@ -606,12 +606,15 @@
   }
 
   .heroBreadcrumbs {
-    top: 84px;
-    padding: 0 var(--hero-header-padding-x-md);
+    position: relative;
+    top: auto;
+    flex-shrink: 0;
+    padding: calc(88px + env(safe-area-inset-top, 0px)) var(--hero-header-padding-x-md) 0;
   }
 
   .heroBody {
-    padding: 120px var(--hero-header-padding-x-md) clamp(120px, 15vh, 180px);
+    padding: 20px var(--hero-header-padding-x-md) clamp(120px, 15vh, 180px);
+    min-height: 0;
   }
 
   .introInner {
@@ -657,17 +660,16 @@
 
 @media (max-width: 768px) {
   .heroBreadcrumbs {
-    top: 76px;
-    padding: 0 16px;
+    padding: calc(72px + env(safe-area-inset-top, 0px)) 16px 0;
   }
 
   .heroBody {
-    padding: 108px 16px clamp(96px, 14vh, 140px);
+    padding: 16px 16px clamp(96px, 14vh, 140px);
   }
 
   .heroTitle {
     max-width: none;
-    font-size: clamp(24px, 6.5vw, 34px);
+    font-size: clamp(22px, 5.8vw, 30px);
   }
 
   .heroBadge {

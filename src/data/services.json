@@ -6,7 +6,12 @@
         "meta": {
           "title": "Substance in the UK — Real Office & Local Presence | Vibe Services",
           "description": "We build real UK operational presence: registered office, physical workspace, local director and ongoing management — fully HMRC and banking compliant.",
-          "keywords": ["substance in the UK", "registered office UK", "UK local director", "Vibe Services"]
+          "keywords": [
+            "substance in the UK",
+            "registered office UK",
+            "UK local director",
+            "Vibe Services"
+          ]
         },
         "h1": "Substance in the UK: Registered Office, Real Workspace, Local Director & Presence Management — Fully HMRC Compliant",
         "lead": "We build a real operational presence for you in the United Kingdom — including a registered address, a physical office, a local representative, and ongoing management. All aligned with HMRC and banking expectations.",
@@ -52,60 +57,73 @@
           "title": "Substance in the UK",
           "desc": "Registered office, real workspace, local director and presence management — fully HMRC compliant."
         },
-        "relatedServices": ["company-registration", "accounting", "sales-organisation"],
+        "relatedServices": [
+          "company-registration",
+          "accounting",
+          "sales-organisation"
+        ],
         "relatedBlogSlugs": []
       },
       "ru": {
         "meta": {
-          "title": "Substance in the UK — реальный офис и присутствие | Vibe Services",
-          "description": "Создаём реальное операционное присутствие в UK: юрадрес, физический офис, локальный директор и управление присутствием — полное соответствие HMRC и банкам.",
-          "keywords": ["substance в UK", "юрадрес UK", "директор в UK", "Vibe Services"]
+          "title": "Реальное присутствие в Великобритании — реальный офис и присутствие | Vibe Services",
+          "description": "Создаём реальное операционное присутствие в Великобритании: юрадрес, физический офис, локальный директор и управление присутствием — полное соответствие HMRC и банкам.",
+          "keywords": [
+            "реальное присутствие в Великобритании",
+            "юрадрес в Великобритании",
+            "директор в Великобритании",
+            "Vibe Services"
+          ]
         },
-        "h1": "Substance in the UK: юридический адрес, реальный офис, локальный директор и управление присутствием — полное соответствие HMRC",
+        "h1": "Реальное присутствие в Великобритании: юридический адрес, реальный офис, локальный директор и управление присутствием — полное соответствие HMRC",
         "lead": "Мы создаём для вас реальное операционное присутствие в Великобритании — включая юридический адрес, физический офис, локального представителя и постоянное управление. Всё в соответствии с ожиданиями HMRC и банков.",
         "offer": {
           "badge": "Полное соответствие HMRC",
           "highlight": "3 месяца",
-          "sub": "От пустой структуры до реального substance"
+          "sub": "От пустой структуры до реального присутствия"
         },
         "sections": [
           {
             "title": "Что входит",
             "paragraphs": [
-              "Мы предоставляем юридический адрес, физический рабочий офис, локального директора или представителя, корпоративный секретариат, обработку почты и постоянную поддержку по комплаенсу.",
-              "Без substance международные компании рискуют блокировкой счетов, налоговыми проверками и репутационными потерями. Мы решаем это с первого дня."
+              "Мы предоставляем юридический адрес, физический рабочий офис, локального директора или представителя, корпоративный секретариат, обработку почты и постоянную поддержку по соответствию требованиям.",
+              "Без присутствия международные компании рискуют блокировкой счетов, налоговыми проверками и репутационными потерями. Мы решаем это с первого дня."
             ]
           },
           {
             "title": "Для кого предназначена эта услуга",
             "paragraphs": [
-              "Эта услуга предназначена для международных владельцев бизнеса и топ-менеджеров из Европы, Азии и Ближнего Востока, которые хотят работать через UK-структуру без необходимости личного переезда.",
-              "Она идеальна, когда вам нужен банковский счёт, регистрация VAT или комплаенс HMRC, но нет физического присутствия в UK."
+              "Эта услуга предназначена для международных владельцев бизнеса и топ-менеджеров из Европы, Азии и Ближнего Востока, которые хотят работать через структуру в Великобритании без необходимости личного переезда.",
+              "Она идеальна, когда вам нужен банковский счёт, регистрация НДС или соответствие требованиям HMRC, но нет физического присутствия в Великобритании."
             ]
           }
         ],
         "benefits": [
-          "Полный операционный substance за 3 месяца — не за 12",
-          "100% фокус на комплаенсе HMRC и банков с первого дня",
+          "Полное операционное присутствие за 3 месяца — не за 12",
+          "100% фокус на соответствии требованиям HMRC и банков с первого дня",
           "Прозрачные цены и персональный менеджер",
           "Юрадрес и реальный рабочий офис",
           "Локальный директор или представитель"
         ],
         "faq": [
           {
-            "question": "Зачем банкам UK нужен substance?",
-            "answer": "Банки обязаны соблюдать AML-правила. Компания-оболочка без реальной деятельности — высокий риск. Substance доказывает настоящие операции."
+            "question": "Зачем банкам Великобритании нужно реальное присутствие?",
+            "answer": "Банки обязаны соблюдать правила борьбы с отмыванием денег. Компания-оболочка без реальной деятельности — высокий риск. Реальное присутствие доказывает настоящие операции."
           },
           {
-            "question": "Можете управлять substance, пока мы за рубежом?",
+            "question": "Можете управлять присутствием, пока мы за рубежом?",
             "answer": "Да. Мы ведём локальное представительство, почту, встречи и отчётность, пока вы управляете бизнесом из другой страны."
           }
         ],
         "card": {
-          "title": "Substance in the UK",
+          "title": "Реальное присутствие в Великобритании",
           "desc": "Юрадрес, реальный офис, локальный директор и управление присутствием — полное соответствие HMRC."
         },
-        "relatedServices": ["company-registration", "accounting", "sales-organisation"],
+        "relatedServices": [
+          "company-registration",
+          "accounting",
+          "sales-organisation"
+        ],
         "relatedBlogSlugs": []
       }
     },
@@ -115,7 +133,12 @@
         "meta": {
           "title": "UK Company Registration — LTD & LLP | Vibe Services",
           "description": "Turnkey UK company registration: LTD or LLP, structure selection, documents and Companies House filing.",
-          "keywords": ["UK company registration", "LTD UK", "LLP UK", "Vibe Services"]
+          "keywords": [
+            "UK company registration",
+            "LTD UK",
+            "LLP UK",
+            "Vibe Services"
+          ]
         },
         "h1": "UK Company Registration",
         "lead": "Register your UK company the right way — LTD or LLP, optimal structure, full document preparation and Companies House filing. We handle the complexity so you don't.",
@@ -150,17 +173,26 @@
           "title": "Company Registration",
           "desc": "LTD / LLP registration turnkey — structure, documents and filing."
         },
-        "relatedServices": ["substance-in-uk", "accounting", "sales-organisation"],
+        "relatedServices": [
+          "substance-in-uk",
+          "accounting",
+          "sales-organisation"
+        ],
         "relatedBlogSlugs": []
       },
       "ru": {
         "meta": {
-          "title": "Регистрация компании в UK — LTD и LLP | Vibe Services",
-          "description": "Регистрация компании в Великобритании под ключ: LTD или LLP, выбор структуры, документы и подача в Companies House.",
-          "keywords": ["регистрация компании UK", "LTD UK", "LLP UK", "Vibe Services"]
+          "title": "Регистрация компании в Великобритании — LTD и LLP | Vibe Services",
+          "description": "Регистрация компании в Великобритании под ключ: LTD или LLP, выбор структуры, документы и подача в реестр компаний.",
+          "keywords": [
+            "регистрация компании в Великобритании",
+            "LTD в Великобритании",
+            "LLP в Великобритании",
+            "Vibe Services"
+          ]
         },
-        "h1": "Регистрация компании в UK",
-        "lead": "Регистрируем UK-компанию правильно — LTD или LLP, оптимальная структура, подготовка документов и подача в Companies House. Берём сложность на себя.",
+        "h1": "Регистрация компании в Великобритании",
+        "lead": "Регистрируем компанию в Великобритании правильно — LTD или LLP, оптимальная структура, подготовка документов и подача в реестр компаний. Берём сложность на себя.",
         "offer": {
           "badge": "LTD / LLP",
           "highlight": "Под ключ",
@@ -168,10 +200,10 @@
         },
         "sections": [
           {
-            "title": "LTD vs LLP",
+            "title": "LTD или LLP",
             "paragraphs": [
               "Limited company (LTD) подходит большинству международных бизнесов. LLP — для определённых партнёрских моделей. Юридический директор подберёт оптимальный вариант.",
-              "Готовим устав, shareholder agreements и все документы для Companies House."
+              "Готовим устав, соглашения акционеров и все документы для реестра компаний."
             ]
           }
         ],
@@ -179,20 +211,24 @@
           "Регистрация LTD или LLP",
           "Консультация по структуре и налогам",
           "Полный пакет документов",
-          "Подача в Companies House",
-          "Готовность к substance"
+          "Подача в реестр компаний",
+          "Готовность к присутствию"
         ],
         "faq": [
           {
             "question": "Сколько длится регистрация?",
-            "answer": "Регистрация в Companies House — дни. Полный запуск с substance и банком — около 3 месяцев."
+            "answer": "Регистрация в реестре компаний — дни. Полный запуск с присутствием и банком — около 3 месяцев."
           }
         ],
         "card": {
           "title": "Регистрация компании",
           "desc": "LTD / LLP под ключ — структура, документы и подача."
         },
-        "relatedServices": ["substance-in-uk", "accounting", "sales-organisation"],
+        "relatedServices": [
+          "substance-in-uk",
+          "accounting",
+          "sales-organisation"
+        ],
         "relatedBlogSlugs": []
       }
     },
@@ -202,7 +238,12 @@
         "meta": {
           "title": "UK Accounting & VAT — Bookkeeping & Payroll | Vibe Services",
           "description": "UK accounting: bookkeeping, VAT, payroll, annual accounts and tax consulting for international businesses.",
-          "keywords": ["UK accounting", "VAT UK", "payroll UK", "Vibe Services"]
+          "keywords": [
+            "UK accounting",
+            "VAT UK",
+            "payroll UK",
+            "Vibe Services"
+          ]
         },
         "h1": "UK Accounting & Compliance",
         "lead": "Stay compliant with HMRC — bookkeeping, VAT registration and returns, payroll, annual accounts and tax consulting. We keep your UK entity in good standing.",
@@ -237,49 +278,62 @@
           "title": "Accounting",
           "desc": "Bookkeeping, VAT, payroll, annual accounts and tax consulting."
         },
-        "relatedServices": ["substance-in-uk", "company-registration", "sales-organisation"],
+        "relatedServices": [
+          "substance-in-uk",
+          "company-registration",
+          "sales-organisation"
+        ],
         "relatedBlogSlugs": []
       },
       "ru": {
         "meta": {
-          "title": "Бухгалтерия в UK — VAT и payroll | Vibe Services",
-          "description": "Бухгалтерское сопровождение в UK: учёт, VAT, payroll, годовая отчётность и налоговый консалтинг.",
-          "keywords": ["бухгалтерия UK", "VAT UK", "payroll UK", "Vibe Services"]
+          "title": "Бухгалтерия в Великобритании — НДС и зарплатный учёт | Vibe Services",
+          "description": "Бухгалтерское сопровождение в Великобритании: учёт, НДС, зарплатный учёт, годовая отчётность и налоговый консалтинг.",
+          "keywords": [
+            "бухгалтерия в Великобритании",
+            "НДС в Великобритании",
+            "зарплатный учёт в Великобритании",
+            "Vibe Services"
+          ]
         },
         "h1": "Бухгалтерское сопровождение",
-        "lead": "Остаётесь compliant с HMRC — ведение учёта, VAT, payroll, годовая отчётность и налоговый консалтинг. Поддерживаем вашу UK-компанию в порядке.",
+        "lead": "Остаётесь в соответствии с требованиями HMRC — ведение учёта, НДС, зарплатный учёт, годовая отчётность и налоговый консалтинг. Поддерживаем вашу компанию в Великобритании в порядке.",
         "offer": {
-          "badge": "HMRC ready",
+          "badge": "Готовность к HMRC",
           "highlight": "Полный сервис",
-          "sub": "VAT, payroll, годовая отчётность"
+          "sub": "НДС, зарплатный учёт, годовая отчётность"
         },
         "sections": [
           {
             "title": "Что делаем",
             "paragraphs": [
-              "Ежемесячный учёт, регистрация и декларации VAT, payroll для сотрудников в UK, годовая отчётность и corporation tax. Плюс налоговый консалтинг для международных структур.",
-              "Вы занимаетесь ростом — мы берём документы и дедлайны."
+              "Ежемесячный учёт, регистрация и декларации НДС, зарплатный учёт для сотрудников в Великобритании, годовая отчётность и корпоративный налог. Плюс налоговый консалтинг для международных структур.",
+              "Вы занимаетесь ростом — мы берём документы и сроки."
             ]
           }
         ],
         "benefits": [
           "Ведение учёта",
-          "VAT — регистрация и отчётность",
-          "Payroll и PAYE",
+          "НДС — регистрация и отчётность",
+          "Зарплатный учёт и PAYE",
           "Годовая отчётность и CT600",
           "Налоговый консалтинг"
         ],
         "faq": [
           {
-            "question": "Нужен ли UK-бухгалтер, если команда за рубежом?",
-            "answer": "Да. UK-компания обязана отчитываться в HMRC и Companies House. Мы — ваш бухгалтерский партнёр в UK."
+            "question": "Нужен ли бухгалтер в Великобритании, если команда за рубежом?",
+            "answer": "Да. Компания в Великобритании обязана отчитываться в HMRC и реестре компаний. Мы — ваш бухгалтерский партнёр в Великобритании."
           }
         ],
         "card": {
           "title": "Бухгалтерия",
-          "desc": "Учёт, VAT, payroll, годовая отчётность и налоговый консалтинг."
+          "desc": "Учёт, НДС, зарплатный учёт, годовая отчётность и налоговый консалтинг."
         },
-        "relatedServices": ["substance-in-uk", "company-registration", "sales-organisation"],
+        "relatedServices": [
+          "substance-in-uk",
+          "company-registration",
+          "sales-organisation"
+        ],
         "relatedBlogSlugs": []
       }
     },
@@ -289,7 +343,12 @@
         "meta": {
           "title": "UK Sales Organisation — Market Entry & Marketing | Vibe Services",
           "description": "Organise UK sales: market analysis, marketing setup and local team hiring for international brands entering Britain.",
-          "keywords": ["UK sales", "UK market entry", "UK marketing", "Vibe Services"]
+          "keywords": [
+            "UK sales",
+            "UK market entry",
+            "UK marketing",
+            "Vibe Services"
+          ]
         },
         "h1": "UK Sales Organisation",
         "lead": "Go beyond registration — analyse the UK market, set up marketing and build a local sales team. From launch strategy to first revenue.",
@@ -324,19 +383,28 @@
           "title": "Sales Organisation",
           "desc": "Market analysis, marketing and UK sales team setup."
         },
-        "relatedServices": ["substance-in-uk", "company-registration", "accounting"],
+        "relatedServices": [
+          "substance-in-uk",
+          "company-registration",
+          "accounting"
+        ],
         "relatedBlogSlugs": []
       },
       "ru": {
         "meta": {
-          "title": "Организация продаж в UK | Vibe Services",
+          "title": "Организация продаж в Великобритании | Vibe Services",
           "description": "Организация продаж в Великобритании: анализ рынка, маркетинг и подбор команды для международных брендов.",
-          "keywords": ["продажи UK", "выход на рынок UK", "маркетинг UK", "Vibe Services"]
+          "keywords": [
+            "продажи в Великобритании",
+            "выход на рынок Великобритании",
+            "маркетинг в Великобритании",
+            "Vibe Services"
+          ]
         },
-        "h1": "Организация продаж в UK",
-        "lead": "Не только регистрация — анализируем рынок UK, настраиваем маркетинг и формируем локальную команду продаж. От стратегии до первой выручки.",
+        "h1": "Организация продаж в Великобритании",
+        "lead": "Не только регистрация — анализируем рынок Великобритании, настраиваем маркетинг и формируем локальную команду продаж. От стратегии до первой выручки.",
         "offer": {
-          "badge": "Go-to-market",
+          "badge": "Выход на рынок",
           "highlight": "Продажи",
           "sub": "Анализ рынка, маркетинг, команда"
         },
@@ -344,29 +412,33 @@
           {
             "title": "Наш подход",
             "paragraphs": [
-              "Оцениваем product-market fit в UK, разрабатываем go-to-market план, настраиваем каналы и помогаем нанять локальных sales-специалистов.",
-              "Вместе с substance и бухгалтерией вы получаете полноценную UK-операцию — не просто зарегистрированную оболочку."
+              "Оцениваем соответствие продукта рынку в Великобритании, разрабатываем план выхода на рынок, настраиваем каналы и помогаем нанять локальных специалистов по продажам.",
+              "Вместе с присутствием и бухгалтерией вы получаете полноценную операцию в Великобритании — не просто зарегистрированную оболочку."
             ]
           }
         ],
         "benefits": [
-          "Анализ рынка UK",
+          "Анализ рынка Великобритании",
           "Настройка маркетинга и каналов",
           "Подбор команды продаж",
-          "Go-to-market стратегия",
-          "Интеграция с пакетом substance"
+          "Стратегия выхода на рынок",
+          "Интеграция с пакетом присутствия"
         ],
         "faq": [
           {
-            "question": "Можете помочь, если компания в UK уже есть?",
+            "question": "Можете помочь, если компания в Великобритании уже есть?",
             "answer": "Да. Добавим организацию продаж к существующей структуре — выход на рынок, маркетинг и команда без перерегистрации."
           }
         ],
         "card": {
           "title": "Организация продаж",
-          "desc": "Анализ рынка, маркетинг и подбор команды продаж в UK."
+          "desc": "Анализ рынка, маркетинг и подбор команды продаж в Великобритании."
         },
-        "relatedServices": ["substance-in-uk", "company-registration", "accounting"],
+        "relatedServices": [
+          "substance-in-uk",
+          "company-registration",
+          "accounting"
+        ],
         "relatedBlogSlugs": []
       }
     }
