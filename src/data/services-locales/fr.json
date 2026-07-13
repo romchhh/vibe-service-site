@@ -14,27 +14,26 @@
     },
     "sections": [
       {
-        "title": "Ce qui est inclus",
+        "title": "Pour qui ce service est conçu",
         "paragraphs": [
-          "Nous fournissons une adresse de registered office, un espace de travail physique, un directeur local ou représentant, des services de secrétariat de société, la gestion du courrier et un accompagnement compliance continu.",
-          "Sans substance, les sociétés internationales risquent le blocage de comptes, des contrôles fiscaux et une atteinte à leur réputation. Nous résolvons cela dès le premier jour."
+          "Ce service est conçu pour les propriétaires d'entreprises et dirigeants internationaux d'Europe, d'Asie et du Moyen-Orient qui souhaitent opérer via une structure UK sans avoir besoin de déménager personnellement."
         ]
       },
       {
-        "title": "Pour qui ce service est conçu",
+        "title": "Quand vous en avez besoin",
         "paragraphs": [
-          "Ce service est conçu pour les propriétaires d'entreprises et dirigeants internationaux d'Europe, d'Asie et du Moyen-Orient qui souhaitent opérer via une structure UK sans avoir besoin de déménager personnellement.",
-          "Il est idéal lorsque vous avez besoin d'un compte bancaire, d'une immatriculation VAT ou d'une conformité HMRC, mais que vous n'avez pas de présence physique au Royaume-Uni."
+          "C'est idéal lorsque vous avez besoin d'un compte bancaire, d'une immatriculation VAT ou d'une conformité HMRC, mais que vous n'avez pas de présence physique au Royaume-Uni."
+        ]
+      },
+      {
+        "title": "Ce qui est inclus",
+        "paragraphs": [
+          "Nous fournissons une adresse de registered office, un espace de travail physique, un directeur local ou représentant, des services de secrétariat de société, la gestion du courrier et un accompagnement compliance continu."
         ]
       }
     ],
-    "benefits": [
-      "Substance opérationnelle complète en 3 mois — pas en 12",
-      "100 % de focus sur la conformité HMRC et bancaire dès le premier jour",
-      "Tarification transparente et un account manager dédié",
-      "Registered office et espace de travail réel",
-      "Directeur local ou représentant"
-    ],
+    "benefits": [],
+    "whyChooseUs": "Nous livrons une substance opérationnelle complète en 3 mois — pas en 12. Dès le premier jour, nous maintenons un focus à 100 % sur la conformité HMRC et bancaire. Vous bénéficiez aussi d'une tarification transparente et d'un account manager dédié.",
     "faq": [
       {
         "question": "Pourquoi les banques britanniques exigent-elles de la substance ?",

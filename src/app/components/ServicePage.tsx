@@ -112,22 +112,6 @@ export default function ServicePage({ slug, breadcrumbs }: Props) {
       </section>
 
       <article className={styles.inner}>
-        <div className={styles.benefitsBlock}>
-          <h2 className={styles.benefitsTitle}>{t('servicePages.benefitsHeading') || 'Ключевые преимущества'}</h2>
-          <ul className={styles.benefits}>
-            {view.benefits.map((benefit, i) => (
-              <li key={benefit} className={styles.benefitItem}>
-                <div className={styles.benefitIcon}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <span>{benefit}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
         <div className={styles.sections}>
           {view.sections.map((section, idx) => (
             <section key={section.title} className={styles.section}>
@@ -143,6 +127,29 @@ export default function ServicePage({ slug, breadcrumbs }: Props) {
             </section>
           ))}
         </div>
+
+        {(view.whyChooseUs || view.benefits.length > 0) && (
+          <div className={styles.benefitsBlock}>
+            <h2 className={styles.benefitsTitle}>{t('servicePages.benefitsHeading')}</h2>
+            {view.whyChooseUs ? (
+              <p className={styles.whyChooseUs}>{view.whyChooseUs}</p>
+            ) : null}
+            {view.benefits.length > 0 ? (
+              <ul className={styles.benefits}>
+                {view.benefits.map((benefit) => (
+                  <li key={benefit} className={styles.benefitItem}>
+                    <div className={styles.benefitIcon}>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </div>
+                    <span>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        )}
 
         <div className={styles.ctaBlock}>
           <div className={styles.ctaCard}>

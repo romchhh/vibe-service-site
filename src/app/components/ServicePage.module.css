@@ -283,11 +283,24 @@
   letter-spacing: -0.02em;
 }
 
+.whyChooseUs {
+  margin: 0;
+  font-size: clamp(17px, 1.7vw, 20px);
+  line-height: 1.7;
+  color: var(--gray-900);
+  font-weight: 500;
+  max-width: 52rem;
+}
+
 .benefits {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
+}
+
+.whyChooseUs + .benefits {
+  margin-top: 28px;
 }
 
 .benefitItem {

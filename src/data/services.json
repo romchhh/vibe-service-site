@@ -22,27 +22,26 @@
         },
         "sections": [
           {
-            "title": "What's included",
+            "title": "For whom this service is designed",
             "paragraphs": [
-              "We provide a registered office address, a physical workspace, a local director or representative, company secretarial services, mail handling, and ongoing compliance support.",
-              "Without substance, international companies face account blocks, tax investigations and reputational risk. We solve this from day one."
+              "This service is designed for international business owners and executives from Europe, Asia, and the Middle East who want to operate through a UK structure without the need to relocate personally."
             ]
           },
           {
-            "title": "For whom this service is designed",
+            "title": "When you need this",
             "paragraphs": [
-              "This service is designed for international business owners and executives from Europe, Asia, and the Middle East who want to operate through a UK structure without the need to relocate personally.",
               "It is ideal when you need a bank account, VAT registration, or HMRC compliance but lack a physical presence in the UK."
+            ]
+          },
+          {
+            "title": "What's included",
+            "paragraphs": [
+              "We provide a registered office address, a physical workspace, a local director or representative, company secretarial services, mail handling, and ongoing compliance support."
             ]
           }
         ],
-        "benefits": [
-          "Full operational substance within 3 months — not 12",
-          "100% focus on HMRC and banking compliance from day one",
-          "Transparent pricing and a dedicated account manager",
-          "Registered office and real workspace",
-          "Local director or representative"
-        ],
+        "benefits": [],
+        "whyChooseUs": "We deliver full operational substance within 3 months — not 12. We maintain a 100% focus on HMRC and banking compliance from day one. You also get transparent pricing and a dedicated account manager.",
         "faq": [
           {
             "question": "Why do UK banks require substance?",
@@ -84,27 +83,26 @@
         },
         "sections": [
           {
-            "title": "Что входит",
+            "title": "Для кого эта услуга предназначена",
             "paragraphs": [
-              "Мы предоставляем юридический адрес, физический рабочий офис, локального директора или представителя, корпоративный секретариат, обработку почты и постоянную поддержку по соответствию требованиям.",
-              "Без присутствия международные компании рискуют блокировкой счетов, налоговыми проверками и репутационными потерями. Мы решаем это с первого дня."
+              "Эта услуга предназначена для международных владельцев бизнеса и топ-менеджеров из Европы, Азии и Ближнего Востока, которые хотят работать через структуру в Великобритании без необходимости личного переезда."
             ]
           },
           {
-            "title": "Для кого предназначена эта услуга",
+            "title": "Когда это нужно",
             "paragraphs": [
-              "Эта услуга предназначена для международных владельцев бизнеса и топ-менеджеров из Европы, Азии и Ближнего Востока, которые хотят работать через структуру в Великобритании без необходимости личного переезда.",
-              "Она идеальна, когда вам нужен банковский счёт, регистрация НДС или соответствие требованиям HMRC, но нет физического присутствия в Великобритании."
+              "Это идеально, когда вам нужен банковский счёт, регистрация НДС или соответствие требованиям HMRC, но нет физического присутствия в Великобритании."
+            ]
+          },
+          {
+            "title": "Что входит",
+            "paragraphs": [
+              "Мы предоставляем юридический адрес, физический рабочий офис, локального директора или представителя, корпоративный секретариат, обработку почты и постоянную поддержку по соответствию требованиям."
             ]
           }
         ],
-        "benefits": [
-          "Полное операционное присутствие за 3 месяца — не за 12",
-          "100% фокус на соответствии требованиям HMRC и банков с первого дня",
-          "Прозрачные цены и персональный менеджер",
-          "Юрадрес и реальный рабочий офис",
-          "Локальный директор или представитель"
-        ],
+        "benefits": [],
+        "whyChooseUs": "Мы обеспечиваем полное операционное присутствие за 3 месяца — не за 12. С первого дня сохраняем 100% фокус на соответствии требованиям HMRC и банков. Вы также получаете прозрачные цены и персонального менеджера.",
         "faq": [
           {
             "question": "Зачем банкам Великобритании нужно реальное присутствие?",

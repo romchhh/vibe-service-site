@@ -66,6 +66,8 @@ export type ServiceView = {
   offer: ServiceOffer
   sections: ServiceSection[]
   benefits: string[]
+  /** Continuous “Why choose us” copy shown as prose when set */
+  whyChooseUs?: string
   faq: ServiceFaqItem[]
   card: {
     title: string
